@@ -1,0 +1,121 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="UTF-8">
+<title>AreTalk</title>
+<head>
+
+<link rel="stylesheet" href="lib/css/reset.css">
+<link rel="stylesheet" href="lib/js/layui/css/register-layui.css">
+<link rel="stylesheet" href="lib/css/header.css">
+<link rel="stylesheet" href="lib/css/footer.css">
+<link rel="stylesheet" href="css/register.css">
+
+
+<script src="lib/js/jquery.js"></script>
+<script src="lib/js/layui/layui.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/register.js"></script>
+
+</head>
+
+<body>
+
+	<div id="header">
+		
+	</div>
+	<img class="splitImgDown" src="images/splitImgDown.png"/>
+	<div id="login" class="layui-form layui-form-pane">
+				<div id="LoginTitle">
+					<div id="LogoText">AreTalk注册</div>
+				</div>
+
+					<div style="text-align:center;">
+
+  						<div class="layui-form-item">
+  						  <label class="layui-form-label inputName">账户</label>
+  						  <div class="layui-input-block">
+  						    <input type="text" id="username" name="userName" autocomplete="off" class="layui-input " lay-verify="required|username|pass" placeholder="数字或者字母组合，不允许含有标点符号、空格等">
+  						  </div>
+  						</div>
+              
+  						  <div class="layui-form-item">
+  						  <label class="layui-form-label inputName">密码</label>
+  						  <div class="layui-input-block">
+  						    <input type="text" name="password" autocomplete="off" class="layui-input " lay-verify="required" placeholder="大于6位，数字或者字母组合">
+  						  </div>
+  						  </div>
+
+                <div class="layui-form-item">
+                <label class="layui-form-label inputName">昵称</label>
+                <div class="layui-input-block">
+                  <input type="text" name="nickname" autocomplete="off" class="layui-input " lay-verify="required">
+                </div>
+                </div>
+
+                <div class="layui-form-item sex-item">
+                <label class="sexinput">性别</label>
+                <div class="layui-input-block">
+                        <input type="radio" lay-filter="sexinput" name="sex" value="1" title="男" lay-verify="required">
+                        <input type="radio" lay-filter="sexinput" name="sex" value="0" title="女" lay-verify="required">
+                </div>
+                </div>
+
+                <div class="layui-form-item">
+                  <label class="layui-form-label inputName">国籍</label>
+                  <div class="layui-input-block">
+                    <select name="motherlandId" id="motherlandId" lay-filter="country" lay-verify="required">                      
+						        <option  selected = "selected" value="0">请选择</option>
+                    </select>
+                  </div>
+                </div>
+
+             
+                <div class="layui-form-item">
+                  <label class="layui-form-label inputName" >生日</label>
+                  <div class="layui-input-block">
+                    <input class="layui-input" name="birthday" placeholder="出生日期" id="LAY_demorange_s" lay-verify="required"> 
+                  </div>
+                </div>
+                                       
+           
+                <div class="layui-form-item">
+                   
+                  <div class="layui-inline" style="width:100%;margin-right: 0px;">
+                    <label class="layui-form-label inputName" >手机号</label>
+                    <div class="layui-input-inline">
+                      <select name="countryId" id="PhoneNmuAre" >
+                            <option  value="0">区号</option>
+                      </select>
+                    </div>                    
+                    <div class="PhoneNum-inline" >
+                      <input type="text" name="phoneNo" id="PhoneNumber" autocomplete="off" class="layui-input"                 lay-verify="required|number" placeholder="接收短信验证码的手机号">
+                    </div>
+                  </div>              
+                
+                </div>
+
+
+  						  <div class="layui-form-item">
+  						  <label class="layui-form-label inputName">验证码</label>
+  						  <div class="layui-input-block">
+  						    <input type="text" name="verifyCode" autocomplete="off" id="IDcode" class="layui-input"  placeholder="您接收到的短信验证码">
+  						    <button id="sendCode" lay-submit class="" lay-filter="getCode" type="button">发送验证码</button>  						    
+  						  </div>
+  						</div>
+
+					</div>
+					<div id="StayLogin">
+					<input id="chk_protocol" type="checkbox" name="protocol" title=" " lay-skin="primary" lay-filter="protocol" lay-verify="agree"><span>同意并遵守<a href="http://www.aretalk.com/protocol.html" id="protocol">《服务条款》</a></span>
+					</div>  
+			 		<div id="SignBtn" lay-submit lay-filter="register" >注册</div>
+<!-- " -->
+	</div>		
+		
+
+</body>
+</html>

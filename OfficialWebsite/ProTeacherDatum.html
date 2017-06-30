@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="UTF-8">
+<title>AreTalk</title>
+<head>
+
+<link rel="stylesheet" href="lib/css/reset.css">
+<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="css/jquery.fileupload.css">
+<link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/upload.css" media="all"> -->
+
+<link rel="stylesheet" href="lib/css/header.css">
+<link rel="stylesheet" href="lib/css/footer.css">
+<link rel="stylesheet" href="lib/js/layui/css/layui.css">
+<link rel="stylesheet" href="lib/header/css/dropkick.css" type="text/css">
+<link rel="stylesheet" href="css/registerDatum.css">
+                
+
+</head>
+
+<body>
+
+	<div id="header">
+		
+	</div>
+  
+<img class="splitImgDown" src="images/splitImgDown.png"/>
+  <div id="main" class="layui-form">
+
+    <div id="step">
+      <div class=" proFirst" id="Personal">个人信息</div>
+      <div class="progressSec proNOW" id="Archives">档案</div>
+      <div class="progress-long" id="ServiceProvision">教师服务条款</div>
+      <div class="proFinish" id="Finish">完成</div>
+    </div>
+
+    <div class="PersonalInfo">
+        <div class="InfoTitle">
+          <span class="title1" >视频、音频介绍</span>
+          <span class="title2" >在这里上传你的视频</span>
+        </div>
+
+
+        <div id="Document">
+
+            
+
+            <form class="fileupload" id="vedio-upload" action="http://211.159.152.210:8188/AreTalkServer/Servlet/UploadHandleServlet" method="POST" enctype="multipart/form-data">
+
+            <div class="container exerciseListBox" id="VideoContainer">
+                <div id="videoBox" align="center">
+                  <!-- <video src="kiana.mp4" controls=""></video> -->
+                  <div class="mediaPicBox" id="vedioPicBox" align="center">
+                    <img id="vedioPic" src="images/vedioPic.png" alt="" />
+                  </div>                  
+                </div>
+                <div class="mediauploadInfo">
+                  <ul class="videoUL">
+                    <li class="videoInfo">语言清晰流利</li>
+                    <li class="videoInfo">时间1-2分钟</li>
+                    <li class="videoInfo">确保正确的拍摄方向</li>
+                    <li class="videoInfo">保持光照以确保视频清晰</li>
+                    <li class="videoInfo">不能包含个人和其他广告信息</li>
+                  </ul>
+                            <span class="btn fileinput-button" >
+                                
+                                <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span class="uploadbtntext">选择文件</span>
+                                <input type="file" name="files[]" multiple id="upload-btn">
+                            </span>                  
+                    <div class="row fileupload-buttonbar">
+                        <div class="chooseBtnBox">
+                            <!-- The fileinput-button span is used to style the file input field as button -->
+                            <!-- <input type="checkbox" class="toggle" style="margin-right:20px;"> -->
+                        
+
+                            
+                            
+                            <!-- <span class="fileupload-process"></span> -->
+                        </div>
+                        <!-- The global progress state -->
+
+                    </div>                  
+                </div>
+              </div>            
+                        <div class="jindutiao fileupload-progress fade"> <!-- 进度条 -->
+                            <!-- The global progress bar -->
+                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                            </div>
+                            <!-- The extended global progress state -->
+                            <div class="progress-extended">&nbsp;</div>
+                        </div>
+                    <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                </form>
+            
+            
+
+
+            
+            <!-- The template to display files available for upload -->
+            <script id="template-upload" type="text/x-tmpl">
+            {% for (var i=0, file; file=o.files[i]; i++) { %}
+                <tr id="filetr" class="template-upload fade">
+                  <!--   <td ><input type="checkbox" name="delete" value="1" class="toggle" ></td> -->
+                    <td>
+                        <span class="preview"></span>
+                    </td>
+                    <td>
+                        <p class="name">{%=file.name%}</p>
+                        <strong class="error text-danger"></strong>
+                    </td>
+            <!--         <td>
+                        <p class="size">Processing...</p>
+                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0"          aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success"            style="width:0%;"></div></div>
+                    </td> -->
+                    <td>
+                        {% if (!i && !o.options.autoUpload) { %}
+                            <button class="btn btn-primary start" disabled>
+                             <span>上传</span>
+                            </button>
+                        {% } %}
+                        {% if (!i) { %}
+                            <button class="btn btn-warning cancel" onclick="cancelupload()">
+                                <span>取消</span>
+                            </button>
+                        {% } %}
+                    </td>
+                </tr>
+            {% } %}
+            </script>
+            <!-- The template to display files available for download -->
+            <script id="template-download" type="text/x-tmpl">
+            {% for (var i=0, file; file=o.files[i]; i++) { %}
+                <tr class="template-download fade">
+  <!--                     <td>
+                        <span class="preview">
+                            {% if (file.thumbnailUrl) { %}
+                                <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img           src="{%=file.thumbnailUrl%}"></a>
+                            {% } %}
+                        </span>
+                    </td>
+                      <td>
+                        <p class="name">
+                            {% if (file.url) { %}
+                                <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}"            {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+                            {% } else { %}
+                                <span>{%=file.name%}</span>
+                            {% } %}
+                        </p>
+                        {% if (file.error) { %}
+                            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+                        {% } %}
+                    </td>
+                <td>
+                        <span class="size">{%=o.formatFileSize(file.size)%}</span>
+                    </td> 
+                    <td>
+                      {% if (file.deleteUrl) { %}
+                            <button class="btn btn-danger delete" data-type="{%=file.deleteType%}"          data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %}           data-xhr-fields='{"withCredentials":true}'{% } %}>
+                                <i class="glyphicon glyphicon-trash"></i>
+                                <span>Delete</span>
+                            </button>
+                            
+                        {% } else { %} -->
+                            <button class="btn btn-warning cancel">
+                                <i class="glyphicon glyphicon-ban-circle"></i>
+                                <span>取消</span>
+                            </button>
+                        {% } %}
+                    </td>
+                </tr>
+            {% } %}
+            </script>  
+
+
+
+        </div>
+
+        </div>
+
+            
+    <div class="PersonalInfo">
+        <div class="InfoTitle">
+          <span class="title2" >在这里上传你的音频</span>
+        </div>
+            <form class="fileupload" id="MP3-upload" action="http://211.159.152.210:8188/AreTalkServer/Servlet/UploadHandleServlet" method="POST" enctype="multipart/form-data">
+
+            <div class="container exerciseListBox">
+                <div id="MP3Box">
+                  <!-- <video src="kiana.mp4" controls=""></video> -->
+                  <div class="MP3PicBox">
+                    <img id="MP3Pic" src="images/MP3Pic.png" alt="" />
+                  </div>                  
+                </div>
+                <div class="mediauploadInfo">
+                  <ul class="videoUL">
+                    <li class="videoInfo">语言清晰流利</li>
+                    <li class="videoInfo">时间1-2分钟</li>                   
+                    <li class="videoInfo">确保环境安静音质清晰</li>
+                    <li class="videoInfo">不能包含个人和其他广告信息</li>
+                  </ul>
+                            <span class="btn fileinput-button" >
+                                
+                                <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span class="uploadbtntext">选择文件</span>
+                                <input type="file" name="files[]" multiple id="upload-btn">
+                            </span>                  
+                    <div class="row fileupload-buttonbar">
+                        <div class="chooseBtnBox">
+                            <!-- The fileinput-button span is used to style the file input field as button -->
+                            <!-- <input type="checkbox" class="toggle" style="margin-right:20px;"> -->
+                        
+
+                            
+                            
+                            <!-- <span class="fileupload-process"></span> -->
+                        </div>
+                        <!-- The global progress state -->
+
+                    </div>                  
+                </div>
+              </div>            
+                        <div class="jindutiao fileupload-progress fade"> <!-- 进度条 -->
+                            <!-- The global progress bar -->
+                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                            </div>
+                            <!-- The extended global progress state -->
+                            <div class="progress-extended">&nbsp;</div>
+                        </div>
+                    <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                </form>        
+    </div>
+
+    <div class="PersonalInfo">
+        <div class="InfoTitle">
+          <span class="title1" >教学专长</span>
+          <span class="title2" >选择你的教学经验等级</span>
+        </div>
+    <div id="MyTeachLv">
+<!--         <ul id="teachLV">
+    <li class="TeachLvLi"><input type="radio" name="TeachLvName" />鉴于Lv1：我有初级教学经验</li>
+    <li class="TeachLvLi"><input type="radio" name="TeachLvName" />鉴于Lv2：我有基础教学经验</li>
+    <li class="TeachLvLi"><input type="radio" name="TeachLvName" />鉴于Lv3：我有中等教学经验</li>
+    <li class="TeachLvLi"><input type="radio" name="TeachLvName" />鉴于Lv4：我有高级教学经验</li>
+    <li class="TeachLvLi"><input type="radio" name="TeachLvName" />鉴于Lv5：我有精通教学经验</li>
+</ul> -->
+  <div class="layui-form-item">
+   
+    <div class="layui-input-block">
+        <li class="TeachLvLi"><input type="radio" name="TeachLvChoose" title="鉴于Lv1：我有初级教学经验" value="1"/></li>
+        <li class="TeachLvLi"><input type="radio" name="TeachLvChoose" title="鉴于Lv2：我有基础教学经验" value="2"/></li>
+        <li class="TeachLvLi"><input type="radio" name="TeachLvChoose" title="鉴于Lv3：我有中等教学经验" value="3"/></li>
+        <li class="TeachLvLi"><input type="radio" name="TeachLvChoose" title="鉴于Lv4：我有高级教学经验" value="4"/></li>
+        <li class="TeachLvLi"><input type="radio" name="TeachLvChoose" title="鉴于Lv5：我有精通教学经验" value="5"/></li>
+    </div>
+  </div>
+
+    </div>
+    </div>
+    <div class="PersonalInfo">
+        <div class="InfoTitle">
+          <spanvalue="" class="title1" >我的教师签名</span>
+          <span class="title2" >编写一段自我介绍，如下示例所示</span>
+        </div>
+        <div id="Demointroduction">
+            <div class="DemoIntroText">
+                <div class="DemoIntroTextTitle">示例1</div>
+                <div class="DemoContent">
+                    大学本科学历,中学老师。1995年参加工作,默默奉献,不浮华。人生座右铭:激发学生兴趣永远是教师的目标。
+                </div>
+            </div>
+            <div class="DemoIntroText">
+                <div class="DemoIntroTextTitle">示例2</div>
+                <div class="DemoContent">
+                    大学本科学历,中学老师。1995年参加工作,默默奉献,不浮华。人生座右铭:激发学生兴趣永远是教师的目标。
+                </div>
+            </div>
+            <textarea id="MyDemoContent" name="MyTContent" required lay-verify="required" placeholder="请输入写一段简短的自我介绍" class="layui-textarea"></textarea>
+        </div>
+    </div>
+        <div class="PersonalInfo">
+        <div class="InfoTitle">
+          <span class="title1" >我的证书</span>
+        </div>
+        <div id="Mycertificate">
+            <div class="certificateBox">
+                <form class="fileupload CerUploadFrom" id="ID-upload" action="http://211.159.152.210:8188/AreTalkServer/Servlet/UploadHandleServlet" method="POST" enctype="multipart/form-data">
+
+                    <div class="container exerciseListBox">
+        
+                        <div class="certificateuploadInfo">
+                            <div id="IDCardBox" class="CerUploadBox">
+                                <div class="CerUploadTitle">身份证明<span class="must">*</span></div>
+                                <img id="CerUploadTitlePic" class="UploadTitlePic" src="images/demoimg.png" alt="" />
+                                <span class="btn fileinput-button CerUpBtn" >                                
+                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span                 class="uploadbtntext">选择文件</span>
+                                    <input type="file" name="files[]" multiple id="upload-btn">
+                                </span>                          
+                            </div>
+                        
+<!--                                     
+                        <div class="row fileupload-buttonbar">
+                            <div class="chooseBtnBox">
+                        
+                            </div>                        
+                        </div>   -->                
+                        </div>
+                    </div>            
+                    <div class="jindutiao fileupload-progress fade"> <!-- 进度条 -->
+                        <!-- The global progress bar -->
+                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                        </div>
+                        <!-- The extended global progress state -->
+                        <div class="progress-extended">&nbsp;</div>
+                    </div>
+                    <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                    <div class="clear"></div>
+                </form>
+
+
+
+
+                <form class="fileupload CerUploadFrom" id="school-upload" action="http://211.159.152.210:8188/AreTalkServer/Servlet/UploadHandleServlet" method="POST" enctype="multipart/form-data">
+
+                    <div class="container exerciseListBox">
+        
+                        <div class="certificateuploadInfo">
+                            <div id="IDCardBox" class="CerUploadBox">
+                                <div class="CerUploadTitle">毕业证书<span class="must">*</span></div>
+                                <img id="SchUploadTitlePic" class="UploadTitlePic" src="images/demoimg.png" alt="" />
+                                <span class="btn fileinput-button CerUpBtn" >                                
+                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span                 class="uploadbtntext">选择文件</span>
+                                    <input type="file" name="files[]" multiple id="upload-btn">
+                                </span>                          
+                            </div>
+                        
+<!--                                     
+                        <div class="row fileupload-buttonbar">
+                            <div class="chooseBtnBox">
+                        
+                            </div>                        
+                        </div>   -->                
+                        </div>
+                    </div>            
+                    <div class="jindutiao fileupload-progress fade"> <!-- 进度条 -->
+                        <!-- The global progress bar -->
+                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                        </div>
+                        <!-- The extended global progress state -->
+                        <div class="progress-extended">&nbsp;</div>
+                    </div>
+                    <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                    <div class="clear"></div>
+                </form>
+                <form class="fileupload CerUploadFrom" id="teacher-upload" action="http://211.159.152.210:8188/AreTalkServer/Servlet/UploadHandleServlet" method="POST" enctype="multipart/form-data">
+
+                    <div class="container exerciseListBox">
+        
+                        <div class="certificateuploadInfo">
+                            <div id="IDCardBox" class="CerUploadBox">
+                                <div id="CerUploadTitle" class="CerUploadTitle">教室资格证<span class="must">*</span></div>
+                                <img id="teacherUploadTitlePic" class="UploadTitlePic" src="images/demoimg.png" alt="" />
+                                <span class="btn fileinput-button CerUpBtn" >                                
+                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span  class="uploadbtntext">选择文件</span>
+                                    <input type="file" name="files[]" multiple id="upload-btn">
+                                </span>                          
+                            </div>
+                        
+<!--                                     
+                        <div class="row fileupload-buttonbar">
+                            <div class="chooseBtnBox">
+                        
+                            </div>                        
+                        </div>   -->                
+                        </div>
+                    </div>            
+                    <div class="jindutiao fileupload-progress fade"> <!-- 进度条 -->
+                        <!-- The global progress bar -->
+                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                        </div>
+                        <!-- The extended global progress state -->
+                        <div class="progress-extended">&nbsp;</div>
+                    </div>
+                    <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                    <div class="clear"></div>
+                </form>
+                <form class="fileupload CerUploadFrom" id="other-upload" action="http://211.159.152.210:8188/AreTalkServer/Servlet/UploadHandleServlet" method="POST" enctype="multipart/form-data">
+
+                    <div class="container exerciseListBox">
+        
+                        <div class="certificateuploadInfo">
+                            <div id="IDCardBox" class="CerUploadBox">
+                                <div id="otherUploadTitle" class="CerUploadTitle">其他证书<span class="must"></span></div>
+                                <img id="otherUploadTitlePic" class="UploadTitlePic" src="images/demoimg.png" alt="" />
+                                <span class="btn fileinput-button CerUpBtn" >                                
+                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span  class="uploadbtntext">选择文件</span>
+                                    <input type="file" name="files[]" multiple id="upload-btn">
+                                </span>                          
+                            </div>
+                        
+<!--                                     
+                        <div class="row fileupload-buttonbar">
+                            <div class="chooseBtnBox">
+                        
+                            </div>                        
+                        </div>   -->                
+                        </div>
+                    </div>            
+                    <div class="jindutiao fileupload-progress fade"> <!-- 进度条 -->
+                        <!-- The global progress bar -->
+                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                        </div>
+                        <!-- The extended global progress state -->
+                        <div class="progress-extended">&nbsp;</div>
+                    </div>
+                    <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                    <div class="clear"></div>
+                </form> 
+                <div class="clear"></div>                                                 
+            </div>
+
+        </div>
+    </div>
+    <div class="PersonalInfo" align="center">
+      <div lay-submit lay-filter="nextFrom" id="sendFrom" class="layui-btn layui-btn-normal">提交并继续</div>
+    </div> 
+
+
+    </div> 
+	<footer>
+		
+	</footer>
+<script src="lib/js/jquery.js"></script>
+<script src="lib/header/js/dropkick.js"></script>
+<script src="lib/js/lang/langchange.js" type="text/javascript"></script>
+<script src="lib/js/layui/layui.js" type="text/javascript"></script>
+
+
+<script src="js/vendor/jquery.ui.widget.js"></script>
+<script src="js/tmpl.min.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="js/load-image.all.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src="js/canvas-to-blob.min.js"></script>
+<!-- blueimp Gallery script -->
+<script src="js/jquery.blueimp-gallery.min.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="js/jquery.fileupload.js"></script>
+<!-- The File Upload processing plugin -->
+<script src="js/jquery.fileupload-process.js"></script>
+<!-- The File Upload image preview & resize plugin -->
+<script src="js/jquery.fileupload-image.js"></script>
+<!-- The File Upload audio preview plugin -->
+<script src="js/jquery.fileupload-audio.js"></script>
+<!-- The File Upload video preview plugin -->
+<script src="js/jquery.fileupload-video.js"></script>
+<!-- The File Upload validation plugin -->
+<script src="js/jquery.fileupload-validate.js"></script>
+<!-- The File Upload user interface plugin -->
+<script src="js/jquery.fileupload-ui.js"></script>
+<!-- The main application script -->
+<script src="js/Datunupload.js"></script>
+<script src="js/Datunregister.js" type="text/javascript"></script>
+
+</body>
+</html>

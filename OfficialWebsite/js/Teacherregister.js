@@ -1,0 +1,573 @@
+var UpLoadURL = 'http://211.159.152.210:8188';
+var wait=60;  
+
+
+var username;
+var PhoneNumber;
+var fromValue;
+var PhoneArea;
+var teacherHeadImgId
+var Sessionid;
+
+layui.use(['layer', 'form','laydate'], function(){
+
+  var layer = layui.layer;
+  var form = layui.form();
+  var laydate = layui.laydate;
+  var start = {istoday: false};
+
+
+form.verify({
+  username: function(value, item){ //value：表单的值、item：表单的DOM对象
+    if(!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)){
+      return '用户名不能有特殊字符';
+    }
+    if(/(^\_)|(\__)|(\_+$)/.test(value)){
+      return '用户名首尾不能出现下划线\'_\'';
+    }
+
+  }
+  
+
+  ,pass: [
+    /^[\S]{1,50}$/
+    ,'不能出现空格'
+  ] 
+}); 
+
+ document.getElementById('Tbirthday').onclick = function(){
+    start.elem = this;
+    laydate(start);
+  }
+
+
+form.on('submit(sendFrom)', function(data){
+
+//  console.log(data.field) ;当前容器的全部表单字段，名值对形式：{name: value}
+  fromValue = data.field;
+
+    var KnowLang = [];var level= [];
+    $(".KnowLang").each(function(index, obj) {
+      KnowLang.push(
+        $(this).children("option:selected").val()
+      );
+
+      level.push(
+        $(this).parents(".addBox").find("select:last").children("option:selected").val()
+      );
+
+})
+    var WhereFrom =  fromValue.fromcity+fromValue.fromdetail;
+    var WhereLive =  fromValue.livecity+fromValue.livedetail;
+
+    fromValue.KnowLangArry = KnowLang;
+    fromValue.levelArry = level;
+    fromValue.WhereFrom = WhereFrom;
+    fromValue.WhereLive = WhereLive;
+
+fromValue.password = hex_md5(fromValue.Tpassword);
+fromValue.userName = fromValue.userName.toLowerCase();
+
+/*  delete fromValue["files[]"]; 
+  delete fromValue["livecity"]; 
+  delete fromValue["livedetail"];
+  delete fromValue["fromcity"];
+  delete fromValue["fromdetail"];*/
+
+
+console.log(fromValue)
+
+teacherHeadImgId = $(".col-lg-7").attr("value");
+  if (teacherHeadImgId) {
+    register();
+  }else{
+    alert("没有上传头像");
+    return;    
+  }
+
+
+
+});
+
+
+var i =2;
+$("#addKnowLang").click(function(){
+var addUseLang = '<div class="addBox"><div class="layui-inline"><label class="layui-form-label">掌握语言</label><div class="layui-input-inline input-short"><select class="KnowLang" name="KnowLang'+i+'" lay-verify=""><option value="">请选择你掌握语言</option><option value="1">英语</option><option value="2">汉语</option><option value="3">日语</option></select></div></div><div class="layui-inline input-right"><label class="layui-form-label">等级</label><div class="layui-input-inline input-short"><select class="KnowLangLv" name="KnowLangLv'+i+'" lay-verify=""><option value="">请选择</option><option value="1">初级</option><option value="2">中级</option><option value="3">高级</option></select></div></div><img class="clearLang" src="images/jian.png" /></div>';
+ $("#KnowLangFrom").append(addUseLang);
+ form.render();
+  i = i+1;
+
+ $(".clearLang").click(function(){
+ $(this).parent().remove();
+ form.render();
+ i =i-1;
+ })
+
+})
+
+var j = 2;
+$("#addTeachUseLang").click(function(){
+var addTeachUseLang = '<div class="addBox"><div class="layui-inline"><label class="layui-form-label">语言课程</label><div class="layui-input-inline input-short"><select class="lessonLang" name="lessonLang'+j+'" lay-verify=""><option value="">请选择你掌握语言</option><option value="1">英语</option><option value="2">汉语</option><option value="3">日语</option></select></div></div><div class="layui-inline input-right"><label class="layui-form-label">使用语言</label><div class="layui-input-inline input-short"><select name="UseLang" name="UseLang'+j+'" lay-verify=""><option value="">请选择</option><option value="1">英语</option><option value="2">汉语</option><option value="3">日语</option></select></div></div><img class="clearLang" src="images/jian.png" /></div>';
+ $("#baseInfoFromuse").append(addTeachUseLang);
+ form.render();
+j =j+1
+
+ $(".clearLang").click(function(){
+ $(this).parent().remove();
+ form.render();
+ j = j-1;
+})
+
+
+})
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function(){ 
+
+
+  $("#header").load("lib/header/header.html",function(){
+  
+
+  });
+
+  $("footer").load("lib/footer/footer.html",function(){
+    $('.changeLangSet').dropkick({
+
+        change: function (value) {
+
+          $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
+          $("#LanguagePic img").attr("src","images/"+value+".png");
+        }
+
+      });
+
+  })
+
+
+//区号
+$.ajax({                    
+        type:'GET',
+        data:{},       
+        url: UpLoadURL+'/AreTalkServer/Verify/getCountryAreacode.action',
+        success:function(data) {
+          
+              for (var i = 0;i<data.data.areacode.length; i++) {
+               var areacode = '<option value="'+data.data.areacode[i].countryId+'">'+data.data.areacode[i].areaCode+'</option>';
+               $('#PhoneNmuAre').append(areacode);                              
+                  var form = layui.form();
+                  form.render();
+                }
+            },
+        error: function () {                  
+
+      }                        
+}); 
+
+//国籍、居住地
+  $.ajax({
+        type:'GET',
+        data:{},       
+        url: UpLoadURL+'/AreTalkServer/Api/AreTalk/getCountryInfo.action',
+        success:function(data) {
+              for (var i = 0;i<data.data.countryInfo.length; i++) {
+               var countryInfo = '<option value="'+data.data.countryInfo[i].countryId+'">'+data.data.countryInfo[i].countryNameSelf+'</option>';
+               $('#motherlandId').append(countryInfo);
+               $('#LivelandId').append(countryInfo);
+
+                  var form = layui.form();
+                  form.render();
+                }
+            },
+        error: function () {
+      }                        
+}); 
+
+
+
+//证件类型
+$.ajax({                    
+        type:'GET',
+        data:{},       
+        url: UpLoadURL+'/AreTalkServer/Web/Api/getCommonTable.action',
+        success:function(data) {
+          
+              for (var i = 0;i<data.data.idcardTyape.length; i++) {
+               var certificate = '<option value="'+data.data.idcardTyape[i].id+'">'+data.data.idcardTyape[i].cardName+'</option>';
+               $('#certificate').append(certificate);                              
+                  var form = layui.form();
+                  form.render();
+                }
+            },
+        error: function () {                  
+
+      }                        
+}); 
+
+//联系方式
+$.ajax({                    
+        type:'GET',
+        data:{},       
+        url: UpLoadURL+'/AreTalkServer/Web/Api/getCommonTable.action',
+        success:function(data) {
+          
+              for (var i = 0;i<data.data.communicationChannel.length; i++) {
+               var contactWay = '<option value="'+data.data.communicationChannel[i].terraceId+'">'+data.data.communicationChannel[i].terraceName+'</option>';
+               $('#contactWay').append(contactWay);                              
+                  var form = layui.form();
+                  form.render();
+                }
+            },
+        error: function () {                  
+
+      }                        
+}); 
+
+
+//银行
+$.ajax({                    
+        type:'GET',
+        data:{},       
+        url: UpLoadURL+'/AreTalkServer/Web/Api/getCommonTable.action',
+        success:function(data) {
+          
+              for (var i = 0;i<data.data.bankInfo.length; i++) {
+               var bankInfo = '<option value="'+data.data.bankInfo[i].id+'">'+data.data.bankInfo[i].bankName+'</option>';
+               $('#BankSelect').append(bankInfo);                              
+                  var form = layui.form();
+                  form.render();
+                }
+            },
+        error: function () {                  
+
+      }                        
+}); 
+
+//掌握语言
+$.ajax({                    
+        type:'GET',
+        data:{},       
+        url: UpLoadURL+'/AreTalkServer/Web/Api/getCommonTable.action',
+        success:function(data) {
+          
+              for (var i = 0;i<data.data.lang.length; i++) {
+               var LangSelect = '<option value="'+data.data.lang[i].id+'">'+data.data.lang[i].name+'</option>';
+               $('#motherLangSelect').append(LangSelect);
+               $('#KnowLangSelect').append(LangSelect);
+                  var form = layui.form();
+                  form.render();
+                }
+            },
+        error: function () {                  
+
+      }                        
+}); 
+
+})//ready结束
+
+
+
+}); //layui.use结束
+
+
+
+
+
+var checkInfoValid;
+function GetCode(){
+  
+  username = $("#username").val();
+  PhoneNumber = $("#PhoneNumber").val();
+  var PhoneLocaltion = $('#PhoneNmuAre option:selected').val();//Select选中的值
+  console.log(username);console.log(PhoneNumber);
+
+  if (username&&PhoneNumber){
+      $.ajax({
+          async:false,
+              type:'POST',
+              data:{userName:username,phoneNo:PhoneNumber,type:1},       
+              url: UpLoadURL+'/AreTalkServer/Web/Login/checkInfoValid.action',
+              success:function(data) {
+                  
+                  if(data.status="success"){
+                    checkInfoValid = true;
+                      
+                      $.ajax({
+                          async:false,                  
+                          type:'POST',
+                          data:{countryId:PhoneLocaltion,phoneNo:PhoneNumber,type:0},       
+                          url: UpLoadURL+'/AreTalkServer/Verify/sendPhoneNoVerifyCode.action',
+                          success:function(data) {
+                                if (data.status="success") {  
+                                   time()                                
+                                   layer.msg('正在发送验证码，请查收手机短信',{time:1500});
+                                   console.log('正在发送验证码，请查收手机短信')
+                                }
+                              },
+                          error: function () {                  
+            
+                            }                        
+                      }); 
+
+                  }else if(data.status="failed"){
+
+                        if (data.item="userName") {
+                            layer.msg('用户名已被注册',{time:1500});
+                            console.log('用户名已被注册')
+                        }else if(data.item="phoneNO"){
+                            layer.msg('手机号已注册',{time:1500});
+                            console.log('手机号已注册')
+                        }
+                  }
+                    
+
+                  },
+              error: function () {
+              
+              }                        
+          }); 
+
+  }else{
+  
+    layer.msg('用户名或手机号不得为空，请重试',{time:1500});
+  }
+
+
+
+}
+
+
+
+
+
+function register(){
+
+$.ajax({
+        type:'POST',
+        data:{
+              userType:0,
+              userName:fromValue.userName,
+              password:fromValue.Tpassword,
+              phoneNo:fromValue.phoneNo,
+              motherlandId:fromValue.motherLang,       
+              phoneNo:fromValue.phoneNo,
+              email:fromValue.email,
+              verifyCode:fromValue.IDcode,
+              countryId:fromValue.countryId,//区号
+              birthday:fromValue.Tbirthday,
+              motherlandId:fromValue.motherlandId//国籍
+        },       
+        url: UpLoadURL+'/AreTalkServer/Web/Login/register.action',
+        success:function(data) {
+            if(data.data.status=="success"){
+
+               console.log("register 成功"); 
+              Login(); 
+             
+            }else{
+              layer.msg('网络错误请重试',{time:1500});
+            }
+
+            },
+        error: function () {                  
+            
+      console.log("register  error")
+      }                        
+})
+
+
+}
+
+
+
+
+function Login() {
+var TuserName = fromValue.userName;
+var Tpassword = fromValue.Tpassword;
+
+ console.log(TuserName)
+  console.log(Tpassword)
+
+  $.ajax({
+      type: "POST",
+      url:UpLoadURL+"/AreTalkServer/Web/Login/login.action",
+      data: {userName:TuserName,password:Tpassword,userType:0},
+      success: function (data) {
+          console.log("Login 成功"); 
+
+          Sessionid = data.data.JSESSIONID;
+          CreateCookie("JSESSIONID", data.data.JSESSIONID, 30);          
+          UpLoadHeadImg();
+          AddTeacherInfo();
+          AddKnowLang();
+          AddKnowLangLv();
+
+          },
+
+      error: function () {
+          console.log("Login  error");
+          }
+      });
+
+}
+
+
+
+function UpLoadHeadImg(){
+
+
+  console.log("teacherHeadImgId:"+teacherHeadImgId);
+
+     $.ajax({                    
+        type:'POST',
+        data: {avatarId:teacherHeadImgId},
+        url: UpLoadURL+"/AreTalkServer/Web/Api/uploadUserImage.action;jsessionid="+Sessionid,
+        success:function(data) {
+                console.log("上传头像图片ID成功")
+            },
+        error: function () {                  
+                console.log("UpLoadHeadImg error");
+      }
+      }); 
+       
+}
+
+
+
+function AddTeacherInfo(){
+
+  $.ajax({
+      type: "POST",
+      traditional: true,  
+      url:UpLoadURL+'/AreTalkServer/Web/Api/uploadTeacherInfo.action;jsessionid='+Sessionid,
+      data: {realName:fromValue.realname,
+             cardType:fromValue.certificate,
+             cardNum:fromValue.certificateNum,
+             countryId:fromValue.motherlandId,
+             streetInfo:fromValue.WhereFrom,
+             homeCountryId:fromValue.LivelandId,
+             homeStreetInfo:fromValue.WhereLive,
+             communicationType:fromValue.contactWay,
+             communicationId:fromValue.contactNum,
+             bankId:fromValue.bank,
+             bankphoneNumber:fromValue.bankPhone,
+             bankCardNum:fromValue.BankCardID            
+           },
+      success: function (data) {
+              console.log("AddTeacherInfo 成功");
+          },
+
+      error: function (a, b, c) {
+          console.log("a: " + JSON.stringify(a));
+          console.log("b: " + JSON.stringify(b));
+          console.log("c: " + JSON.stringify(c));
+          console.log("AddTeacherInfo  error");
+          }
+      });
+
+}
+
+function AddKnowLang(){
+
+  $.ajax({
+      type: "POST",
+      url:UpLoadURL+'/AreTalkServer/Web/Api/updateUserLang.action;jsessionid='+Sessionid,
+      data: {
+              langAddList:fromValue.KnowLangArry,
+              langDeleteList:null
+           },
+      success: function (data) {
+              console.log("AddKnowLang 成功");
+          },
+
+      error: function () {
+          console.log("AddKnowLang  error");
+          }
+      });
+
+}
+
+
+function AddKnowLangLv(){
+
+  $.ajax({
+      type: "POST",
+      url:UpLoadURL+'/AreTalkServer/Web/Api/updateUserLangLevel.action;jsessionid='+Sessionid,
+      data: {
+              langIdList:fromValue.KnowLangArry,
+              langLevelList:fromValue.levelArry
+           },
+      success: function (data) {
+              console.log("AddKnowLangLv 成功");
+              window.location.href = "ProTeacherDatum.html";
+          },
+      error: function () {
+          console.log("AAddKnowLangLv  error");
+          }
+      });
+
+}
+
+function CreateCookie(name, value, days) {
+    if (days) {
+        var date = new Date;
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1E3);
+        var expires = "; expires=" + date.toGMTString()
+    } else var expires = "";
+    document.cookie = name + "=" + value + expires + "; path=/"
+
+}
+
+
+function GetQueryString(name){
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+} 
+
+function getCookie(c_name) {
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1) {
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1) {
+        c_value = null;
+    }
+    else {
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1) {
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start, c_end));
+    }
+    return c_value;
+}
+
+
+function time(){
+          if (wait == 0) { 
+            $("#GetCode").removeAttr("disabled");           
+            $("#GetCode").html("获取验证码");
+            $("#GetCode").css("background-color", "#009688"); 
+            wait = 60;  
+        } else {  
+            $("#GetCode").attr("disabled", "true");  
+            $("#GetCode").css("background-color", "#9da2a7"); 
+            $("#GetCode").html("重新发送"+ wait);  
+            wait--;  
+            setTimeout(function() {  
+                time()  
+            },  
+            1000)  
+        }  
+
+}

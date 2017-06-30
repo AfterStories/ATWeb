@@ -1,0 +1,47 @@
+
+html,body{
+	width: 100%;
+	min-width: 768px;
+	
+}
+
+	#InfoTitle{
+		width: 85%;
+		height: 102px;
+		margin:0 auto; 
+		color: #4b4b4b;
+		font-family:"Microsoft Yahei";
+	}
+	#InfoTitle-text1{
+		font-size: 30px;
+		margin-top: 20px;
+		margin-left: 40px;
+	}
+	.InfoContent>img{
+		float: left;
+		height:48px; 
+		width:48px;
+		margin-top: 5px;
+	}
+	.InfoText{
+		position: absolute;
+		margin-top:2%; 
+		padding-left:60px;
+	}
+	.clear{ clear:both} 
+	#SignUpBtn{
+		width:50%;
+		height: 55px;
+		background-color: #67c5f0;
+		font-size: 22px;
+		font-family:Microsoft Yahei;
+		color: #fff;
+		cursor:pointer;
+		text-align: center;
+		line-height:55px;
+		border-radius: 10px;
+		margin: 30px auto;
+		
+	}
+
+

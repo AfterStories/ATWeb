@@ -1,0 +1,1293 @@
+html,body{
+	font-family:Microsoft YaHei;
+	min-width: 769px
+}
+.clear{
+	clear: both;
+}
+/*主内容区域*/
+.must{
+	color:red;
+}
+#step{
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	margin: 2vw auto;
+
+}
+.PersonalInfo{
+	margin: 1vw auto;
+	width: 85%;;
+}
+.progressSec{
+	width:20%;
+	height:28px;
+	font-size: 16px;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;  
+	color: #595959;
+	background-color:#e2e2e2;
+	position: relative;  
+	
+}
+.progress-long{
+	width:20%;
+	height:28px;	
+	display: flex;
+  	justify-content: center;
+  	align-items: center;  
+	color: #595959;
+	background-color:#e2e2e2;
+	position: relative; 
+}
+/* transparent透明 */
+.progressSec:after{
+	content:'';
+	display: block;
+	border-top: 14px solid transparent;
+	border-bottom: 14px solid transparent;
+	border-left: 14px solid #e2e2e2;
+	position: absolute;
+	right:-14px;
+	top: 0;
+
+}
+.progressSec:before{
+	content:'';
+	display: block;
+	border-top: 14px solid #e2e2e2;
+	border-bottom: 14px solid #e2e2e2;
+	border-left: 14px solid #fff;
+	position: absolute;
+	left:0px;
+	top: 0;
+}
+.progress-long:after{
+	content:'';
+	display: block;
+	border-top: 14px solid transparent;
+	border-bottom: 14px solid transparent;
+	border-left: 14px solid #e2e2e2;
+	position: absolute;
+	right:-14px;
+	top: 0;
+
+}
+.progress-long:before{
+	content:'';
+	display: block;
+	border-top: 14px solid #e2e2e2;
+	border-bottom: 14px solid #e2e2e2;
+	border-left: 14px solid #fff;
+	position: absolute;
+	left:0px;
+	top: 0;
+}
+.proNOW{
+	width:20%;
+	height:28px;
+	font-size: 16px;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;  
+	color: #000;
+	background-color:#67c5f0;
+	position: relative;  
+	
+}
+.proNOW:after{
+	content:'';
+	display: block;
+	border-top: 14px solid transparent;
+	border-bottom: 14px solid transparent;
+	border-left: 14px solid #67c5f0;
+	position: absolute;
+	right:-14px;
+	top: 0;
+
+}
+.proNOW:before{
+	content:'';
+	display: block;
+	border-top: 14px solid #67c5f0;
+	border-bottom: 14px solid #67c5f0;
+	border-left: 14px solid #fff;
+	position: absolute;
+	left:0px;
+	top: 0;
+}
+.proFirst{
+	width:20%;
+	height:28px;
+	font-size: 16px;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;  
+	color: #595959;
+	background-color:#e2e2e2;
+	position: relative;  
+}
+.proFirst:after{
+	content:'';
+	display: block;
+	border-top: 14px solid transparent;
+	border-bottom: 14px solid transparent;
+	border-left: 14px solid #e2e2e2;
+	position: absolute;
+	right:-14px;
+	top: 0;
+
+}
+.proFinish{
+	width:20%;
+	height:28px;
+	font-size: 16px;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;  
+	color: #595959;
+	background-color:#e2e2e2;
+	position: relative; 
+}
+.proFinish:before{
+	content:'';
+	display: block;
+	border-top: 14px solid #e2e2e2;
+	border-bottom: 14px solid #e2e2e2;
+	border-left: 14px solid #fff;
+	position: absolute;
+	left:0px;
+	top: 0;
+}
+#MP3Box{
+	    width: 50%;
+    float: left;
+	    height: 15vw;
+	    padding: 0 5vw;;
+}
+#VideoContainer{
+	margin-bottom:1vw;
+}
+#videoBox{
+    width: 40%;
+    float: left;	
+}
+.MP3PicBox{
+ height: 4vw;
+ position: relative;
+ width: 20vw;
+ top: 50%;
+ float: left;
+ transform: translateY(-50%);;
+}
+.mediaPicBox{
+	width:18vw;
+	height:15vw;
+
+}
+.choosefilebtn{
+	width: 6vw;
+    height: 42px;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 6px 12px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-transform: none;
+    overflow: visible;
+    box-sizing: border-box;
+}
+.uploadbtnpng{
+	width:2vw;
+
+}
+#vedioPic{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+#MP3Pic{
+	width: 100%;
+	height: 100%;
+}
+video{
+	width:100%;
+}
+audio{
+	position: relative;
+	width: 20vw;
+	top: 50%;
+	float: left;
+	transform: translateY(-50%);
+}
+.container{
+	margin:0 auto;
+	width:100%; 
+}
+
+#upload-btn{
+	width: 6vw;
+	height: 100%;
+}
+#exerciseSRC-upload{
+    display: flex;
+    justify-content: space-between;	
+}
+.uploaddemobox{
+	width: 30%;
+	border: 1px solid red;
+	font-size: 16px;;
+
+}
+#uploadheadBox{
+	float: left;
+	width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border: 1px solid;
+}
+.demoimgBox{
+	display: flex;
+	justify-content: space-between;
+	margin: 2vw 0;
+}
+.demotittleimg{
+	margin:0.5vw auto 
+}
+.preview{
+	text-align: center;
+}
+.mediauploadInfo{
+	float:left;
+	height:15vw;
+	width:50%;
+	padding:2vw;
+
+}
+#school-upload .certificateuploadInfo{
+	position:relative;
+	left:25%;
+}
+
+#teacher-upload .certificateuploadInfo{
+	position:relative;
+	left:50%;
+}
+
+#other-upload .certificateuploadInfo{
+	position:relative;
+	left: 80%;
+}
+
+.certificateuploadInfo{
+	position:relative;
+}
+.mediauploadInfo li{
+	margin:0.4vw 0;
+	font-size:1vw;
+	list-style-type:disc;
+
+}
+
+.uploadbtntext{
+	margin:0 5px;
+	font-size:0.8vw;
+
+}
+
+
+.chooseBtnBox{
+	position: relative;
+	z-index: 999999;
+	float: left;
+}
+
+.videoUL{
+	margin:6px 0 2vw;
+}
+#Mycertificate{
+	position:relative;
+	top:1vw;
+	
+}
+.certificateBox{
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:550px;
+}
+
+.CerUploadFrom{
+	float:left;
+	width:100%;
+	position:absolute;
+	top:0;
+	overflow:hidden;
+
+}
+.certificate-upload{
+	border:1px solid;
+	width:25%;
+
+}
+.CerUploadBox{
+	float: left;
+	width: 10vw;
+	text-align: center;	
+}
+.CerUploadTitle{
+	font-size:1vw;
+	margin:0.5vw 0;
+
+}
+.UploadTitlePic{
+	width:10vw;
+	height:10vw;
+	margin:0 auto;
+
+}
+
+.fileinput-button{
+	z-index: 99999999999;
+}
+
+#MyDemoContent{
+height: 100px;
+}
+
+.DemoIntroText{
+	width:50%;
+	float:left;
+	border-left:2px solid #39afef;
+	padding-left:0.5vw;
+	margin-bottom:1vw;
+
+}
+.DemoIntroTextTitle{
+	font-size:1vw;
+	color:#53baf1;
+
+}
+.DemoContent{
+	width:60%;
+	font-size:0.8vw;
+
+}
+.dk_toggle{
+	    width: 150px!important;
+    height: 30px!important;
+}
+.CerUpBtn{
+	margin:1vw auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 设备屏幕自适应 */
+/* 屏样幕宽度小于768个象素时应用的CSS式 */
+@media (max-width: 769px) {
+
+
+
+#main{
+	width: 80%;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    margin: 1vw auto;
+}
+
+.title1{
+	font-size: 18px;
+	display: block;
+	margin-top: 8px;
+}
+.title2{
+	font-size:16px;
+	display: block;
+	margin-left: 30px;
+	margin-top: 8px;
+	word-spacing:2px;
+}
+#Content1{
+	height: 258px;
+	width: 80%;
+	margin:0 auto;
+	border: 1px solid red;
+}	
+
+
+.demoimg{
+	width: 4vw;
+	height: 4vw;
+	border-radius: 4vw;
+}
+.demotitele{
+	color: #7d8b96;
+
+}
+.everdemotitle{
+	color: #666;
+	font-size: 0.8vw;
+
+}
+#fileuploadnote{
+	float: left;
+	margin-left: -0.52vw;
+	color: red;
+	margin-top: 1vw;
+	font-size: 0.8vw;
+
+}
+.uploadnotetext{
+	text-align: center;
+
+}
+.fileinput-button{
+	color: #000;		
+	padding: 1px 5px;		
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: burlywood;
+	box-sizing: border-box;
+	background-color: rgba(235, 235, 235, 1);
+	display: table;
+	border: 1px solid #c6c6c6;
+}
+#uploadimg{
+	vertical-align: middle;
+	display: table-cell;
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	}
+
+canvas{
+	border-radius: 150px !important;
+	width: 150px !important;
+	height: 150px !important;
+	}
+
+.btn-primary{
+	width:6vw;
+	height: 42px;
+	display: inline-block;
+	padding: 6px 12px;    		
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;    		
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-transform: none;
+	overflow: visible;
+	box-sizing: border-box;
+	}
+.btn-warning{
+	width: 6vw;
+	height: 42px;
+	display: inline-block;
+	padding: 6px 12px;    		
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;    		
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-transform: none;
+	overflow: visible;
+	box-sizing: border-box;
+}
+.splitImgDown{
+	width: 100%;
+	}
+.InfoTitle{
+	width: 100%;
+	color: #595959;
+	font-family: "微软雅黑";
+	font-weight: 200;
+	margin:30px auto  20px;
+	border-bottom: 1px solid #bcbcbc;
+
+}
+
+.InfoContent{
+	width:100%;
+	margin-top: 30px;
+	border-top: 1px solid #cfcfcf;
+}
+#baseInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;
+
+}
+#baseInfouse{
+	margin:1vw auto;
+	border-bottom:1px solid #bcbcbc;	
+}
+#bankInfoFrom{
+	margin:0 auto;	
+}
+#bankInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;	
+}
+#alipayInfoFrom{
+	margin:0 auto;	
+}
+#alipayInfo{
+	margin:1vw auto;	
+}
+#baseInfoFrom{
+	margin:0 auto;
+}
+#baseInfoFromuse{
+	margin:0 auto;	
+}
+#KnowLangInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;
+}
+#KnowLangFrom{
+	margin:0 auto;		
+}
+.addBtn{
+	text-align: center;
+	margin:1vw auto;
+	width: 90%;
+}
+.addBtnImg{
+	width: 3vw;
+	height: 3vw;
+}
+.layui-inline{
+	margin:1.5vw 2vw !important; 
+}
+.input-right{
+}
+.layui-form-label{
+	width: 70px;
+	padding: 9px 4px;
+}
+.input-short{
+	width:19vw;
+}
+.input-long{
+	width: 52vw;;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 大于768且小于1280px */
+
+@media (min-width:769px) and (max-width:1000px){
+
+
+#main{
+	width: 80%;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    margin: 1vw auto;
+}
+
+.title1{
+	font-size: 18px;
+	display: block;
+	margin-top: 8px;
+}
+.title2{
+	font-size:16px;
+	display: block;
+	margin-left: 30px;
+	margin-top: 8px;
+	word-spacing:2px;
+}
+#Content1{
+	height: 258px;
+	width: 80%;
+	margin:0 auto;
+	border: 1px solid red;
+}	
+
+
+.demoimg{
+	width: 4vw;
+	height: 4vw;
+	border-radius: 4vw;
+}
+.demotitele{
+	color: #7d8b96;
+
+}
+.everdemotitle{
+	color: #666;
+	font-size: 0.8vw;
+
+}
+#fileuploadnote{
+	float: left;
+	margin-left: -0.52vw;
+	color: red;
+	margin-top: 1vw;
+	font-size: 0.8vw;
+
+}
+.uploadnotetext{
+	text-align: center;
+
+}
+.fileinput-button{
+	color: #000;		
+	padding: 1px 5px;		
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: burlywood;
+	box-sizing: border-box;
+	background-color: rgba(235, 235, 235, 1);
+	display: table;
+	border: 1px solid #c6c6c6;
+}
+#uploadimg{
+	vertical-align: middle;
+	display: table-cell;
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	}
+
+canvas{
+	}
+
+.btn-primary{
+	width: 6vw;
+	height: 42px;
+	display: inline-block;
+	padding: 6px 12px;    		
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;    		
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-transform: none;
+	overflow: visible;
+	box-sizing: border-box;
+	}
+.btn-warning{
+	width: 6vw;
+	height: 42px;
+	display: inline-block;
+	padding: 6px 12px;    		
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;    		
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-transform: none;
+	overflow: visible;
+	box-sizing: border-box;
+}
+.splitImgDown{
+	width: 100%;
+	}
+.InfoTitle{
+	width: 100%;
+	color: #595959;
+	font-family: "微软雅黑";
+	font-weight: 200;
+	margin:30px auto  20px;
+	border-bottom: 1px solid #bcbcbc;
+
+}
+
+.InfoContent{
+	width:100%;
+	margin-top: 30px;
+	border-top: 1px solid #cfcfcf;
+}
+#baseInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;
+
+}
+#baseInfouse{
+	margin:1vw auto;
+	border-bottom:1px solid #bcbcbc;	
+}
+#bankInfoFrom{
+	margin:0 auto;	
+}
+#bankInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;	
+}
+#alipayInfoFrom{
+	margin:0 auto;	
+}
+#alipayInfo{
+	margin:1vw auto;	
+}
+#baseInfoFrom{
+	margin:0 auto;
+}
+#baseInfoFromuse{
+	margin:0 auto;	
+}
+#KnowLangInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;
+}
+#KnowLangFrom{
+	margin:0 auto;		
+}
+.addBtn{
+	text-align: center;
+	margin:1vw auto;
+	width: 90%;
+}
+.addBtnImg{
+	width: 3vw;
+	height: 3vw;
+}
+.layui-inline{
+	margin:1.5vw 2vw !important; 
+}
+.input-right{
+}
+.layui-form-label{
+	width: 70px;
+	padding: 9px 4px;
+}
+.input-short{
+	width:19vw;
+}
+.input-long{
+	width: 52vw;;
+}
+
+
+}
+
+
+@media (min-width:1000px) and (max-width:1280px){
+
+#main{
+	width: 80%;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    margin: 1vw auto;
+}
+
+.title1{
+	font-size: 18px;
+	display: block;
+	margin-top: 8px;
+}
+.title2{
+	font-size:16px;
+	display: block;
+	margin-left: 30px;
+	margin-top: 8px;
+	word-spacing:2px;
+}
+#Content1{
+	height: 258px;
+	width: 80%;
+	margin:0 auto;
+	border: 1px solid red;
+}	
+
+
+.demoimg{
+	width: 4vw;
+	height: 4vw;
+	border-radius: 4vw;
+}
+.demotitele{
+	color: #7d8b96;
+
+}
+.everdemotitle{
+	color: #666;
+	font-size: 0.8vw;
+
+}
+#fileuploadnote{
+	float: left;
+	margin-left: -0.52vw;
+	color: red;
+	margin-top: 1vw;
+
+}
+.uploadnotetext{
+	text-align: center;
+
+}
+.fileinput-button{
+	color: #000;		
+	padding: 1px 5px;		
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: burlywood;
+	box-sizing: border-box;
+	background-color: rgba(235, 235, 235, 1);
+	display: table;
+	border: 1px solid #c6c6c6;
+}
+#uploadimg{
+	vertical-align: middle;
+	display: table-cell;
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	}
+
+canvas{
+	}
+
+.btn-primary{
+	width: 6vw;
+	height: 42px;
+	display: inline-block;
+	padding: 6px 12px;    		
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;    		
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-transform: none;
+	overflow: visible;
+	box-sizing: border-box;
+	}
+.btn-warning{
+	width: 6vw;
+	height: 42px;
+	display: inline-block;
+	padding: 6px 12px;    		
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;    		
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-transform: none;
+	overflow: visible;
+	box-sizing: border-box;
+}
+.splitImgDown{
+	width: 100%;
+	}
+.InfoTitle{
+	width: 100%;
+	color: #595959;
+	font-family: "微软雅黑";
+	font-weight: 200;
+	margin:30px auto  20px;
+	border-bottom: 1px solid #bcbcbc;
+
+}
+
+.InfoContent{
+	width:100%;
+	margin-top: 30px;
+	border-top: 1px solid #cfcfcf;
+}
+#baseInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;
+
+}
+#baseInfouse{
+	margin:1vw auto;
+	border-bottom:1px solid #bcbcbc;	
+}
+#bankInfoFrom{
+	width: 90%;
+	margin:0 auto;	
+}
+#bankInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;	
+}
+#alipayInfoFrom{
+	width: 90%;
+	margin:0 auto;	
+}
+#alipayInfo{
+	margin:1vw auto;	
+}
+#baseInfoFrom{
+	width: 90%;
+	margin:0 auto;
+}
+#baseInfoFromuse{
+	width: 90%;
+	margin:0 auto;	
+}
+#KnowLangInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;
+}
+#KnowLangFrom{
+	width: 90%;
+	margin:0 auto;		
+}
+.addBtn{
+	margin:1vw auto;
+	text-align:center;
+	width:90%;
+}
+.addBtnImg{
+	width: 2vw;
+	height: 2vw;
+}
+.layui-inline{
+	margin:1.5vw 0.5vw !important; 
+}
+.input-right{
+}
+.layui-form-label{
+	width: 70px;
+}
+.input-short{
+	width:18vw;
+}
+.input-long{
+	width: 46vw;;
+}
+
+}
+
+
+
+
+
+
+
+/* 宽度大于1280时 */
+@media (min-width:1280px){
+
+#main{
+	width: 80%;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    margin: 1vw auto;
+}
+
+.title1{
+	font-size: 18px;
+	display: block;
+	margin-top: 8px;
+}
+.title2{
+	font-size:16px;
+	display: block;
+	margin-left: 30px;
+	margin-top: 8px;
+	word-spacing:2px;
+}
+#Content1{
+	height: 258px;
+	width: 80%;
+	margin:0 auto;
+	border: 1px solid red;
+}	
+
+
+.demoimg{
+	width: 4vw;
+	height: 4vw;
+	border-radius: 4vw;
+}
+.demotitele{
+	color: #7d8b96;
+
+}
+.everdemotitle{
+	color: #666;
+	font-size: 0.8vw;
+
+}
+#fileuploadnote{
+	color:red;
+	margin:1vw auto;
+
+}
+.uploadnotetext{
+	text-align: center;
+
+}
+.fileinput-button{
+	color: #000;		
+	padding: 1px 5px;		
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: burlywood;
+	box-sizing: border-box;
+	background-color: rgba(235, 235, 235, 1);
+	display: table;
+	border: 1px solid #c6c6c6;
+	
+}
+#uploadimg{
+	vertical-align: middle;
+	display: table-cell;
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	}
+
+
+.btn-primary{
+	width: 6vw;
+	height: 42px;
+	display: inline-block;
+	padding: 6px 12px;    		
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;    		
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-transform: none;
+	overflow: visible;
+	box-sizing: border-box;
+	}
+.btn-warning{
+	width: 6vw;
+	height: 42px;
+	margin-left: 10px;
+	display: inline-block;
+	padding: 6px 12px;    		
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;    		
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-transform: none;
+	overflow: visible;
+	box-sizing: border-box;
+}
+.splitImgDown{
+	width: 100%;
+	}
+.InfoTitle{
+	width: 100%;
+	color: #595959;
+	font-family: "微软雅黑";
+	font-weight: 200;
+	margin:30px auto  20px;
+	border-bottom: 1px solid #bcbcbc;
+
+}
+
+.InfoContent{
+	width:100%;
+	margin-top: 30px;
+	border-top: 1px solid #cfcfcf;
+}
+#baseInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;
+
+}
+#baseInfouse{
+	margin:1vw auto;
+	border-bottom:1px solid #bcbcbc;	
+}
+#bankInfoFrom{
+	width: 90%;
+	margin:0 auto;	
+}
+#bankInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;	
+}
+#alipayInfoFrom{
+	width: 90%;
+	margin:0 auto;	
+}
+#alipayInfo{
+	margin:1vw auto;	
+}
+#baseInfoFrom{
+	width: 90%;
+	margin:0 auto;
+}
+#baseInfoFromuse{
+	width: 90%;
+	margin:0 auto;	
+}
+#KnowLangInfo{
+	margin:1vw auto;
+	border-bottom:1px solid #e2e2e2;
+}
+#KnowLangFrom{
+	width: 90%;
+	margin:0 auto;		
+}
+.addBtn{
+	margin:1vw auto;
+	text-align:center;
+	width:90%;
+}
+.addBtnImg{
+	width: 2vw;
+	height: 2vw;
+}
+.layui-inline{
+	margin:1.5vw 1.5vw !important; 
+}
+.input-right{
+}
+.layui-form-label{
+	width: 70px;
+}
+.input-short{
+	width:19vw;
+}
+.input-long{
+	width: 45vw;;
+}
+
+
+}
+
+

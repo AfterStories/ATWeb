@@ -1,0 +1,303 @@
+	/*header区域*/
+ul,li{list-style: none;}
+#StuColor{
+	text-decoration: none;
+	color: #ff7a57;
+	font-size: 18px;
+	font-family: Microsoft Yahei;
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+#TopBox{
+		width: 100%;
+		height: 5.7vw;
+		background-color: #fff;
+		float: left;
+  		display: -webkit-flex;
+  		display:flex;
+  		justify-content:space-between;
+ 		-webkit-align-items: center;
+        align-items: center;		
+}
+
+#TopMenu ul{
+	height: 100%;	
+}
+
+#TopLogo{
+	margin-left:2.42vw;
+	cursor: pointer;
+}
+#TopMenu{
+	height: 100%;
+}
+
+#TopLogo img{
+    width: 13.46vw;;
+    height: 3vw;
+}
+
+
+
+
+
+
+
+#TopMenu .nav-tab{	
+	height: 100%;		        
+	width: 16vw; 
+	border-left:1px solid #d2d2d2;                
+	text-align: center;                
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+                 
+	}
+.nav-big-tab{	
+	height: 100%;		        
+	width: 12vw;
+	border-left:1px solid #d2d2d2;                
+	text-align: center;                
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;           
+}	
+.otherBtn{
+	text-decoration: none;
+	color: #7d8b96;
+	font-size: 8px;;
+	font-family: Microsoft Yahei;
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+@media (max-width:640px){
+	#TopMenu .nav-tab{	
+	height: 100%;		        
+	width: 16vw; 
+	border-left:1px solid #d2d2d2;                
+	text-align: center;                
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+                 
+	}
+.nav-big-tab{	
+	height: 100%;		        
+	width: 12vw;
+	border-left:1px solid #d2d2d2;                
+	text-align: center;                
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;           
+}	
+.otherBtn{
+	text-decoration: none;
+	color: #7d8b96;
+	font-size: 8px;;
+	font-family: Microsoft Yahei;
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+#StuColor{
+	text-decoration: none;
+	color: #ff7a57;
+	font-size: 8px;
+	font-family: Microsoft Yahei;
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+}
+
+
+
+
+/* 宽度大于640 小于1000时 */
+@media (min-width:640px) and (max-width:1000px){
+
+#TopMenu .nav-tab{	
+	height: 100%;		        
+	width: 10vw; 
+	border-left:1px solid #d2d2d2;                
+	text-align: center;                
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+                 
+	}
+.nav-big-tab{	
+	height: 100%;		        
+	width: 11vw;; 
+	border-left:1px solid #d2d2d2;                
+	text-align: center;                
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;           
+}	
+.otherBtn{
+	text-decoration: none;
+	color: #7d8b96;
+	font-size: 12px;
+	font-family: Microsoft Yahei;
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+#StuColor{
+	text-decoration: none;
+	color: #ff7a57;
+	font-size: 12px;
+	font-family: Microsoft Yahei;
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+}
+
+
+
+
+
+
+
+/* 宽度大于1000 小于1600时 */
+@media (min-width:1000px) and (max-width:1600px){
+
+#TopMenu .nav-tab{	
+	height: 100%;		        
+	width: 134px; 
+	border-left:1px solid #d2d2d2;                
+	text-align: center;                
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+                 
+	}
+.nav-big-tab{	
+	height: 100%;		        
+	width: 157px; 
+	border-left:1px solid #d2d2d2;                
+	text-align: center;                
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;           
+}	
+.otherBtn{
+	text-decoration: none;
+	color: #7d8b96;
+	font-size: 18px;
+	font-family: Microsoft Yahei;
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+#StuColor{
+	text-decoration: none;
+	color: #ff7a57;
+	font-size: 18px;
+	font-family: Microsoft Yahei;
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+}
+
+
+
+
+
+
+
+
+/* 宽度大于1600时 */
+@media (min-width:1600px) {
+
+#TopMenu .nav-tab{	
+	height: 100%;		        
+	width: 134px; 
+	border-left:1px solid #d2d2d2;                
+	text-align: center;                
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+                 
+	}
+.nav-big-tab{	
+	height: 100%;		        
+	width: 157px; 
+	border-left:1px solid #d2d2d2;                
+	text-align: center;                
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;           
+}	
+.otherBtn{
+	text-decoration: none;
+	color: #7d8b96;
+	font-size: 18px;
+	font-family: Microsoft Yahei;
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+#StuColor{
+	text-decoration: none;
+	color: #ff7a57;
+	font-size: 18px;
+	font-family: Microsoft Yahei;
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+}
+
+

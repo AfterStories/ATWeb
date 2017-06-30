@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>My Lessons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap -->
+
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' media="all" />
+<link rel="stylesheet" href="../lib/layui/css/layui.css"  media="all">
+<!-- //bootstrap -->
+<link href="css/dashboard.css" rel="stylesheet">
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
+
+<link href="css/SignIn.css" rel='stylesheet' type='text/css' media="all" />
+<style>
+	#SmallClass,#OneToOneLessons{
+		overflow: hidden;
+	}
+</style>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="../lib/layui/layui.js"> </script>
+<script src="js/md5.js"></script>
+<script src="js/Sign In.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/SmallClass.js"></script>
+
+
+
+
+
+
+<!--start-smoth-scrolling-->
+<!-- fonts -->
+ 
+ 
+<!-- //fonts -->
+</head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.aretalk.com"><h1><img src="images/logo.png" alt="" /></h1></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+		<div id="userHeadImg"><img id="TopuserHeadImg" src="" alt=""></div>
+		<div id="download" onclick="download()">下载客户端</div>
+
+			<div class="top-search">
+				<form class="navbar-form navbar-right">
+					<input type="text" class="form-control" placeholder="Search...">
+					<input type="submit" value=" ">
+				</form>
+			</div>
+
+
+		<div class="clearfix"> </div>
+      </div>
+		<div class="clearfix"> </div>
+      </div>
+    </nav>
+	<div class="copyrights">Collect from <a href="#" >AreTalk</a></div>
+        <div class="col-sm-3 col-md-2 sidebar">
+			<div class="top-navigation">
+				<div class="t-menu">MENU</div>
+				<div class="t-img">
+					<img src="images/lines.png" alt="" />
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+				<div class="drop-navigation drop-navigation">
+
+					<ul class="nav nav-sidebar">
+					<li ><a href="index.html" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>主页</a></li>
+					<li><a href="My Lessons.html" class="user-icon"><span class="glyphicon  glyphicon-book" aria-hidden="true"></span>我的课程</a></li>
+ 
+					<li class="active"><a href="SmallClasses.html?LangId=2" class="user-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>小班课</a></li>
+					<li ><a href="1to1.html?LangId=2" class="user-icon"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>一对一课程</a></li>										
+ 
+<!-- 					<li><a href="#" class="menu1"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>小班课<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
+	<ul class="cl-effect-2" id="smallclass-menu">
+
+
+	</ul> -->
+						<!-- script-for-menu -->
+
+
+<!-- 					<li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>一对一课程<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
+
+	<ul class="cl-effect-1" id="1to1-menu">
+
+
+	</ul> -->
+						<!-- script-for-menu -->
+
+					<li><a href="FM.html" class="song-icon"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>FM 电台</a></li>
+					
+				  </ul>
+						<script>
+							$( ".top-navigation" ).click(function() {
+							$( ".drop-navigation" ).slideToggle( 300, function() {
+							// Animation complete.
+							});
+							});
+						</script>
+
+				</div>
+								<div class="NavShare">	
+	<div id="navhelpbox">
+		<img src="images/navHELP.png" id="navhelpimg">
+	</div>				
+	<div id="NavShareBtn">
+		<img src="images/navFB.png" class="navshareImg" alt="share to facebook">
+		<img src="images/navTW.png" class="navshareImg" alt="share to twitter">
+		<img src="images/navWB.png" class="navshareImg" alt="share to weibo">
+		<img src="images/navWC.png" class="navshareImg" alt="share to wechat">
+	</div>
+</div> 
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<div class="main-grids">
+				<div class="top-grids" id="SmallClass">
+					<div class="recommended-info">
+						<h3 class="LessonTabContent">小班课 课程</h3>
+					</div>
+
+				</div>
+			</div>
+			
+		</div>
+		<div class="clearfix"> </div>
+	<div class="drop-menu">
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
+		  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Regular link</a></li>
+		  <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
+		  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another link</a></li>
+		</ul>
+	</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  </body>
+</html>

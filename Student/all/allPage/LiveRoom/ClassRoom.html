@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ClassRoom</title>
+	<link href="nep.min.css" rel="stylesheet">
+
+<script src="jquery.js"></script>
+</head>
+<body id="LiveWin" style="margin:0;padding: 0;">
+
+</body>
+<style type="text/css">
+#LiveWin{
+	width:100%;
+	height:100%;
+      margin: 0;
+    padding:0; 
+}
+body,html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding:0; 
+}
+
+</style>
+
+<script src="nep.min.js"></script>	
+<script>
+/*注意： 使用data-setup时，initOptions将无效，因为播放器已经自动加载过了*/
+function getCookie(c_name) {
+  var c_value = document.cookie;
+  var c_start = c_value.indexOf(" " + c_name + "=");
+  if (c_start == -1) {
+      c_start = c_value.indexOf(c_name + "=");
+  }
+  if (c_start == -1) {
+      c_value = null;
+  }
+  else {
+      c_start = c_value.indexOf("=", c_start) + 1;
+      var c_end = c_value.indexOf(";", c_start);
+      if (c_end == -1) {
+          c_end = c_value.length;
+      }
+      c_value = unescape(c_value.substring(c_start, c_end));
+  }
+  return c_value;
+}
+
+function GetQueryString_parent(name){
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.parent.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+
+var Sessionid = getCookie("JSESSIONID");
+var thelessonId = GetQueryString_parent("thelessonId");
+var ClassNo = GetQueryString_parent("ClassNo");
+
+
+var LIVEUrl/*='rtmp://live.hkstv.hk.lxdns.com/live/hks'*/;
+$(document).ready(function(){
+getLive();
+        $(document.body).css({
+        "overflow-x":"hidden",
+        "overflow-y":"hidden"
+      });
+var container = document.getElementById('LiveWin');
+function getLive(){
+
+      $.ajax({
+        async:false,
+        type: "POST",
+        url: 'http://211.159.152.210:8188/AreTalkServer/Web/Api/getClassRoomInfo.action;jsessionid='+Sessionid,
+        data: {lessonId :thelessonId,classNo :ClassNo},
+        success: function (data) {
+
+          if (data.data.pullUrl.rtmpPullUrl) { 
+             LIVEUrl = data.data.pullUrl.rtmpPullUrl;
+             $("#LiveWin").empty();
+
+          }else{
+            alert("当前尚未开课")
+          }
+   
+
+        },
+        error: function () {
+
+                 }
+        });
+
+
+}
+
+
+
+var container = document.getElementById('LiveWin');
+container.innerHTML = '<video id="my-video" class="video-js vjs-waiting vjs-fluid" controls poster="poster.png" preload="auto" ><source src="'+LIVEUrl+'" type="video/mp4"></video>';
+
+/*container.innerHTML ='<video id="my-video" class="video-js" x-webkit-airplay="allow" webkit-playsinline controls poster="//nos.netease.com/vod163/poster.png" preload="auto" width="640" height="360" data-setup="{}"><source src="//nos.netease.com/vod163/demo.mp4" type="video/mp4"></video>'*/
+
+var myPlayer = neplayer("my-video",
+{
+	"autoplay": true,
+	"bigPlayButton":false//成功啦
+
+}
+);
+
+
+/*myPlayer.play();*/
+
+})
+
+</script>
+
+
+</html>

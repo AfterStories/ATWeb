@@ -1,0 +1,329 @@
+
+/*主内容区域*/
+.splitImgDown{
+	width: 100%;
+}
+.clear{ clear:both}
+
+
+
+/* 设备屏幕自适应 */
+
+@media (max-width: 769px) {
+		#InfoTitle{
+			width: 85%;
+			height: 102px;
+			margin:0 auto; 
+			color: #4b4b4b;
+			font-family:Microsoft Yahei;
+		}
+
+		#InfoTitle-text1{
+			font-size: 30px;
+			margin-top: 20px;
+			margin-left: 40px;
+		}
+
+		.InfoContent>img{
+			float: left;
+			height:6vw; 
+			width:6vw;
+		}
+		.InfoContent-right>img{
+			float: left;
+			height:6vw; 
+			width:6vw;
+		}		
+	.InfoContent-right{
+		margin:2vw 0;
+		float: left;
+		width: 100%;
+		height:6vw;
+		font-size: 16px;
+		color: #4b4b4b;
+		font-family:Microsoft Yahei;
+		position: relative;
+
+		}	
+		.InfoText{
+			position: absolute;
+			padding-left: 7vw;
+			float: left;
+			height: 100%;
+			padding-top: 1vw;
+
+		}
+		 
+		#SignUpBtn{
+			width:50%;
+			height: 55px;
+			background-color: #67c5f0;
+			font-size: 22px;
+			font-family:Microsoft Yahei;
+			color: #fff;
+			cursor:pointer;
+			text-align: center;
+			line-height:55px;
+			border-radius: 10px;
+			margin: 30px auto;
+			
+		}
+
+
+	#main{
+		width: 85%;			
+		margin:60px auto;
+		
+	}	
+	#Info{
+		width: 80%;
+		margin:0 auto; 
+		}
+	.InfoContent{
+		margin:3vw 0;
+		float: left;
+		width: 100%;
+		height:6vw;
+		font-size: 16px;
+		color: #4b4b4b;
+		font-family:Microsoft Yahei;
+		position: relative;
+
+		}			
+	#InfoTitle-text2{
+		font-size: 20px;
+		margin-left: 40px;
+		margin-top: 10px;
+		}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 大于768且小于1280px */
+
+@media (min-width:769px) and (max-width:1280px){
+		#InfoTitle{
+			width: 85%;
+			height: 102px;
+			margin:0 auto; 
+			color: #4b4b4b;
+			font-family:Microsoft Yahei;
+		}
+
+		#InfoTitle-text1{
+			font-size: 30px;
+			margin-top: 20px;
+			margin-left: 40px;
+
+
+		}
+
+		.InfoContent>img{
+			float: left;
+			height:4vw; 
+			width:4vw;
+		}
+		.InfoContent-right>img{
+			float: left;
+			height:4vw; 
+			width:4vw;
+		}		
+	.InfoContent-right{
+			margin:10px 0;
+			width: 50%;
+			height:48px;
+			font-size: 16px;
+			color: #4b4b4b;
+			font-family:Microsoft Yahei;
+			position: relative;
+			float:right;
+
+		}	
+		.InfoText{
+			position: absolute;
+			padding-left: 4.5vw;
+			float: left;
+			height: 100%;
+			padding-top: 0.5vw;
+
+		}
+		 
+		#SignUpBtn{
+			width:50%;
+			height: 55px;
+			background-color: #67c5f0;
+			font-size: 22px;
+			font-family:Microsoft Yahei;
+			color: #fff;
+			cursor:pointer;
+			text-align: center;
+			line-height:55px;
+			border-radius: 10px;
+			margin: 30px auto;
+			
+		}
+
+	#main{
+		width: 95%;			
+		margin:60px auto;
+		
+	}
+	#Info{
+		width: 90%;
+		margin:0 auto;
+	}
+	.InfoContent{
+			margin:10px 0;
+			float: left;
+			height:48px;
+			font-size: 16px;
+			color: #4b4b4b;
+			font-family:Microsoft Yahei;
+			width:50%;
+			position:relative;
+
+		}		
+	#InfoTitle-text2{
+		font-size: 20px;
+		margin-left: 80px;
+		margin-top: 10px;
+		}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 宽度大于1280时 */
+@media (min-width:1280px){
+			#InfoTitle{
+			width: 85%;
+			height: 102px;
+			margin:0 auto; 
+			color: #4b4b4b;
+			font-family:Microsoft Yahei;
+		}
+
+		#InfoTitle-text1{
+			font-size: 30px;
+			margin-top: 20px;
+			margin-left: 40px;
+
+
+		}
+
+		.InfoContent>img{
+			float: left;
+			height:2.5vw; 
+			width:2.5vw;
+		}
+		.InfoContent-right>img{
+			float: left;
+			height:2.5vw; 
+			width:2.5vw;
+		}		
+
+		.InfoText{
+			position: absolute;
+			padding-left: 3vw;
+			float: left;
+			height: 100%;
+			padding-top: 0.5vw;
+
+		}
+		 
+		#SignUpBtn{
+			width:50%;
+			height: 55px;
+			background-color: #67c5f0;
+			font-size: 22px;
+			font-family:Microsoft Yahei;
+			color: #fff;
+			cursor:pointer;
+			text-align: center;
+			line-height:55px;
+			border-radius: 10px;
+			margin: 30px auto;
+			
+		}
+
+	#main{
+		width: 95%;			
+		margin:60px auto;
+		
+	}	
+	#Info{
+			width: 75%;
+			margin:0 auto; 
+		}
+	.InfoContent{
+			margin:10px 0;
+			width: 30vw;
+			height:48px;
+			font-size: 16px;
+			color: #4b4b4b;
+			font-family:Microsoft Yahei;
+			position: relative;
+			margin-right: 10px;
+			float:left;
+
+		}	
+	.InfoContent-right{
+			margin:10px 0;
+			width: 30vw;
+			height:48px;
+			font-size: 16px;
+			color: #4b4b4b;
+			font-family:Microsoft Yahei;
+			position: relative;
+			margin-right: 10px;
+			float:right;
+
+		}	
+	#InfoTitle-text2{
+		font-size: 20px;
+		margin-left: 80px;
+		margin-top: 10px;
+		}
+
+
+}
+
+
+

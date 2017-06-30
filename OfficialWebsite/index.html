@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="UTF-8">
+<title>AreTalk</title>
+<head>
+
+<link rel="stylesheet" href="lib/css/reset.css">
+<link rel="stylesheet" href="lib/header/css/dropkick.css" type="text/css">
+<link rel="stylesheet" href="lib/js/Swiper/dist/css/swiper.min.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="lib/css/header.css">
+<link rel="stylesheet" href="lib/css/footer.css">
+
+
+<script src="lib/js/jquery.js"></script>
+<script src="lib/header/js/dropkick.js"></script>
+<script src="lib/js/lang/langchange.js" type="text/javascript"></script>
+<script src="lib/js/Swiper/dist/js/swiper.min.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+
+	<div id="header">
+		
+	</div>
+
+
+
+	<div id="FirstMain">
+		<div id="FirstImg">
+			<img class="splitImgDown" src="images/splitImgDown.png"/>	
+			<img id="HomeFirstImg" src="images/HomeFirstImg.png"></><!-- 背景图 -->			
+			<img class="splitImgUp" src="images/splitImgUp.png"/>
+		</div>
+		<div id="FitstImgContent">
+			<div id="FirstImgText">Aretalk 在线直播中文教育平台</div>
+			<a id="FirstImgBtn" href="register.html">立即注册</a>
+		</div>	
+
+	</div>
+	<div id="DiffMain" class="MidBox">
+		<div id="DiffTittle">
+			<div id="tittleText">Aretalk的优势</div>
+			<img id="TittleLine" src="images/TittleLine.png" />
+		</div>
+			<img id="DiffImg" src="images/DiffMain.png" alt="" />
+	</div>
+	<div id="FuncMain" class="AdBox">	
+		<img class="splitImgDown" src="images/splitImgDown.png"/>
+			<div id="FuncTittle">平台主要功能</div>			
+			<div id="swiperAd">
+		    	<div class="swiper-container">
+        			<div class="swiper-wrapper">
+            			<div class="swiper-slide"><img src="images/SwiperAd(1).png"></div>
+            			<div class="swiper-slide"><img src="images/SwiperAd(2).png"></div>
+            			<div class="swiper-slide"><img src="images/SwiperAd(3).png"></div>
+       				</div>
+    			</div>				
+			</div>
+					<div class="swiper-pagination"></div>
+					<img class="swiper-button-prev" src="images/pre.png" />
+					<img class="swiper-button-next" src="images/next.png" />					
+		<img class="splitImgUp" src="images/splitImgUp.png"/>		
+	</div>
+	<div id="AdMain" class="LowAdBox">
+		<div id="AdTable">
+			<div class="smAdBox">
+				<img src="images/light.png" alt="" class="smAdImg" />
+				<div class="smAdText">
+					<div class="smAdTittle">让学习更轻松</div>
+					<div class="smAdsummary">借助教辅资料快速掌握中文</div>
+				</div>
+			</div>
+			<div class="smAdBox">
+				<img src="images/phone.png" alt="" class="smAdImg" />
+				<div class="smAdText">
+					<div class="smAdTittle">1对1教学</div>
+					<div class="smAdsummary">个性化定制教学课程，专业教师全程跟踪</div>
+				</div>
+			</div>
+			<div class="smAdBox">
+				<img src="images/A+.png" alt="" class="smAdImg" />
+				<div class="smAdText">
+					<div class="smAdTittle">能力迅速提升</div>
+					<div class="smAdsummary">让你的中文学习水平得到快速提升</div>
+				</div>
+			</div>			
+			<div class="smAdBox">
+				<img src="images/pc.png" alt="" class="smAdImg" />
+				<div class="smAdText">
+					<div class="smAdTittle">极致用户体验</div>
+					<div class="smAdsummary">电脑、手机、平板电脑多途径登录</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="BigAdMain" class="MicAdBox">
+		<img class="splitImgDown" src="images/splitImgDown.png"/>
+		<div id="BigAdBox">
+		
+				<div id="BigAdText" class="BigAdinnerBox">
+					<div id="BigAdTittle">Aretalk在线直播中文学习平台</br>想你所想</div>
+					<div id="BigAdContent">学习可以发生在任何地方,我们的应用程序将在您的计算机上,和移动设备上提供增强更快的流以随时学习。</div>
+				</div>
+				<div id="bigAdImg" class="BigAdinnerBox"><img src="images/BigAd.png" alt="AreTalk" /><div class="clear"></div></div>
+		
+				
+	</div>
+	<img class="splitImgUp" src="images/splitImgUp.png"/>
+</div>	
+	
+
+	<footer>
+		
+	</footer>
+
+
+<script>
+$(document).ready(function(){ 
+	$("#header").load("lib/header/header.html",function(){
+	
+
+	});
+
+	$("footer").load("lib/footer/footer.html",function(){
+		$('.changeLangSet').dropkick({
+
+        change: function (value) {
+
+          $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
+          $("#LanguagePic img").attr("src","images/"+value+".png");
+        }
+
+      });
+
+	})
+
+
+
+	var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+		prevButton:'.swiper-button-prev',
+		nextButton:'.swiper-button-next',        
+        slidesPerView: 3,
+        paginationClickable: true,
+        spaceBetween: 10,
+        loop : true,
+        autoplay :2000
+    });
+})
+
+
+ 
+</script>
+
+</body>
+</html>

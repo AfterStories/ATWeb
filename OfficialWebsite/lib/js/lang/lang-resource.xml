@@ -1,0 +1,72 @@
+<content>
+		<text id="Language">
+		<zh>选择语言：</zh>
+		<en>Language：</en>
+	</text>
+	<text id="Download">
+		<zh>下载客户端</zh>
+		<en>Download</en>
+	</text>
+	<text id="Help">
+		<zh>帮助中心</zh>
+		<en>Help</en>
+	</text>	
+	<text id="I'm Teacher">
+		<zh>我是教师</zh>
+		<en>I'm Teacher</en>
+	</text>
+	<text id="Login">
+		<zh>我是学生</zh>
+		<en>I'm Student</en>
+	</text>
+	<text id="register">
+		<zh>加入我们</zh>
+		<en>Join us</en>
+	</text>
+		<text id="About">
+		<zh>相关信息</zh>
+		<en>About</en>
+	</text>
+		<text id="About Us">
+		<zh>关于我们</zh>
+		<en>About Us</en>
+	</text>
+		<text id="Contact Us">
+		<zh>联系我们</zh>
+		<en>Contact Us</en>
+	</text>
+		<text id="Cooperative Partner">
+		<zh>合作机构</zh>
+		<en>Cooperative Partner</en>
+	</text>
+		<text id="Business Cooperation">
+		<zh>商业合作</zh>
+		<en>Business Cooperation</en>
+	</text>
+		<text id="Development opportunity">
+		<zh>发展机会</zh>
+		<en>Development opportunity</en>
+	</text>
+		<text id="Other">
+		<zh>其他</zh>
+		<en>Other</en>
+	</text>
+		<text id="Help">
+		<zh>帮助信息</zh>
+		<en>Help</en>
+	</text>
+		
+		<text id="Terms privacy">
+		<zh>隐私/协议</zh>
+		<en>Terms privacy</en>
+
+		</text>
+		<text id="Help Center">
+		<zh>帮助中心</zh>
+		<en>Help Center</en>
+	</text>
+
+
+</content>
+	
+

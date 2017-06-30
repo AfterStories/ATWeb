@@ -1,0 +1,1303 @@
+
+html,body{
+min-width: 414px;
+background-color: #f9f9f9;
+position: relative;
+}
+
+.layui-form-checked[lay-skin=primary] i {
+    border-color: #5FB878;
+    background-color: #39afef;
+    color: #fff;
+}
+
+.splitImgDown{
+	width: 100%;
+}
+
+.layui-input-phoneNum{
+    border: 1px solid #cfcfcf;
+    background-color: #fff;
+    display: block;
+    border-radius: 0 2px 2px 0;
+    padding: 0;
+    color: #777;
+    height: 3vw;
+    line-height: 3vw;
+    float: left;
+    display: block;
+    position: relative;
+
+}
+.layui-input-phoneNum:hover{
+	    border-color: #cfcfcd!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 设备屏幕自适应 */
+@media (max-width: 414px) {	
+
+
+
+#login{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 20px auto;
+	width: 80vw;
+	height: 33rem;
+	top: 12vw;	
+}
+
+#LoginTitle{
+	text-align:center;
+	font-size: 30px;
+	color: #4b4b4b;
+	height:4vw;
+	margin:20px;
+}
+#LoginTitle img{
+width: 211px;
+height: 52px;
+
+}
+#LogoText{
+	font-size: 26px;
+	color: #39b0ef;
+	margin-top: 20px;
+}
+
+.layui-form-item {
+	margin-bottom: 15px;
+    clear: both;
+    
+}
+#SignBtn{
+	width:50%;
+	height:10vw;
+	background-color: #39b0ef;
+	font-size: 15px;
+	font-family:"Microsoft Yahei";
+	color: #fff;
+	cursor:hand;
+	text-align: center;
+	line-height:10vw;
+	border-radius: 5px;;
+	cursor:pointer;
+	margin: 10px auto 0;
+	position:absolute;
+	right:0;
+	left: 0;
+	bottom: 0;
+}
+#forget{
+	height: 30px;
+	float: left;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#forget a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+
+#goRegister{
+	height: 30px;
+	float: right;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#goRegister a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+#StayLogin{
+	float: left;
+	margin: 5px 10px 5px 0px;
+	position: absolute;
+	font-size: 12px; 
+}
+#StayLogin span{
+color: #999;
+margin-left: 10px;
+
+}
+#protocol{
+text-decoration: none;
+color: #39b0ef;	
+}
+#LoginSet{	
+	height:35px;
+	overflow: hidden;
+}
+
+#OtherLogin{	
+	height: 63px;
+	width: 100%;
+	line-height:63px;
+	text-align: center
+}
+.OtherLogin{
+	height: 63px;
+	width: 100%;
+	line-height: 63px;
+	text-align: center;
+	font-size:18px;
+	color: #898989;	
+}
+.OtherLogin a{
+	color: #0096ff;
+	text-decoration: none;
+	font-size:18px;	
+}
+#line{
+	width:90%;
+	margin:0 auto;
+	height:1px;
+	border-top: 1px #cacaca solid; 
+}
+.loginInput{
+	-webkit-box-shadow:0 0 0 50px #fff inset; 
+	-webkit-text-fill-color: #cacaca;
+}
+.layui-form-label,.layui-input{
+	height: 8vw;
+	line-height: 8vw;
+	padding: 0;	
+	color: #777;		
+}
+
+.layui-input{
+padding-left: 10px;
+}
+
+#sendCode{
+    display: inline-block;
+    float: right;
+    height:6vw;
+    line-height:6vw;
+    padding: 0 2vw;
+    background-color: #39b0ef;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 2vw;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 1vw;
+}
+.layui-input-block{
+	margin-left: 20vw;
+    left: -1px;
+}
+#PhoneNmuAre{
+	font-size: 12px;
+	width: 10vw;
+	border:none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+	background: url("../images/arrow.png") no-repeat scroll right center transparent;
+		color: #777;
+}
+
+.inputName{
+width: 20vw;
+height: 8vw;
+line-height:8vw;
+font-size: 12px;
+}
+.sex-item{
+    width: 100%;
+    height: 8vw;
+    line-height: 8vw;
+    padding: 0;
+    color: #777;
+    border: 1px solid #cfcfcf;
+}
+.sexinput{
+border-right: 1px solid #cfcfcf;
+    border-radius: 2px 0 0 2px;
+    text-align: center;
+    background-color: #FBFBFB;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    float: left;
+    display: block;
+    position: relative;
+    padding: 0;
+    color: #777;
+    width: 20vw;
+    height: 8vw;
+    line-height: 8vw;
+    font-size: 12px;
+}
+.layui-form-radio i {
+    margin-right: 8px;
+    font-size: 16px;
+    color: #39b0ef;
+}
+.layui-form-radio {
+    line-height: 3vw;
+    margin: 0px 10px 0 0;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 0;
+    height: 3vw;
+}
+
+.layui-form-item .layui-input-inline{
+	width: 5vw;
+	margin-right: 0px;
+}
+.PhoneNum-inline{
+	width: 22vw;
+    margin-right: 0px;
+    margin-left: -1px;
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.layui-form-item .layui-input-inline{
+	margin-right: 0px;
+	width: 18vw;
+}
+.PhoneNum-inline{
+	width: 42vw;
+    margin-right: 0px;
+    margin-left: -1px;
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 414px) and (max-width: 736px){
+
+#login{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 20px auto;
+	width: 80vw;
+	height: 78vh;
+	/* overflow: hidden; */;
+	top: 12vw;	
+}
+
+#LoginTitle{
+	text-align:center;
+	font-size: 30px;
+	color: #4b4b4b;
+	height:4vw;
+	margin:20px;
+}
+#LoginTitle img{
+width: 211px;
+height: 52px;
+
+}
+#LogoText{
+	font-size: 26px;
+	color: #39b0ef;
+	margin-top: 20px;
+}
+
+.layui-form-item {
+	margin-bottom: 15px;
+    clear: both;
+    
+}
+#SignBtn{
+	width:50%;
+	height:10vw;
+	background-color: #39b0ef;
+	font-size: 15px;
+	font-family:"Microsoft Yahei";
+	color: #fff;
+	cursor:hand;
+	text-align: center;
+	line-height:10vw;
+	border-radius: 5px;;
+	cursor:pointer;
+	margin: 10px auto 0;
+	position:absolute;
+	right:0;
+	left: 0;
+	bottom: 0;
+}
+#forget{
+	height: 30px;
+	float: left;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#forget a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+
+#goRegister{
+	height: 30px;
+	float: right;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#goRegister a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+#StayLogin{
+	float: left;
+	margin: 5px 10px 5px 0px;
+	position: absolute;
+	font-size: 10px; 
+}
+#StayLogin span{
+color: #999;
+margin-left: 10px;
+
+}
+#protocol{
+text-decoration: none;
+color: #39b0ef;	
+}
+#LoginSet{	
+	height:35px;
+	overflow: hidden;
+}
+
+#OtherLogin{	
+	height: 63px;
+	width: 100%;
+	line-height:63px;
+	text-align: center
+}
+.OtherLogin{
+	height: 63px;
+	width: 100%;
+	line-height: 63px;
+	text-align: center;
+	font-size:18px;
+	color: #898989;	
+}
+.OtherLogin a{
+	color: #0096ff;
+	text-decoration: none;
+	font-size:18px;	
+}
+#line{
+	width:90%;
+	margin:0 auto;
+	height:1px;
+	border-top: 1px #cacaca solid; 
+}
+.loginInput{
+	-webkit-box-shadow:0 0 0 50px #fff inset; 
+	-webkit-text-fill-color: #cacaca;
+}
+.layui-form-label,.layui-input{
+	height: 8vw;
+	line-height: 8vw;
+	padding: 0;	
+	color: #777;		
+}
+
+.layui-input{
+padding-left: 10px;
+}
+
+#sendCode{
+    display: inline-block;
+    float: right;
+    height:6vw;
+    line-height:6vw;
+    padding: 0 2vw;
+    background-color: #39b0ef;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 2vw;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 1vw;
+}
+.layui-input-block{
+	margin-left: 20vw;
+    left: -1px;
+}
+#PhoneNmuAre{
+	font-size: 12px;
+	width: 10vw;
+	border:none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+	background: url("../images/arrow.png") no-repeat scroll right center transparent;
+		color: #777;	
+}
+
+.inputName{
+width: 20vw;
+height: 8vw;
+line-height:8vw;
+}
+.sex-item{
+    width: 100%;
+    height: 8vw;
+    line-height: 8vw;
+    padding: 0;
+    color: #777;
+    border: 1px solid #cfcfcf;
+}
+.sexinput{
+border-right: 1px solid #cfcfcf;
+    border-radius: 2px 0 0 2px;
+    text-align: center;
+    background-color: #FBFBFB;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    float: left;
+    display: block;
+    position: relative;
+    padding: 0;
+    color: #777;
+    width: 20vw;
+    height: 8vw;
+    line-height: 8vw;
+}
+.layui-form-radio i {
+    margin-right: 8px;
+    font-size: 22px;
+    color: #39b0ef;
+}
+.layui-form-radio {
+    line-height: 3vw;
+    margin: 5px 10px 0 0;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 0;
+    height: 3vw;
+}
+
+.layui-form-item .layui-input-inline{
+	margin-right: 0px;
+	width: 15vw;
+}
+.PhoneNum-inline{
+	width: 45vw;
+    margin-right: 0px;
+    margin-left: -1px;
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:736px) and (max-width:1280px){
+#login{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	width: 50vw;
+	height: 70vw;
+	top: 12vw;	
+}
+
+#LoginTitle{
+	text-align:center;
+	font-size: 30px;
+	color: #4b4b4b;
+	height:4vw;
+	margin:20px;
+}
+#LoginTitle img{
+width: 211px;
+height: 52px;
+
+}
+#LogoText{
+	font-size: 26px;
+	color: #39b0ef;
+	margin-top: 20px;
+}
+
+.layui-form-item {
+	margin-bottom: 15px;
+    clear: both;
+    
+}
+#SignBtn{
+	width:40%;
+	height: 4vw;
+	background-color: #39b0ef;
+	font-size: 22px;
+	font-family:"Microsoft Yahei";
+	color: #fff;
+	cursor:hand;
+	text-align: center;
+	line-height:4vw;
+	border-radius: 5px;;
+	cursor:pointer;
+	margin: 10px auto 0;
+	position:absolute;
+	right:0;
+	left: 0;
+	bottom: 0;
+}
+#forget{
+	height: 30px;
+	float: left;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#forget a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+
+#goRegister{
+	height: 30px;
+	float: right;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#goRegister a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+#StayLogin{
+	float: left;
+	margin: 5px 10px 5px 0px;
+	position: absolute; 
+}
+#StayLogin span{
+color: #999;
+margin-left: 10px;
+
+}
+#protocol{
+text-decoration: none;
+color: #39b0ef;	
+}
+#LoginSet{	
+	height:35px;
+	overflow: hidden;
+}
+
+#OtherLogin{	
+	height: 63px;
+	width: 100%;
+	line-height:63px;
+	text-align: center
+}
+.OtherLogin{
+	height: 63px;
+	width: 100%;
+	line-height: 63px;
+	text-align: center;
+	font-size:18px;
+	color: #898989;	
+}
+.OtherLogin a{
+	color: #0096ff;
+	text-decoration: none;
+	font-size:18px;	
+}
+#line{
+	width:90%;
+	margin:0 auto;
+	height:1px;
+	border-top: 1px #cacaca solid; 
+}
+.loginInput{
+	-webkit-box-shadow:0 0 0 50px #fff inset; 
+	-webkit-text-fill-color: #cacaca;
+}
+.layui-form-label,.layui-input{
+	height: 5vw;
+	line-height: 5vw;
+	padding: 0;	
+	color: #777;		
+}
+
+.layui-input{
+padding-left: 10px;
+}
+
+#sendCode{
+    display: inline-block;
+    float: right;
+    height: 4vw;
+    line-height: 4vw;
+    padding: 0 1vw;
+    background-color: #39b0ef;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 8px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 1vw;
+}
+.layui-input-block{
+	margin-left: 12vw;
+    left: -1px;
+}
+#PhoneNmuAre{
+	font-size: 12px;
+	width: 4.5vw;
+	border:none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+	background: url("../images/arrow.png") no-repeat scroll right center transparent;
+		color: #777;	
+}
+
+.inputName{
+width: 12vw;
+height: 5vw;
+line-height:5vw;
+}
+.sex-item{
+    width: 100%;
+    line-height: 3vw;
+    padding: 0;
+    color: #777;
+    border: 1px solid #cfcfcf;
+}
+.sexinput{
+border-right: 1px solid #cfcfcf;
+    border-radius: 2px 0 0 2px;
+    text-align: center;
+    background-color: #FBFBFB;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    float: left;
+    display: block;
+    position: relative;
+    padding: 0;
+    color: #777;
+    width: 12vw;
+    height: 5vw;
+    line-height: 5vw;
+}
+.layui-form-radio {
+    line-height: 3vw;
+    margin: 0px 10px 0 0;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 0;
+    margin-top: 1.2vw;
+}
+.layui-form-radio i {
+    margin-right: 8px;
+    font-size: 16px;
+    color:#39b0ef;
+}
+.layui-form-item .layui-input-inline{
+	width: 10vw;
+	margin-right: 0px;
+}
+.PhoneNum-inline{
+	width: 28vw;
+    margin-right: 0px;
+    margin-left: -1px;
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1280px)and (max-width:1600px){
+#login{
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+margin: 0 auto;
+width: 38vw;
+height: 48vw;
+top: 12vw;
+	
+}
+
+#LoginTitle{
+	text-align:center;
+	font-size: 30px;
+	color: #4b4b4b;
+		height:4vw;
+}
+#LoginTitle img{
+width: 211px;
+height: 52px;
+
+}
+#LogoText{
+	font-size: 26px;
+	color: #39b0ef;
+	margin-top: 20px;
+}
+
+.layui-form-item {
+	margin-bottom: 15px;
+    clear: both;
+    
+}
+#SignBtn{
+	width:60%;
+	height: 3.5vw;
+	background-color: #39b0ef;
+	font-size: 20px;
+	font-family:"Microsoft Yahei";
+	color: #fff;
+	cursor:hand;
+	text-align: center;
+	line-height:3.5vw;
+	border-radius: 5px;;
+	cursor:pointer;
+	margin: 10px auto 0;
+	position:absolute;
+	right:0;
+	left: 0;
+	bottom: 0;
+}
+#forget{
+	height: 30px;
+	float: left;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#forget a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+
+#goRegister{
+	height: 30px;
+	float: right;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#goRegister a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+#StayLogin{
+	float: left;
+	margin: 5px 10px 5px 0px;
+	position: absolute; 
+}
+#StayLogin span{
+color: #999;
+margin-left: 10px;
+
+}
+#protocol{
+text-decoration: none;
+color: #39b0ef;	
+}
+#LoginSet{	
+	height:35px;
+	overflow: hidden;
+}
+
+#OtherLogin{	
+	height: 63px;
+	width: 100%;
+	line-height:63px;
+	text-align: center
+}
+.OtherLogin{
+	height: 63px;
+	width: 100%;
+	line-height: 63px;
+	text-align: center;
+	font-size:18px;
+	color: #898989;	
+}
+.OtherLogin a{
+	color: #0096ff;
+	text-decoration: none;
+	font-size:18px;	
+}
+#line{
+	width:90%;
+	margin:0 auto;
+	height:1px;
+	border-top: 1px #cacaca solid; 
+}
+.loginInput{
+	-webkit-box-shadow:0 0 0 50px #fff inset; 
+	-webkit-text-fill-color: #cacaca;
+}
+.layui-form-label,.layui-input{
+	height: 3.5vw;
+	line-height: 3.5vw;	
+	padding: 0;	
+	color: #777;
+	width: 100%;	
+}
+ .layui-form-label {
+    width: 8vw;
+}
+.layui-input{
+padding-left: 20px;
+}
+
+#sendCode{
+    display: inline-block;
+    float: right;
+    height: 70%;
+    line-height:70%;
+    padding: 0 18px;
+    background-color: #39b0ef;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 10px;
+    right: 1vw;
+}
+.layui-input-block{
+	margin-left: 7vw;
+	left: -2px;
+}
+#PhoneNmuAre{
+	width: 3vw;
+	border:none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+	background: url("../images/arrow.png") no-repeat scroll right center transparent;
+	color: #777;	
+}
+
+.inputName{
+width: 7vw;
+height: 3.5vw;
+line-height:3.5vw;
+}
+.sex-item{
+    width: 100%;
+    height: 3vw;
+    line-height: 3vw;
+    padding: 0;
+    color: #777;
+    border: 1px solid #cfcfcf;
+}
+.sexinput{
+border-right: 1px solid #cfcfcf;
+    border-radius: 2px 0 0 2px;
+    text-align: center;
+    background-color: #FBFBFB;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    float: left;
+    display: block;
+    position: relative;
+    padding: 0;
+    color: #777;
+    width: 7vw;
+    height: 3vw;
+    line-height: 3vw;
+}.layui-form-radio {
+    line-height: 3vw;
+    cursor: pointer;
+    font-size: 0;
+    height: 3vw;
+    margin: 0px 10px 0 0;
+}
+.layui-form-radio i {
+    margin-right: 8px;
+    font-size: 22px;
+    color: #39b0ef;
+}
+.layui-form-item .layui-input-inline{
+	width: 5vw;
+	margin-right: 0px;
+}
+.PhoneNum-inline{
+	width: 26vw;
+    margin-right: 0px;
+    margin-left: -1px;
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1600px){
+#login{
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+margin: 0 auto;
+width: 34vw;
+height: 42vw;
+top: 10vw;
+	
+}
+
+#LoginTitle{
+	text-align:center;
+	font-size: 30px;
+	color: #4b4b4b;
+	height:4vw;
+}
+#LoginTitle img{
+width: 211px;
+height: 52px;
+
+}
+#LogoText{
+	font-size: 26px;
+	color: #39b0ef;
+	margin-top: 20px;
+}
+
+.layui-form-item {
+    clear: both;
+    font-size: 14px;
+	
+}
+
+#SignBtn{
+	width:60%;
+	height: 3vw;
+	background-color: #39b0ef;
+	font-size: 22px;
+	font-family:"Microsoft Yahei";
+	color: #fff;
+	cursor:hand;
+	text-align: center;
+	line-height:3vw;
+	border-radius: 5px;;
+	cursor:pointer;
+	margin: 10px auto 0;
+	position:absolute;
+	right:0;
+	left: 0;
+	bottom: 0;
+}
+#forget{
+	height: 30px;
+	float: left;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#forget a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+
+#goRegister{
+	height: 30px;
+	float: right;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#goRegister a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+#StayLogin{
+	margin: 5px 10px 5px 0px;
+	position: absolute; 
+}
+#StayLogin span{
+color: #999;
+margin-left: 10px;
+
+}
+#protocol{
+text-decoration: none;
+color: #39b0ef;	
+}
+#LoginSet{	
+	height:35px;
+	overflow: hidden;
+}
+
+#OtherLogin{	
+	height: 63px;
+	width: 100%;
+	line-height:63px;
+	text-align: center
+}
+.OtherLogin{
+	height: 63px;
+	width: 100%;
+	line-height: 63px;
+	text-align: center;
+	font-size:18px;
+	color: #898989;	
+}
+.OtherLogin a{
+	color: #0096ff;
+	text-decoration: none;
+	font-size:18px;	
+}
+#line{
+	width:90%;
+	margin:0 auto;
+	height:1px;
+	border-top: 1px #cacaca solid; 
+}
+.layui-form-label,.layui-input{
+	height: 3vw;
+	line-height: 3vw;	
+	padding: 0;
+	color: #777;
+	width: 100%;
+}
+
+.layui-input{
+padding-left: 20px;
+}
+#sendCode{
+    display: inline-block;
+    height: 2vw;
+    line-height: 2vw;
+    padding: 0 10px;
+    background-color: #39b0ef;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 10px;
+    float: right;
+    right: 0;
+}
+.layui-input-block{
+	margin-left: 7vw;
+	left: -1px;
+}
+.inputName{
+width: 7vw;
+height: 3vw;
+line-height: 3vw;
+}
+.sex-item{
+    height: 3vw;
+    line-height: 3vw;
+    padding: 0;
+    color: #777;
+    border: 1px solid #cfcfcf;
+    width: 100%;
+    margin-left: -3px;
+}
+.sexinput{
+    background-color: #FBFBFB;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    float: left;
+    display: block;
+    position: relative;
+    padding: 0;
+    color: #777;
+    width: 7vw;
+    height: 3vw;
+    line-height: 3vw;
+    border-right: 1px solid #cfcfcf;
+    border-radius: 2px 0 0 2px;
+    text-align: center;
+    overflow: hidden;
+}
+.layui-form-radio {
+    line-height: 3vw;
+    margin: 0px 10px 0 0;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 0;
+    height: 3vw;
+}
+.layui-form-radio i {
+    margin-right: 8px;
+    font-size: 22px;
+    color: #39b0ef;
+}
+#PhoneNmuAre{
+    appearance:none;
+    -moz-appearance:none;
+    border:none;
+    width:100%;
+    float:right;
+    height:100%;	
+}
+
+.layui-form-item .layui-input-inline{
+	width: 5vw;
+	margin-right: 0px;
+}
+.PhoneNum-inline{
+	width: 22vw;
+    margin-right: 0px;
+    margin-left: -1px;
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+}

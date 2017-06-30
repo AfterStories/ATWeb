@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body> 
+
+<p>按下播放按钮等待音频播放完成</p>
+
+<audio id="myAudio" controls>
+  <source src="/FM/1/201704011019484" type="audio/mpeg">
+</audio>
+
+<script>
+var aud = document.getElementById("myAudio");
+aud.onended = function() 
+{
+    alert("音频已播放完成");
+};
+</script>
+
+</body> 
+</html>

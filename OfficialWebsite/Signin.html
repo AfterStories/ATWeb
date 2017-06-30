@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Signin</title>
+<script src="lib/js/jquery.js"></script>
+<link rel="stylesheet" href="lib/css/reset.css">
+<link rel="stylesheet" href="lib/header/css/dropkick.css" type="text/css">
+<link rel="stylesheet" href="css/Signin.css" type="text/css">
+
+<script src="lib/header/js/dropkick.js"></script>
+<script src="lib/js/lang/langchange.js" type="text/javascript"></script>
+	
+	
+
+</head>
+
+<body>
+	<div id="header">
+		
+	</div>
+	<div id="main">
+		<div id="login">
+			<div id="LoginTitle">
+			<img src="images/LOGO.png" alt="">
+				Sign in
+			</div>
+			<div style="text-align:center">
+			 <input id="Account" class="loginInput"  type="text" placeholder="Your Account" >
+			 <input id="Password" type="password" class="loginInput" name="password" placeholder="Your Password" />		 
+			</div>
+			 <div id="SignBtn" onclick="Login();">Sign in</div>
+			 <div id="LoginSet">
+			 	<div id="forget"><a href="">Forget password ?</a></div>
+			 	<div id="StayLogin"><input id="StayPaw" type="checkbox">Stay sign in</div>
+
+			 </div>
+			 <div id="OtherLoginInfo">
+				<div class="OtherLogin">Or,sign in with Facebookor Twitter or WeChat</div>
+				<div id="line"></div>
+			 	<div class="OtherLogin">No to Are Talk? <a href="">Join us</a></div>
+			 </div>
+		</div>	
+
+
+
+	</div>
+	<footer>
+		
+	</footer>
+
+
+	<script>
+$(document).ready(function(){ 
+	$("#header").load("lib/header/header.html",function(){
+	
+	$('.change').dropkick({
+
+        change: function (value) {
+
+          $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
+          $("#LanguagePic img").attr("src","images/"+value+".png");
+        }
+
+      });
+
+	});
+
+	$("footer").load("lib/footer/footer.html")
+
+	
+
+
+
+		}
+)
+	
+
+	</script>
+</body>
+</html>
+
+
+
+	
+

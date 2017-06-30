@@ -1,0 +1,1253 @@
+
+/*公共样式*/
+body,html{
+	width: 100%;
+	min-width:414px;
+
+}
+a{
+	text-decoration: none;
+}
+#FirstImg{
+	position: relative;
+	overflow: hidden;
+	margin:0 auto;
+	width: 100%;	
+	
+}
+.splitImgUp{
+	width: 100%;
+	height: 1vw;
+	position: absolute;
+	z-index: 9999;
+    bottom: 0;
+    left: 0;	
+
+}
+.splitImgDown{
+	width: 100%;
+	height: 1vw;
+	position: absolute;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+
+}
+.dk_toggle{
+	height: 15px;
+}
+
+
+#HomeFirstImg{
+	width: 100%;
+	height: 44.1vw;
+	left:0;
+	float: left;
+	position: relative;
+}
+#FitstImgContent{
+	float: left;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+	top: 22vw;
+	width: 60%;
+}
+
+
+.AdBox{
+	height: 40vw;
+	width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #f5f6f8;	
+}
+.MidBox{
+	height: 40vw;
+	width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #f5f6f8;	
+}
+.LowAdBox{
+	height: 30vw;
+	width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #f5f6f8;	
+}
+.MicAdBox{
+	height: 28vw;
+	width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #f5f6f8;		
+}
+#swiperAd{
+	width: 80%;
+	height: 24vw;
+  	margin: auto;  
+  	position: absolute;  
+  	top: 0; left: 0; bottom: 0; right: 0;  		
+}
+.swiper-container-horizontal>.swiper-pagination-bullets{
+	margin-top: 20px;
+}
+.swiper-button-prev{
+	margin-left: 2.89vw;
+	width: 3vw;
+	height: 4.26vw;
+}
+.swiper-button-next{
+	margin-right: 2.89vw;
+	width: 3vw;
+	height: 4.26vw;	
+}
+.swiper-button-next,.swiper-button-pre{
+	background-image: none;
+}
+    .swiper-container {
+        width: 100%;
+        height: 100%;	        
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        width: 80%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+.swiper-slide img{
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+	margin: 0 10px;
+    background: rgba(70,122,224,1);	
+}
+.swiper-pagination-bullet-active{
+    width: 8px;   
+    height: 8px;   
+    border-radius: 50%;
+    opacity: 1;
+}
+  
+
+#DiffMain{
+    width: 100%;    
+    left: 0;
+    position: relative;
+    text-align: center;
+}
+#DiffImg{
+	width: 86.12vw;;
+	height: 23vw;
+    margin: auto;
+    position: absolute;
+    top: 3vw;
+    left: 0;
+    bottom: 0;
+    right: 0;	
+}
+
+#DiffTittle{
+	float: left;
+    margin: 3.8vw auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+	
+}
+
+#tittleText{
+	font-size:34px;
+	font-family: "黑体";
+	font-weight: 900;
+	color: #fff;	
+    background: -webkit-linear-gradient(left,rgba(70,122,224,1),rgba(105,88,201,1)); /* Safari */
+    background: -o-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Opera */
+    background: -moz-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Firefox */
+    background: linear-gradient(to right, rgba(70,122,224,1),rgba(105,88,201,1));/* 标准的语法 */
+	display:inline-block;
+	padding:2px;
+}
+#TittleLine{
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+}
+
+#FuncTittle{
+	color: #7d8b96;
+	font-size: 1.8vw;
+	font-family:"Microsoft YaHei";
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 4vw;
+	font-weight: 600;
+}
+
+
+#AdTable{
+  	margin: auto;  
+  	position: absolute;  
+  	top: 0; left: 0; bottom: 0; right: 0;  
+	width: 80%;
+	overflow: hidden;
+  	height: 25.11vw;
+}
+
+.smAdBox{
+	width: 50%;;
+	float: left;
+	height: 12.56vw;
+	position: relative;
+
+}
+.smAdBox img{
+	width: 7.66vw;
+	height: 8.14vw;
+	position: absolute;
+	top: 2.5vw;
+	left: 4vw;;
+}
+.smAdBox span{
+	line-height: 153px;
+
+}
+
+.smAdText{
+	float: right;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	position: absolute;
+	left: 16vw;
+	top: 2.4vw;
+}
+
+
+#BigAdBox{
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 80%;
+	overflow: hidden;
+	height: 65%;
+
+}
+
+#BigAdText{
+	height: 100%;
+	width: 50%;
+	float: left;
+
+}
+
+#bigAdImg{
+	float: right;
+	position: relative;
+	height: 100%;
+	width: 50%;
+
+}
+
+#bigAdImg img{
+width:32.55vw;
+height:17.6vw;
+margin:0 auto;
+position:absolute;
+right:0;
+bottom:0;
+left:0;
+top:0;
+
+}
+
+.clear{
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------- 
+设备屏幕自适应 
+----------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+@media (max-width: 414px) {	
+
+#FirstImgText{
+	font-weight: 900;
+	color: #fff;
+	font-family: "黑体";
+	font-size:4vw;
+	text-align: center;
+	z-index: 9999;
+	position: relative;
+	margin-bottom: 4vw;	
+}
+
+#FirstImgBtn{
+	border-radius: 6px;
+	background-color: #ff7758;
+	width: 13vw;
+	height: 3.8vw;
+	font-family: "黑体";
+	font-size:2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	z-index: 9999;
+	margin:0 auto;
+	-webkit-box-shadow: 1px 1px 5px #495861;
+	-moz-box-shadow: 1px 1px 5px #495861;
+	box-shadow: 1px 1px 5px #495861;
+	cursor: pointer;		
+}
+
+#TopLogo{
+	margin-left:35px;
+	cursor: pointer;
+}
+#TopMenu ul { 
+	height: 20px;
+	display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;          
+}
+#tittleText{
+	font-size:10px;
+	font-family: "黑体";
+	font-weight: 900;
+	color: #fff;	
+    background: -webkit-linear-gradient(left,rgba(70,122,224,1),rgba(105,88,201,1)); /* Safari */
+    background: -o-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Opera */
+    background: -moz-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Firefox */
+    background: linear-gradient(to right, rgba(70,122,224,1),rgba(105,88,201,1));/* 标准的语法 */
+	display:inline-block;
+	padding:2px;
+}
+
+.smAdTittle{
+	font-size: 11px;
+}
+
+.smAdsummary{
+	font-size: 7px;
+}
+
+
+#BigAdTittle{
+	font-size: 10px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	margin-bottom: 1vw;
+}
+#BigAdContent{
+	font-size: 7px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	width: 80%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 24vw;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    -moz-background-size: 27px 44px;
+    -webkit-background-size: 27px 44px;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.swiper-button-prev {
+    margin-left: 2.89vw;
+    width: 3vw;
+    height: 4.26vw;
+}
+.swiper-button-next {
+    margin-right: 2.89vw;
+    width: 3vw;
+    height: 4.26vw;
+}
+
+.swiper-pagination {
+    bottom: 4vw;
+    right: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+
+
+}
+
+
+
+
+
+
+
+
+@media (min-width: 414px) and (max-width: 768px) {
+
+#FirstImgText{
+	font-weight: 900;
+	color: #fff;
+	font-family: "黑体";
+	font-size:4vw;
+	text-align: center;
+	z-index: 9999;
+	position: relative;
+	margin-bottom: 4vw;	
+}
+
+#FirstImgBtn{
+	border-radius: 6px;
+	background-color: #ff7758;
+	width: 13vw;
+	height: 3.8vw;
+	font-family: "黑体";
+	font-size:2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	z-index: 9999;
+	margin:0 auto;
+	-webkit-box-shadow: 3px 3px 8px #495861;
+	-moz-box-shadow: 3px 3px 8px #495861;
+	box-shadow: 3px 3px 8px #495861;
+	cursor: pointer;		
+}
+
+#TopLogo{
+	margin-left:35px;
+	cursor: pointer;
+}
+#TopMenu ul { 
+	height: 20px;
+	display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+          
+	}
+
+
+#tittleText{
+	font-size:14px;
+	font-family: "黑体";
+	font-weight: 900;
+	color: #fff;	
+    background: -webkit-linear-gradient(left,rgba(70,122,224,1),rgba(105,88,201,1)); /* Safari */
+    background: -o-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Opera */
+    background: -moz-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Firefox */
+    background: linear-gradient(to right, rgba(70,122,224,1),rgba(105,88,201,1));/* 标准的语法 */
+	display:inline-block;
+	padding:2px;
+}
+
+.smAdTittle{
+	font-size: 13px;
+}
+
+.smAdsummary{
+	font-size: 8px;
+}
+
+
+#BigAdTittle{
+	font-size: 14px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	margin-bottom: 1vw;
+}
+#BigAdContent{
+	font-size: 12px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	width: 80%;
+}
+
+.swiper-pagination {
+    bottom: 4vw;
+    right: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 大于768且小于960px */
+
+@media (min-width:768px) and (max-width:960px){
+
+#FirstImgText{
+	font-weight: 900;
+	color: #fff;
+	height: 70px;
+	font-family: "黑体";
+	font-size:27px;
+	text-align: center;
+	z-index: 9999;
+	position: relative;
+	margin-bottom: 1.8vw;	
+}
+
+#FirstImgBtn{
+	border-radius: 6px;
+	background-color: #ff7758;
+	width: 13.62vw;
+	height: 3.5vw;
+	font-family: "黑体";
+	font-size:14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	z-index: 9999;
+	margin:0 auto;
+	-webkit-box-shadow: 3px 3px 10px #495861;
+	-moz-box-shadow: 3px 3px 10px #495861;
+	box-shadow: 3px 3px 10px #495861;
+	cursor: pointer;		
+}
+
+
+
+#TopLogo{
+	margin-left:45px;
+	cursor: pointer;
+
+}
+#TopLogo img{
+    width: 215px;
+    height: 45px;
+}
+#TopMenu{
+	height: 100%;
+
+}
+
+
+#tittleText{
+	font-size:20px;
+	font-family: "黑体";
+	font-weight: 900;
+	color: #fff;	
+    background: -webkit-linear-gradient(left,rgba(70,122,224,1),rgba(105,88,201,1)); /* Safari */
+    background: -o-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Opera */
+    background: -moz-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Firefox */
+    background: linear-gradient(to right, rgba(70,122,224,1),rgba(105,88,201,1));/* 标准的语法 */
+	display:inline-block;
+	padding:2px;
+}
+
+
+.smAdTittle{
+	font-size: 18px;
+	font-weight: 400;
+	margin: 1vw 0;
+}
+
+.smAdsummary{
+	font-size: 12px;
+}
+
+
+#BigAdTittle{
+	font-size: 18px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	margin-bottom: 1vw;
+}
+#BigAdContent{
+	font-size: 14px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	width: 80%;
+}
+
+.swiper-pagination {
+    bottom: 4vw;
+    right: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 大于960且小于1280px */
+
+@media (min-width:960px) and (max-width:1280px){
+
+#FirstImgText{
+	font-weight: 900;
+	color: #fff;
+	height: 70px;
+	font-family: "黑体";
+	font-size:35px;
+	text-align: center;
+	z-index: 9999;
+	position: relative;
+	margin-bottom: 2.8vw;	
+}
+
+#FirstImgBtn{
+	border-radius: 6px;
+	background-color: #ff7758;
+	width: 12vw;
+	height: 3vw;
+	font-family: "黑体";
+	font-size:16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	z-index: 9999;
+	margin:0 auto;
+	font-weight: 500;
+	-webkit-box-shadow: 3px 3px 5px #495861;
+	-moz-box-shadow: 3px 3px 5px #f3d42e;
+	box-shadow: 5px 5px 20px #495861;
+	cursor: pointer;		
+}
+
+
+#tittleText{
+	font-size:28px;
+	font-family: "黑体";
+	font-weight: 900;
+	color: #fff;	
+    background: -webkit-linear-gradient(left,rgba(70,122,224,1),rgba(105,88,201,1)); /* Safari */
+    background: -o-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Opera */
+    background: -moz-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Firefox */
+    background: linear-gradient(to right, rgba(70,122,224,1),rgba(105,88,201,1));/* 标准的语法 */
+	display:inline-block;
+	padding:2px;
+}
+
+
+.smAdTittle{
+	font-size: 20px;
+	font-weight: 600;
+	margin: 1vw 0;
+}
+
+
+.smAdsummary{
+	font-size: 18px;
+}
+
+
+#BigAdTittle{
+	font-size: 22px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	font-weight: 400;
+	margin-bottom: 1.4vw;
+}
+#BigAdContent{
+	font-size: 14px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	width: 70%;
+}
+
+
+.swiper-pagination {
+    bottom: 4vw;
+    right: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 宽度大于1280 且 小于 1400*/
+@media (min-width:1280px)and (max-width:1400px){
+
+
+#FirstImgText{
+	font-weight: 900;
+	color: #fff;
+	height: 70px;
+	font-family: "黑体";
+	font-size:45px;
+	text-align: center;
+	z-index: 9999;
+	position: relative;
+	margin-bottom: 4.5vw;	
+}
+
+#FirstImgBtn{
+	border-radius: 6px;
+	background-color: #ff7758;
+	width: 14vw;
+	height: 3.8vw;
+	font-family: "黑体";
+	font-size:22px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	z-index: 9999;
+	margin:0 auto;
+	font-weight: 600;
+	-webkit-box-shadow: 3px 3px 5px #495861;
+	-moz-box-shadow: 3px 3px 5px #f3d42e;
+	box-shadow: 5px 5px 20px #495861;
+	cursor: pointer;
+
+}
+
+
+#tittleText{
+	font-size:34px;
+	font-family: "黑体";
+	font-weight: 900;
+	color: #fff;	
+    background: -webkit-linear-gradient(left,rgba(70,122,224,1),rgba(105,88,201,1)); /* Safari */
+    background: -o-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Opera */
+    background: -moz-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Firefox */
+    background: linear-gradient(to right, rgba(70,122,224,1),rgba(105,88,201,1));/* 标准的语法 */
+	display:inline-block;
+	padding:2px;
+}
+
+
+.smAdTittle{
+	font-size: 35px;
+	font-weight: 700;
+	margin: 1vw 0;
+}
+
+.smAdsummary{
+	font-size: 20px;
+}
+
+
+#BigAdTittle{
+	font-size: 26px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	font-weight: 800;
+	margin-bottom: 2vw;
+}
+#BigAdContent{
+	font-size: 18px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	width: 70%;
+}
+
+.swiper-pagination {
+    bottom: 4vw;
+    right: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 宽度大于1400 且 小于 1600*/
+@media (min-width:1400px)and (max-width:1600px){
+
+#FirstImgText{
+	font-weight: 900;
+	color: #fff;
+	height: 70px;
+	font-family: "黑体";
+	font-size:45px;
+	text-align: center;
+	z-index: 9999;
+	position: relative;
+	margin-bottom: 5vw;	
+}
+
+#FirstImgBtn{
+	border-radius: 6px;
+	background-color: #ff7758;
+	width: 13.62vw;
+	height: 3.8vw;
+	font-family: "黑体";
+	font-size:25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	z-index: 9999;
+	margin:0 auto;
+	font-weight: 900;
+	-webkit-box-shadow: 3px 3px 5px #495861;
+	-moz-box-shadow: 3px 3px 5px #f3d42e;
+	box-shadow: 5px 5px 20px #495861;
+	cursor: pointer;
+	text-decoration: none;		
+}
+
+
+#tittleText{
+	font-size:34px;
+	font-family: "黑体";
+	font-weight: 900;
+	color: #fff;	
+    background: -webkit-linear-gradient(left,rgba(70,122,224,1),rgba(105,88,201,1)); /* Safari */
+    background: -o-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Opera */
+    background: -moz-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Firefox */
+    background: linear-gradient(to right, rgba(70,122,224,1),rgba(105,88,201,1));/* 标准的语法 */
+	display:inline-block;
+	padding:2px;
+}
+
+.smAdTittle{
+	font-size: 35px;
+	font-weight: 700;
+	margin: 1vw 0;
+}
+
+
+.smAdsummary{
+	font-size: 20px;
+}
+
+#BigAdTittle{
+	font-size: 28px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	font-weight: 800;
+	margin-bottom: 2vw;;
+}
+#BigAdContent{
+	font-size: 20px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	width: 70%;
+}
+
+.swiper-pagination {
+    bottom: 4vw;
+    right: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 宽度大于1600时 */
+@media (min-width:1600px){
+
+#FirstImgText{
+	font-weight: 900;
+	color: #fff;
+	height: 70px;
+	font-family: "黑体";
+	font-size:54px;
+	text-align: center;
+	z-index: 9999;
+	position: relative;
+	margin-bottom: 5.8vw;
+	font-weight: 900;	
+}
+
+#FirstImgBtn{
+	border-radius: 6px;
+	background-color: #ff7758;
+	width: 13vw;
+	height: 3.5vw;
+	font-family: "黑体";
+	font-size:25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	z-index: 9999;
+	margin:0 auto;
+	font-weight: 900;
+	-webkit-box-shadow: 3px 3px 5px #495861;
+	-moz-box-shadow: 3px 3px 5px #f3d42e;
+	box-shadow: 5px 5px 20px #495861;
+	cursor: pointer;		
+}
+
+
+#tittleText{
+	font-size:34px;
+	font-family: "黑体";
+	font-weight: 900;
+	color: #fff;	
+    background: -webkit-linear-gradient(left,rgba(70,122,224,1),rgba(105,88,201,1)); /* Safari */
+    background: -o-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Opera */
+    background: -moz-linear-gradient(right,rgba(70,122,224,1),rgba(105,88,201,1)); /* Firefox */
+    background: linear-gradient(to right, rgba(70,122,224,1),rgba(105,88,201,1));/* 标准的语法 */
+	display:inline-block;
+	padding:2px;
+}
+
+.smAdTittle{
+	font-size: 40px;
+	font-weight: 700;
+	margin: 1vw 0;
+}
+
+.smAdsummary{
+	font-size: 25px;
+}
+
+
+
+#BigAdTittle{
+	font-size: 36px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	font-weight: 800;
+	margin-bottom: 2.66vw;
+}
+#BigAdContent{
+	font-size: 24px;
+	color: #657582;
+	font-family: "Microsoft YaHei";
+	width: 70%;
+}
+
+.swiper-pagination {
+    bottom: 4vw;
+    right: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 宽度大于1600时 */
+#Myrili{
+	width: 25vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 宽度大于1600时 */
+#lesson-Card{
+	height: 45vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 宽度大于1600时 */
+#Mywallet{
+	width: 30vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 宽度大于1600时 */
+#Mypaper{
+	width: 27vw;
+}

@@ -1,0 +1,126 @@
+
+/*主内容区域*/
+
+
+	#InfoTitle{
+		width: 100%;
+		height: 102px;		
+		color: #4b4b4b;
+		
+		border-bottom: 1px #d0d0d0 solid; 
+	}
+	#InfoTitle-text1{
+		font-size: 30px;
+		margin-top: 20px;
+		margin-left: 40px;
+
+
+	}
+	#InfoTitle-text2{
+		font-size: 20px;
+		margin-left: 80px;
+		margin-top: 10px;
+	}
+	#teachertable{
+		height: 691px;
+		width:100%;			
+		text-align: center;
+		vertical-align: middle;
+	}
+	#teachertable th,td{
+		width:33.333%;
+		border:solid #dfdfdf;
+	 	border-width:0px 1px 1px 1px; 
+	 	font-size:18px;		 	
+	}
+	#teachertable th img{
+		margin-right: 6px;
+	}
+	.Tdbackgroundcolor{
+		color:#fff;
+		background-color: #67c5f0;
+	}
+	.Tdbackgroundcolorgery{
+		color:#000;
+		background-color: #dfdfdf;
+	}
+
+	.Tdbackgroundcolorlightgery{
+		color:#000;
+		background-color: #e7e7e7;
+	}		
+	
+	.tablebtn{
+		width:80%;
+		height: 3.5vw;
+		background-color: #67c5f0;
+		font-size: 18px;		
+		color: #fff;
+		cursor:pointer;
+		text-align: center;
+		line-height:3.5vw;
+		border-radius:10px;
+		margin:0 auto;
+					
+	}
+.splitImgDown{
+	width: 100%
+}
+td{
+	padding: 0 1vw;
+}
+
+/* 设备屏幕自适应 */
+/* 屏样幕宽度小于768个象素时应用的CSS式 */
+@media (max-width: 769px) {
+
+	#main{
+		width: 700px;
+		height:794px;
+		margin:20px auto;
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 大于768且小于1280px */
+
+@media (min-width:769px) and (max-width:1280px){
+
+	#main{
+		width: 95%;
+
+		margin:40px auto;
+
+	}
+
+}
+
+
+
+
+
+
+
+/* 宽度大于1280时 */
+@media (min-width:1280px){
+
+	#main{
+		width: 95%;
+
+		margin:40px auto;
+
+	}
+}
+
+

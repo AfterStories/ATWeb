@@ -1,0 +1,82 @@
+#FM1{float:left;margin-top:20px;margin-left:20px;height:500px;width:1300px;
+}
+#FM2{position:relative;width:350px;height:350px;margin-bottom:1vw;
+}
+#play{
+ width:3vw;height:3vw;color:#fff;
+ float:left;
+ bottom:0;
+ position:absolute;
+ top:0;
+ margin:auto;
+ right:0;
+ left:0;
+ z-index:99999;   
+}
+#channelidImg{
+    width:350px;height:350px;border-radius:350px;
+    float:left;
+}
+#QCCodeBox{float:right;right:4vw;position:relative;margin-top:2vw;text-align:center;
+    
+}
+#QCImgText{font-size:16px;
+
+}
+#QCImg{width:10vw;height:10vw;margin:0 auto;
+
+}
+#FMInfo{
+width:500px;float:left;
+margin:1vw 1vw;    
+}
+.InfoTittle{
+  font-size:15px;margin-left:18px  
+}
+#fileExpl{
+    width:300px;margin-left:20px;
+}
+#myAudio{
+    display:none
+}
+#FM2Box{
+    float: left;
+}
+#channelBox{
+    float: left;
+    width: 350px;
+    text-align: center;
+}
+#alert_channelId{
+    border:0px solid black;
+}
+        #line-button {
+            height:300px;
+            width:600px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+        .brand { font-family: georgia, serif; }
+        .brand .first {
+            color: #ccc;
+            font-style: italic;
+        }
+        .brand .second {
+            color: #fff;
+            font-weight: bold;
+        }
+        td {
+            border:0px;
+        }
+        .channelidImgclass{
+        -webkit-animation:run 8s linear 0s infinite; 
+        }
+
+        @-webkit-keyframes run{     
+            from{     
+                -webkit-transform:rotate(0deg);     
+            }     
+            to{     
+                -webkit-transform:rotate(360deg);     
+            }     
+        }   

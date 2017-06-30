@@ -1,0 +1,785 @@
+
+html,body{
+min-width: 414px;
+background-color: #f9f9f9;
+position: relative;
+
+
+}
+
+.layui-form-checked[lay-skin=primary] i {
+    border-color: #5FB878;
+    background-color: #39afef;
+    color: #fff;
+}
+
+.splitImgDown{
+	width: 100%;
+}
+
+
+
+
+
+/* 设备屏幕自适应 */
+@media (max-width: 414px) {	
+#login{
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+margin: 0 auto;
+width: 50vw;
+height: 75vw;
+top: 12vw;
+
+}
+
+#LoginTitle{
+	text-align:center;
+	font-size: 30px;
+	color: #4b4b4b;
+	height:22vw;
+}
+#LoginTitle img{
+width: 20vw;
+height: 5vwpx;
+
+}
+#LogoText{
+	font-size: 14px;
+	color: #737373;
+	margin-top: 20px;
+}
+.loginInput{
+	display: inline;
+	color:#b1b1b1;
+	font-size: 12px;
+	font-family:Microsoft Yahei;
+	width:100%;
+	height:5vw;
+	text-align: center;
+	border: solid 1px #cacaca;
+    outline: 0;
+   	text-shadow: none ;  
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+   	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+   	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	margin: 10px auto;    
+}
+.loginInput:hover{
+-webkit-transition:border linear .2s,-webkit-box-shadow linear .5s; 
+border-color:rgba(57,175,239,3);
+}
+#SignBtn{
+	width:60%;
+	height: 6vw;
+	background-color: #39b0ef;
+	font-size: 14px;
+	font-family:"Microsoft Yahei";
+	color: #fff;
+	cursor:hand;
+	text-align: center;
+	line-height:6vw;
+	border-radius: 5px;;
+	cursor:pointer;
+	margin: 10px auto 0;
+}
+#forget{
+	height: 30px;
+	float: left;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#forget a{
+	font-size:10px;
+	color: #0096ff;
+	text-decoration: none;
+}
+
+#goRegister{
+	height: 30px;
+	float: right;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#goRegister a{
+	font-size:10px;
+	color: #0096ff;
+	text-decoration: none;
+}
+#StayLogin{
+	float: left;
+	margin: 5px 10px 5px 0px;
+	position: absolute;
+	bottom: 0; 
+}
+#StayLogin span{
+color: #b1b1b1;
+margin-left: 10px;
+font-size: 9px;
+
+}
+#protocol{
+text-decoration: none;
+color: #39b0ef;	
+}
+#LoginSet{	
+	height:7vw;
+	overflow: hidden;
+}
+
+#OtherLogin{	
+	height: 63px;
+	width: 100%;
+	line-height:63px;
+	text-align: center
+}
+.OtherLogin{
+	height: 63px;
+	width: 100%;
+	line-height: 63px;
+	text-align: center;
+	font-size:18px;
+	color: #898989;	
+}
+.OtherLogin a{
+	color: #0096ff;
+	text-decoration: none;
+	font-size:18px;	
+}
+#line{
+	width:90%;
+	margin:0 auto;
+	height:1px;
+	border-top: 1px #cacaca solid; 
+}
+.loginInput{
+	-webkit-box-shadow:0 0 0 50px #fff inset; 
+	-webkit-text-fill-color: #b1b1b1;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 414px) and (max-width: 768px){
+#login{
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+margin: 0 auto;
+width: 50vw;
+height: 75vw;
+top: 12vw;
+
+}
+
+#LoginTitle{
+	text-align:center;
+	font-size: 30px;
+	color: #4b4b4b;
+	height:22vw;
+}
+#LoginTitle img{
+width: 20vw;
+height: 5vwpx;
+
+}
+#LogoText{
+	font-size: 14px;
+	color: #737373;
+	margin-top: 20px;
+}
+.loginInput{
+	display: inline;
+	color: #b1b1b1;
+	font-size: 12px;
+	font-family:Microsoft Yahei;
+	width:100%;
+	height:5vw;
+	text-align: center;
+	border: solid 1px #cacaca;
+    outline: 0;
+   	text-shadow: none ;  
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+   	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+   	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	margin: 10px auto;    
+}
+.loginInput:hover{
+-webkit-transition:border linear .2s,-webkit-box-shadow linear .5s; 
+border-color:rgba(57,175,239,3);
+}
+#SignBtn{
+	width:60%;
+	height: 6vw;
+	background-color: #39b0ef;
+	font-size: 14px;
+	font-family:"Microsoft Yahei";
+	color: #fff;
+	cursor:hand;
+	text-align: center;
+	line-height:6vw;
+	border-radius: 5px;;
+	cursor:pointer;
+	margin: 10px auto 0;
+}
+#forget{
+	height: 30px;
+	float: left;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#forget a{
+	font-size:10px;
+	color: #0096ff;
+	text-decoration: none;
+}
+
+#goRegister{
+	height: 30px;
+	float: right;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#goRegister a{
+	font-size:10px;
+	color: #0096ff;
+	text-decoration: none;
+}
+#StayLogin{
+	float: left;
+	margin: 5px 10px 5px 0px;
+	position: absolute;
+	bottom: 0; 
+}
+#StayLogin span{
+color: #b1b1b1;
+margin-left: 10px;
+font-size: 12px;
+
+}
+#protocol{
+text-decoration: none;
+color: #39b0ef;	
+}
+#LoginSet{	
+	height:7vw;
+	overflow: hidden;
+}
+
+#OtherLogin{	
+	height: 63px;
+	width: 100%;
+	line-height:63px;
+	text-align: center
+}
+.OtherLogin{
+	height: 63px;
+	width: 100%;
+	line-height: 63px;
+	text-align: center;
+	font-size:18px;
+	color: #898989;	
+}
+.OtherLogin a{
+	color: #0096ff;
+	text-decoration: none;
+	font-size:18px;	
+}
+#line{
+	width:90%;
+	margin:0 auto;
+	height:1px;
+	border-top: 1px #cacaca solid; 
+}
+.loginInput{
+	-webkit-box-shadow:0 0 0 50px #fff inset; 
+	-webkit-text-fill-color:#b1b1b1;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:768px) and (max-width:1280px){
+#login{
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+margin: 0 auto;
+width: 45vw;
+height: 55vw;
+top: 12vw;
+
+}
+
+#LoginTitle{
+	text-align:center;
+	font-size: 30px;
+	color: #4b4b4b;
+	height:20vw;
+}
+#LoginTitle img{
+width: 211px;
+height: 52px;
+
+}
+#LogoText{
+	font-size: 18px;
+	color: #737373;
+	margin-top: 20px;
+}
+.loginInput{
+	display: inline;
+	color: #b1b1b1;
+	font-size: 20px;
+	font-family:Microsoft Yahei;
+	width:100%;
+	height:4vw;
+	text-align: center;
+	border: solid 1px #cacaca;
+    outline: 0;
+   	text-shadow: none ;  
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+   	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+   	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	margin: 10px auto;    
+}
+.loginInput:hover{
+-webkit-transition:border linear .2s,-webkit-box-shadow linear .5s; 
+border-color:rgba(57,175,239,3);
+}
+#SignBtn{
+	width:80%;
+	height: 55px;
+	background-color: #39b0ef;
+	font-size: 22px;
+	font-family:Microsoft Yahei;
+	color: #fff;
+	cursor:hand;
+	text-align: center;
+	line-height:55px;
+	border-radius: 5px;;
+	cursor:pointer;
+	margin: 10px auto 0;
+}
+#forget{
+	height: 30px;
+	float: left;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#forget a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+
+#goRegister{
+	height: 30px;
+	float: right;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#goRegister a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+#StayLogin{
+	float: left;
+	margin: 5px 10px 5px 0px;
+	position: absolute;
+	bottom: 0; 
+}
+#StayLogin span{
+color: #b1b1b1;
+margin-left: 10px;
+
+}
+#protocol{
+text-decoration: none;
+color: #39b0ef;	
+}
+#LoginSet{	
+	height:35px;
+	overflow: hidden;
+}
+
+#OtherLogin{	
+	height: 63px;
+	width: 100%;
+	line-height:63px;
+	text-align: center
+}
+.OtherLogin{
+	height: 63px;
+	width: 100%;
+	line-height: 63px;
+	text-align: center;
+	font-size:18px;
+	color: #898989;	
+}
+.OtherLogin a{
+	color: #0096ff;
+	text-decoration: none;
+	font-size:18px;	
+}
+#line{
+	width:90%;
+	margin:0 auto;
+	height:1px;
+	border-top: 1px #cacaca solid; 
+}
+.loginInput{
+	-webkit-box-shadow:0 0 0 50px #fff inset; 
+	-webkit-text-fill-color: #b1b1b1;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1280px)and (max-width:1600px){
+#login{
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+margin: 0 auto;
+width: 28vw;
+height: 35vw;
+top: 12vw;
+
+}
+
+#LoginTitle{
+	text-align:center;
+	font-size: 30px;
+	color: #4b4b4b;
+	height:200px;
+}
+#LoginTitle img{
+width: 211px;
+height: 52px;
+
+}
+#LogoText{
+	font-size: 18px;
+	color: #737373;
+	margin-top: 20px;
+}
+.loginInput{
+	display: inline;
+	color: #b1b1b1;
+	font-size: 20px;
+	font-family:Microsoft Yahei;
+	width:100%;
+	height:3vw;
+	text-align: center;
+	border: solid 1px #cacaca;
+    outline: 0;
+   	text-shadow: none ;  
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+   	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+   	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	margin: 10px auto;    
+}
+.loginInput:hover{
+-webkit-transition:border linear .2s,-webkit-box-shadow linear .5s; 
+border-color:rgba(57,175,239,3);
+}
+#SignBtn{
+	width:80%;
+	height: 55px;
+	background-color: #39b0ef;
+	font-size: 22px;
+	font-family:Microsoft Yahei;
+	color: #fff;
+	cursor:hand;
+	text-align: center;
+	line-height:55px;
+	border-radius: 5px;;
+	cursor:pointer;
+	margin: 10px auto 0;
+}
+#forget{
+	height: 30px;
+	float: left;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#forget a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+
+#goRegister{
+	height: 30px;
+	float: right;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#goRegister a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+#StayLogin{
+	float: left;
+	margin: 5px 10px 5px 0px;
+	position: absolute;
+	bottom: 0; 
+}
+#StayLogin span{
+color: #b1b1b1;
+margin-left: 10px;
+
+}
+#protocol{
+text-decoration: none;
+color: #39b0ef;	
+}
+#LoginSet{	
+	height:35px;
+	overflow: hidden;
+}
+
+#OtherLogin{	
+	height: 63px;
+	width: 100%;
+	line-height:63px;
+	text-align: center
+}
+.OtherLogin{
+	height: 63px;
+	width: 100%;
+	line-height: 63px;
+	text-align: center;
+	font-size:18px;
+	color: #898989;	
+}
+.OtherLogin a{
+	color: #0096ff;
+	text-decoration: none;
+	font-size:18px;	
+}
+#line{
+	width:90%;
+	margin:0 auto;
+	height:1px;
+	border-top: 1px #cacaca solid; 
+}
+.loginInput{
+	-webkit-box-shadow:0 0 0 50px #fff inset; 
+	-webkit-text-fill-color: #b1b1b1;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1600px){
+#login{
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+margin: 0 auto;
+width: 22.5vw;
+height: 28.35vw;
+top: 12vw;
+
+}
+
+#LoginTitle{
+	text-align:center;
+	font-size: 30px;
+	color: #4b4b4b;
+	height:200px;
+}
+#LoginTitle img{
+width: 211px;
+height: 52px;
+
+}
+#LogoText{
+	font-size: 18px;
+	color: #737373;
+	margin-top: 20px;
+}
+.loginInput{
+	display: inline;
+	color: #b1b1b1;
+	font-size: 20px;
+	font-family:Microsoft Yahei;
+	width:100%;
+	height:3vw;
+	text-align: center;
+	border: solid 1px #cacaca;
+    outline: 0;
+   	text-shadow: none ;  
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+   	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+   	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	margin: 10px auto;    
+}
+.loginInput:hover{
+-webkit-transition:border linear .2s,-webkit-box-shadow linear .5s; 
+border-color:rgba(57,175,239,3);
+}
+#SignBtn{
+	width:80%;
+	height: 55px;
+	background-color: #39b0ef;
+	font-size: 22px;
+	font-family:Microsoft Yahei;
+	color: #fff;
+	cursor:hand;
+	text-align: center;
+	line-height:55px;
+	border-radius: 5px;;
+	cursor:pointer;
+	margin: 10px auto 0;
+}
+#forget{
+	height: 30px;
+	float: left;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#forget a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+
+#goRegister{
+	height: 30px;
+	float: right;
+	margin: 5px 0 5px 10px ;
+	color: #0096ff;
+	text-decoration: none
+}
+#goRegister a{
+	font-size:14px;
+	color: #0096ff;
+	text-decoration: none;
+}
+#StayLogin{
+	float: left;
+	margin: 5px 10px 5px 0px;
+	position: absolute;
+	bottom: 0; 
+}
+#StayLogin span{
+color: #b1b1b1;
+margin-left: 10px;
+
+}
+#protocol{
+text-decoration: none;
+color: #39b0ef;	
+}
+#LoginSet{	
+	height:35px;
+	overflow: hidden;
+}
+
+#OtherLogin{	
+	height: 63px;
+	width: 100%;
+	line-height:63px;
+	text-align: center
+}
+.OtherLogin{
+	height: 63px;
+	width: 100%;
+	line-height: 63px;
+	text-align: center;
+	font-size:18px;
+	color: #898989;	
+}
+.OtherLogin a{
+	color: #0096ff;
+	text-decoration: none;
+	font-size:18px;	
+}
+#line{
+	width:90%;
+	margin:0 auto;
+	height:1px;
+	border-top: 1px #cacaca solid; 
+}
+.loginInput{
+	-webkit-box-shadow:0 0 0 50px #fff inset; 
+	-webkit-text-fill-color:#b1b1b1;
+}
+
+
+}
