@@ -23,6 +23,16 @@
 		<zh>加入我们</zh>
 		<en>Join us</en>
 	</text>
+	<text id="registerNow">
+		<zh>立即注册</zh>
+		<en>Register Now</en>
+		<jp>今すぐ登録</jp>
+	</text>
+	<text id="HomePageTitle">
+		<zh>Aretalk 在线直播中文教育平台</zh>
+		<en>Chinese education online broadcast platform</en>
+		<jp>中国のライブオンライン教育プラットフォーム</jp>
+	</text>		
 		<text id="About">
 		<zh>相关信息</zh>
 		<en>About</en>

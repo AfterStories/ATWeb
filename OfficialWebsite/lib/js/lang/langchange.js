@@ -1,6 +1,6 @@
 
 (function($){
-	
+
 	$.fn.cloudLang = function(params){
 		
 		var defaults = {
@@ -24,14 +24,17 @@
 		                 		var text = $(this).find(defaults.lang).text();
 								
 								aTexts[textId] = text;
+
 							});
 		
 							$.each($("*"), function(i, item)
 							{
-								//alert($(item).attr("langtag"));
+								
 								if($(item).attr("langtag") != null)
-									$(item).fadeOut(150).fadeIn(150).text(aTexts[$(item).attr("langtag")]);
+									$(item).fadeOut(50).fadeIn(50).text(aTexts[$(item).attr("langtag")]);
+								
 							});
+							
 		               }
 		      });
 	};

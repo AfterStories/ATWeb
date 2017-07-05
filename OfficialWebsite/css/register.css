@@ -326,15 +326,14 @@ border-right: 1px solid #cfcfcf;
 @media (min-width: 414px) and (max-width: 736px){
 
 #login{
-	position: absolute;
+	position: relative;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	margin: 20px auto;
+	margin: 0 auto;
 	width: 80vw;
-	height: 78vh;
-	/* overflow: hidden; */;
-	top: 12vw;	
+	height: 140vw;
+	top: 5vh;
 }
 
 #LoginTitle{
@@ -362,21 +361,21 @@ height: 52px;
 }
 #SignBtn{
 	width:50%;
-	height:10vw;
+	height:6vw;
 	background-color: #39b0ef;
 	font-size: 15px;
 	font-family:"Microsoft Yahei";
 	color: #fff;
 	cursor:hand;
 	text-align: center;
-	line-height:10vw;
+	line-height:6vw;
 	border-radius: 5px;;
 	cursor:pointer;
 	margin: 10px auto 0;
-	position:absolute;
+	position:relative;
 	right:0;
 	left: 0;
-	bottom: 0;
+	top: 10vw;
 }
 #forget{
 	height: 30px;
@@ -578,14 +577,14 @@ border-right: 1px solid #cfcfcf;
 
 @media (min-width:736px) and (max-width:1280px){
 #login{
-	position: absolute;
+	position: relative;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	margin: 0 auto;
 	width: 50vw;
-	height: 70vw;
-	top: 12vw;	
+	height: 80vw;
+	top: 5vh;	
 }
 
 #LoginTitle{
@@ -624,10 +623,10 @@ height: 52px;
 	border-radius: 5px;;
 	cursor:pointer;
 	margin: 10px auto 0;
-	position:absolute;
+	position:relative;
 	right:0;
 	left: 0;
-	bottom: 0;
+	top: 5vh;
 }
 #forget{
 	height: 30px;
@@ -826,14 +825,10 @@ border-right: 1px solid #cfcfcf;
 
 @media (min-width:1280px)and (max-width:1600px){
 #login{
-position: absolute;
-left: 0;
-right: 0;
-bottom: 0;
 margin: 0 auto;
 width: 38vw;
-height: 48vw;
-top: 12vw;
+height: 60vw;
+top: 12vh;
 	
 }
 
@@ -872,10 +867,10 @@ height: 52px;
 	border-radius: 5px;;
 	cursor:pointer;
 	margin: 10px auto 0;
-	position:absolute;
 	right:0;
 	left: 0;
-	bottom: 0;
+	position: relative;
+	top: 10vh;
 }
 #forget{
 	height: 30px;
@@ -1075,14 +1070,10 @@ border-right: 1px solid #cfcfcf;
 
 @media (min-width:1600px){
 #login{
-position: absolute;
-left: 0;
-right: 0;
-bottom: 0;
-margin: 0 auto;
 width: 34vw;
-height: 42vw;
+height: 50vw;
 top: 10vw;
+margin: 0 auto;
 	
 }
 
@@ -1122,10 +1113,10 @@ height: 52px;
 	border-radius: 5px;;
 	cursor:pointer;
 	margin: 10px auto 0;
-	position:absolute;
+	position:relative;
 	right:0;
 	left: 0;
-	bottom: 0;
+	top: 10vh;
 }
 #forget{
 	height: 30px;

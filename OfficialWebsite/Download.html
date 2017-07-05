@@ -100,7 +100,7 @@
 				<div class="AboutText">
 					<div class="textTitle">Microsoft.NET Framework 4.5</div>
 					<div class="textcontent">支持Win7，Win8系统，WinXP暂时不支持。此软件需要Microsoft .net framework v4.0 插件支持,若系统没有需要下载安装。</div>
-					<div class="downBtn">下载Microsoft.NET Framework4.5</div>
+					<div class="downBtn" onclick="DownFramework()">下载Microsoft.NET Framework4.5</div>
 				</div>
 			</div>
 			
@@ -112,7 +112,7 @@
 				<div class="AboutText " id="flashtext">
 					<div class="textTitle">FlashPlayer 22</div>
 					<div class="textcontent">可以更好的支持Flash版本教室</div>
-					<div class="downBtn">下载FlashPlayer 22</div>
+					<div class="downBtn" onclick="DownFlashPlayer()">下载FlashPlayer 22</div>
 				</div>
 			</div>
 			
@@ -143,6 +143,7 @@ $(document).ready(function(){
 
           $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
           $("#LanguagePic img").attr("src","images/"+value+".png");
+          CreateCookie("Language", value, 30)
         }
 
       });
@@ -158,7 +159,14 @@ function downloadFile(){
 
 window.location="http://www.aretalk.com/Download/AreTalkStudent/AreTalkStudentv0.01.exe"
 }
+function DownFlashPlayer(){
 
+window.location="http://get2.adobe.com/cn/flashplayer/otherversions/"
+}
+function DownFramework(){
+
+window.location="https://www.microsoft.com/zh-cn/download/details.aspx?id=30653"
+}
 
 </script>
 <script src="js/download.js"></script>

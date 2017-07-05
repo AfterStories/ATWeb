@@ -100,6 +100,21 @@ $("#header").load("lib/header/header.html",function(){
 
  });
 
+$("footer").load("lib/footer/footer.html",function(){
+        $('.changeLangSet').dropkick({
+
+        change: function (value) {
+
+          $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
+          $("#LanguagePic img").attr("src","images/"+value+".png");
+          CreateCookie("Language", value, 30)
+        }
+
+      });
+
+})
+
+
 
 //获取电话区号
 $.ajax({                    
@@ -109,7 +124,7 @@ $.ajax({
         success:function(data) {
           
               for (var i = 0;i<data.data.areacode.length; i++) {
-               var areacode = '<option value="'+data.data.areacode[i].countryId+'">+'+data.data.areacode[i].areaCode+'</option>';
+               var areacode = '<option value="'+data.data.areacode[i].countryId+'">'+data.data.areacode[i].countryName+' +'+data.data.areacode[i].areaCode+'</option>';
                $('#PhoneNmuAre').append(areacode);                              
                   var form = layui.form();
                   form.render();

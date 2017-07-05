@@ -14,18 +14,15 @@
 <link rel="stylesheet" href="lib/header/css/dropkick.css" type="text/css">
 <link rel="stylesheet" href="lib/css/header.css">
 <link rel="stylesheet" href="lib/css/footer.css">
-<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/about.css">
 
 
 <script src="lib/js/jquery.js"></script>
 <script src="lib/js/layui/layui.js"></script>
 <script src="js/md5.js"></script>
-<script src="js/login.js"></script>
-
+<script src="js/about.js"></script>
 <script src="lib/header/js/dropkick.js"></script>
 <script src="lib/js/lang/langchange.js" type="text/javascript"></script>
-
-
 
 </head>
 
@@ -34,34 +31,57 @@
 	<div id="header">
 		
 	</div>
+	
+	<div id="helpTittle">
 	<img class="splitImgDown" src="images/splitImgDown.png"/>
-	<div id="login" class="layui-form">
-				<div id="LoginTitle">
-					<img src="images/logo2.png" >
-					<div id="LogoText">中文教育在线直播平台</div>
-				</div>
+		<div id="TittleName">
+		<img src="images/help.png" id="helpImg" />
+		<span id="TittleNametext">关于我们</span>
+		</div>
 
-					<div style="text-align:center">
-					 	 <input id="username" name="username" class="loginInput"  type="text" placeholder="账户" lay-verify="required|username|pass">
-						 <input id="Password" type="password" class="loginInput" name="	password" placeholder="密码" lay-verify="required">		 
-					</div>
-			 		<div id="LoginSet">
-			 			<div id="forget" style="display:none;"><a href="">忘记密码?</a></div>
-			 			<div id="goRegister"><a href="register.html">注册成为AreTalk学生</a></div>
-			 		</div>
-			 		<div id="SignBtn" lay-submit lay-filter="register" >登录</div>
+	</div>
+	<!-- <div id="serverBtn"></div> -->
+	<div id="login">
+		<div id="HelpNav">
+			<ul id="NavUl">
+				
+				<li class="NavLi active">关于我们</li>
+				<li class="NavLi ">联系我们</li>
+				<li class="NavLi ">合作机构</li>
+				<li class="NavLi ">商务合作</li>
+				<li class="NavLi ">发展机会</li>
+			</ul>
+		</div>
+		<div id="About" class="AboutContent">
 
+				敬请期待1
+		
+		</div>
+		<div id="Contact" class="AboutContent" style="display:none;">
+
+				敬请期待2
+		
+		</div>
+		<div id="Cooperate" class="AboutContent" style="display:none;">
+
+				敬请期待3
+		
+		</div>
+		<div id="Business" class="AboutContent" style="display:none;">
+
+				敬请期待4
+		
+		</div>
+		<div id="Development" class="AboutContent" style="display:none;">
+
+				敬请期待5
+		
+		</div>				
 
 	</div>		
-		
 	<footer>
 		
 	</footer>
-
-
-
-
-<script src="js/login.js"></script>
-
+		
 </body>
 </html>

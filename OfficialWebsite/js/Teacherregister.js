@@ -145,6 +145,7 @@ $(document).ready(function(){
 
           $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
           $("#LanguagePic img").attr("src","images/"+value+".png");
+          CreateCookie("Language", value, 30)
         }
 
       });
@@ -160,8 +161,7 @@ $.ajax({
         success:function(data) {
           
               for (var i = 0;i<data.data.areacode.length; i++) {
-               var areacode = '<option value="'+data.data.areacode[i].countryId+'">'+data.data.areacode[i].areaCode+'</option>';
-               $('#PhoneNmuAre').append(areacode);                              
+               var areacode = '<option value="'+data.data.areacode[i].countryId+'">'+data.data.areacode[i].countryName+' +'+data.data.areacode[i].areaCode+'</option>';               $('#PhoneNmuAre').append(areacode);                              
                   var form = layui.form();
                   form.render();
                 }

@@ -40,8 +40,8 @@
 			<img class="splitImgUp" src="images/splitImgUp.png"/>
 		</div>
 		<div id="FitstImgContent">
-			<div id="FirstImgText">Aretalk 在线直播中文教育平台</div>
-			<a id="FirstImgBtn" href="register.html">立即注册</a>
+			<div id="FirstImgText" langtag="HomePageTitle">Aretalk 在线直播中文教育平台</div>
+			<a id="FirstImgBtn" langtag="registerNow" href="register.html">立即注册</a>
 		</div>	
 
 	</div>
@@ -138,6 +138,8 @@ $(document).ready(function(){
 
           $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
           $("#LanguagePic img").attr("src","images/"+value+".png");
+          CreateCookie("Language", value, 30)
+
         }
 
       });

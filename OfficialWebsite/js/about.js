@@ -37,7 +37,7 @@ layui.use(['layer', 'element'], function(){
   //tab内容切换
   $('.NavLi').click(function(){
     var cur = $(this).index();
-    $('.layui-collapse').eq(cur).show().siblings('.layui-collapse').hide();
+    $('.AboutContent').eq(cur).show().siblings('.AboutContent').hide();
   })
 
 

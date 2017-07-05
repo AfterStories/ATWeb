@@ -205,7 +205,7 @@ footer {
     margin: auto;
     position: absolute;
     bottom:5vw;
-    right: 1vw;	
+	right: 1.5vw;	
 }
 
 #LanguagePic{
@@ -286,9 +286,9 @@ footer{
 	height:100%;
 }
 #FooterLogo{
-	width:20vw;
+	width:25vw;
 	float: left;
-	height:80%;	
+	height:100%;	
 }
 
 #FooterInfo{
@@ -398,7 +398,7 @@ footer {
 	overflow: hidden;
 	margin: 0 auto;
 	background-color: #f5f6f8;
-	height: 19.57vw
+	height: 35vw
 }
 
 
@@ -481,18 +481,16 @@ footer {
 
 
 #LangChoose{
-	position: absolute;
-	right:6%;	
+	right: 6%;
+	position: absolute;	
 }
 #LangBox{
 	width: 22vw;;
-	height: 30px;		
-	position: relative;
-	float: left;
+	height: 30px;
     margin: auto;
-    position: absolute;
     bottom:5vw;
-    right: 1vw;	
+	float: left;
+	position: absolute;;	
 }
 
 #LanguagePic{
@@ -573,15 +571,14 @@ footer{
 	height:100%;
 }
 #FooterLogo{
-	width:20vw;
+	width:25vw;
 	float: left;
-	height:80%;	
+	height:100%;	
 }
 
 #FooterInfo{
 	float: right;
 	width:48%;
-	bottom: 20px;
 	height:100%;
 	vertical-align: middle;
 	position: relative;
@@ -602,14 +599,14 @@ footer{
 }
 
 #footerMain {
-	height:18vw;
-	width: 80%;
+	width: 85%;
 	margin: auto;
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
+	height: 80%;
 
 
 }
@@ -634,7 +631,7 @@ footer{
 
 
 
-/* 宽度大于640 小于1000时 */
+/* å®½åº¦å¤§äºŽ640 å°äºŽ1000æ—¶ */
 @media (min-width:640px) and (max-width:1000px){
 
 
@@ -649,19 +646,12 @@ footer{
     right: 0;
 }
 
-#LangChoose {
-	position: absolute;
-	right: 6%;
-}
+
 
 #LangBox {
-	width: 170px;
-	height: 30px;
-	position: absolute;
 	float: left;
-	margin: auto;
-	bottom: 4vw;
-	right: 1vw;
+	bottom: 0;
+	width: 160px;
 }
 
 #LanguagePic {
@@ -765,18 +755,16 @@ footer {
 
 
 #LangChoose{
-	position: absolute;
-	right:6%;	
+	position: relative;
+	left: 2.5vw;	
 }
-#LangBox{
-	width: 22vw;;
+#LangBox{;
 	height: 30px;		
 	position: relative;
-	float: left;
     margin: auto;
-    position: absolute;
-    bottom:5vw;
-    right: 1vw;	
+    position: absolute;;
+	width: 100%;;
+
 }
 
 #LanguagePic{
@@ -791,12 +779,12 @@ footer {
 
 
 footer{
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-    background-color: #f5f6f8;
-	height: 25vw;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #f5f6f8;
+	height: 30vw;
+	position: relative;
+	bottom: 0;
 }
 #FooterCopyRight{
 	color:#fff;
@@ -925,7 +913,7 @@ footer{
 
 
 
-/* 宽度大于1000 小于1600时 */
+/* å®½åº¦å¤§äºŽ1000 å°äºŽ1600æ—¶ */
 @media (min-width:1000px) and (max-width:1600px){
 
 
@@ -1064,8 +1052,9 @@ footer {
 	float: left;
     margin: auto;
     position: absolute;
-    bottom: 6vw;
-    right: 1vw;	
+    bottom: 0;;
+    right: 0;
+	left: 0;	
 }
 
 #LanguagePic{
@@ -1350,8 +1339,9 @@ footer {
 	float: left;
     margin: auto;
     position: absolute;
-    bottom: 4vw;
-    right: 1vw;	
+    bottom: 0;
+    right: 0;
+	left: 0;	
 }
 
 #LanguagePic{
@@ -1361,7 +1351,7 @@ footer {
     width: 24px;
     height: 24px;
     right: 22%;;
-    top: 15%;;
+    top: 28%;;
 }
 
 

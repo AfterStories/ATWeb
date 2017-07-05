@@ -104,6 +104,7 @@ var TheuserName,Thepassword;
 
           $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
           $("#LanguagePic img").attr("src","images/"+value+".png");
+          CreateCookie("Language", value, 30)
         }
 
       });

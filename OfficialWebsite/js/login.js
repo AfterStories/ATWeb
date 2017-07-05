@@ -45,7 +45,7 @@ form.verify({
 
     var LoginURL = "http://211.159.152.210:8188/AreTalkServer/Web/Login/";
 
-var TheuserName,Thepassword;
+    var TheuserName,Thepassword;
 
 
     
@@ -106,6 +106,7 @@ var TheuserName,Thepassword;
 
           $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
           $("#LanguagePic img").attr("src","images/"+value+".png");
+          CreateCookie("Language", value, 30)
         }
 
       });

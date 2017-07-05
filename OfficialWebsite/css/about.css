@@ -1,9 +1,8 @@
 
 html,body{
-min-width: 414px;
-background-color: #f9f9f9;
-
-
+min-width:414px;
+background-color: #efefef;
+position: relative;
 }
 
 .layui-form-checked[lay-skin=primary] i {
@@ -16,13 +15,96 @@ background-color: #f9f9f9;
 	width: 100%;
 }
 
+#TittleName{
+	float: left;
+	margin-left: 4vw;
+	height: 70px;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+#TittleNametext{
+display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.8vw;
+	color: #fff;
+margin-left: 1vw;
+}
+#helpImg{
+	width: 2vw;
+	height:2vw;
+	margin-top: 0.3vw;
+}
+.splitImgDown {
+    width: 100%;
+    height: 1vw;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+}
+#helpTittle{
+	width: 100%;
+	float: left;
+	background-color: #66c4ef;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	height: 70px;
+}
+#login{
+margin: 0 auto;
+height: 100%;
+width: 100%;
+float: left;
+
+}
+
+.active{
+	color:#66c4ef;
+}
+.NavColor{
+	color:#697176;
+}
+.HelpQuestion{
+	overflow: hidden
+}
+.QuestionText{
+	float: left;
+}
+.ShowCtrl{
+	float: right;
+}
+
+.layui-colla-content {
+    display: none;
+    padding: 10px 4vw;
+    line-height: 22px;
+    border-top: 1px solid #e2e2e2;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 设备屏幕自适应 */
 @media (max-width: 414px) {	
-#login{
 
-}
 
 #LoginTitle{
 	text-align:center;
@@ -167,24 +249,39 @@ color: #39b0ef;
 
 
 @media (min-width: 414px) and (max-width: 768px){
+#NavUl{
+margin: 0 auto;
+padding-left: 4vw;
 
-footer{
-    background-color: #f5f6f8;
-    height: 40vw;
-    margin: 0 auto;
-    width: 100%;
-    position: absolute;
-    bottom: 0;	
 }
 
-#login{
-    margin: 0 auto;
+
+.AboutContent{
+	float: right;
+	width: 70vw;
+	background-color: #fff;
+	height: 100vh;
+}
+.layui-colla-title{
     position: relative;
-    width: 45vw;
-    top: 10vw;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    height: 40px;
+    line-height: 40px;	
+}
+#HelpNav{
+background-color: #fff;
+float: left;
+width: 25vw;
+height: 100vh;
+}
+.NavLi{
+font-size: 16px;line-height: 16px;
+padding: 2vw 0;cursor: pointer;
 
 }
-
 #LoginTitle{
 	text-align:center;
 	font-size: 30px;
@@ -329,38 +426,54 @@ color: #39b0ef;
 
 
 @media (min-width:768px) and (max-width:1280px){
+	#NavUl{
+margin: 0 auto;
+padding-left: 4vw;
 
-footer{
-    background-color: #f5f6f8;
-    height: 30vw;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;	
 }
 
-#login{
-margin: 0 auto;
-position: relative;
-width: 45vw;
-top: 10vw;
+
+.AboutContent{
+	float: right;
+	width: 79vw;
+	background-color: #fff;
+	height: 100vh;
+}
+	#HelpNav{
+background-color: #fff;
+float: left;
+width: 18vw;
 height: 100vh;
 }
+.NavLi{
+font-size: 20px;line-height: 1.3vw;
+padding: 20px 0;cursor: pointer;
 
+}
+.layui-colla-title{
+    position: relative;
+    height: 4vw;
+    line-height: 4vw;
+    padding: 0 1vw 0 4vw;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;	
+}
 #LoginTitle{
 	text-align:center;
 	font-size: 30px;
 	color: #4b4b4b;
-	height:10vw;
+	height:20vw;
 }
 #LoginTitle img{
-width: 20vw;
-height: 5vw;
+width: 211px;
+height: 52px;
 
 }
 #LogoText{
-	font-size: 16px;
+	font-size: 18px;
 	color: #737373;
-	margin-top: 1vw;
+	margin-top: 20px;
 }
 .loginInput{
 	display: inline;
@@ -384,17 +497,17 @@ border-color:rgba(57,175,239,3);
 }
 #SignBtn{
 	width:80%;
-	height: 4vw;
+	height: 55px;
 	background-color: #39b0ef;
 	font-size: 22px;
 	font-family:Microsoft Yahei;
 	color: #fff;
 	cursor:hand;
 	text-align: center;
-	line-height:4vw;
+	line-height:55px;
 	border-radius: 5px;;
 	cursor:pointer;
-	margin: 1vw auto 0;
+	margin: 10px auto 0;
 }
 #forget{
 	height: 30px;
@@ -437,7 +550,7 @@ text-decoration: none;
 color: #39b0ef;	
 }
 #LoginSet{	
-	height:3vw;
+	height:35px;
 	overflow: hidden;
 }
 
@@ -489,26 +602,39 @@ color: #39b0ef;
 
 
 @media (min-width:1280px)and (max-width:1600px){
+	#NavUl{
+margin: 0 auto;
+padding-left: 4vw;
 
-footer{
-    background-color: #f5f6f8;
-    height: 30vw;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;	
 }
 
-#login{
+
+.AboutContent{
+	float: right;
+	width: 82vw;
+	background-color: #fff;
+	height: 100vh;
+}
+	#HelpNav{
+background-color: #fff;
+float: left;
+width: 15vw;
+height: 100vh;
+}
+.layui-colla-title{
     position: relative;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    width: 22.5vw;
-    top: 20vh;
-    height: 100vh;
+    height: 4vw;
+    line-height: 4vw;
+    padding: 0 1vw 0 4vw;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;	
 }
+.NavLi{
+font-size: 20px;line-height: 1.1vw;
+padding: 20px 0;cursor: pointer;
 
+}
 #LoginTitle{
 	text-align:center;
 	font-size: 30px;
@@ -652,33 +778,44 @@ color: #39b0ef;
 
 
 @media (min-width:1600px){
-
-footer{
-    background-color: #f5f6f8;
-    height: 20vw;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;	
-}
-
-
-#login{
-left: 0;
-right: 0;
-bottom: 0;
+	#NavUl{
 margin: 0 auto;
-width: 22.5vw;
-height: 100vh;
-position: relative;
-top: 2vw;
+padding-left: 4vw;
 
 }
 
+.AboutContent{
+	float: right;
+	width: 83vw;
+	background-color: #fff;
+	height: 100vh;
+}
+#HelpNav{
+background-color: #fff;
+float: left;
+width: 15vw;
+height: 100vh;
+}	
+.layui-colla-title{
+    position: relative;
+    height: 2vw;
+    line-height: 2vw;
+    padding: 0 1vw 0 2vw;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;	
+}
+.NavLi{
+font-size: 20px;line-height: 1.5vw;
+padding: 0.8vw 0;
+cursor: pointer;
+
+}
 #LoginTitle{
 	text-align:center;
 	font-size: 30px;
 	color: #4b4b4b;
-	height:10vw;
+	height:200px;
 }
 #LoginTitle img{
 width: 211px;
