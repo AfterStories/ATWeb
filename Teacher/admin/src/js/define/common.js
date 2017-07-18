@@ -136,7 +136,7 @@ function layer_show(title, url, id, w, h) {
     w = 800;
   };
   if(h == null || h == '') {
-    h = ($(window).height() - 300);
+    h = ($(window).height() - 400);
   };
   layer.open({
     type: 2,

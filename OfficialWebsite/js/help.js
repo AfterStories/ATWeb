@@ -1,8 +1,16 @@
 
 $(document).ready(function(){ 
+resizeHeight()
 
 layui.use(['layer', 'element'], function(){
   var layer = layui.layer;
+var element = layui.element();
+
+element.on('collapse', function(data){
+  console.log(data.show); //得到当前面板的展开状态，true或者false
+  resizeHeight();
+});
+
 
 });        
       
@@ -30,6 +38,7 @@ layui.use(['layer', 'element'], function(){
   //左侧导航按钮切换
   $('.NavLi').click(function(){
     $(this).addClass('active').siblings().removeClass('active');
+    resizeHeight()
     
   })
 
@@ -42,15 +51,22 @@ layui.use(['layer', 'element'], function(){
 
 
 
-
-
 })
  
 
 
 
 
+function resizeHeight(){
 
+    var resizeheight = $("#HelpBox").height() ;
+    if (resizeheight<800) {
+      $("#HelpNav").height(800)
+    }else{
+      $("#HelpNav").height(resizeheight)
+    }
+    
+}
 
 function getSessionId(){  
     var c_name = 'JSESSIONID';  

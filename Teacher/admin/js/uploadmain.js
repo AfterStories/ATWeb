@@ -45,13 +45,13 @@ $(function () {
 });
 
 
-    $('#exercise-Type .btn').click(function(){
-        //内容切换
+/*    $('#exercise-Type .btn').click(function(){
+        
         var cur = $(this).index();
         $('.Type-tab-main').eq(cur).show().siblings('.Type-tab-main').hide();
         
     })
-
+*/
 
 
     function getFileName(name){
@@ -101,7 +101,7 @@ $('#UploadAnswerA').fileupload(
           if (filetype=='mp3'){            
             var MP3exerciseCard = '<div id="AnswerA-MP3" class="Answer-MP3-BOX"><div class="AnswerMP3pre"><audio controls><source src='+exerciseUrl+' type="audio/mpeg"></audio></div></div>'
             $("#ABOX").append(MP3exerciseCard);            
-          }else if (filetype=='jpg'||filetype=='png'||filetype=='gif'){           
+          }else if (filetype=='jpg'||filetype=='jpeg'||filetype=='png'||filetype=='gif'){           
             var exerciseCard = '<div class="ImgBox"><img src='+exerciseUrl+'></div>';
             $("#ABOX").append(exerciseCard);            
           }
@@ -231,7 +231,7 @@ var answerCId = $("#CBOX").attr("value");var answerDId = $("#DBOX").attr("value"
 var imgId =null ;var mp3Id = null;
 var anwserA;var anwserB;var anwserC;var anwserD;
 var questionDescribe = $("#Image-exercise-textarea").val();//题干
-var questionDescribeId = null;  //题干ID   只有字或者图
+var questionDescribeId = null;  //无图的话就传空
   
 var Mp3MainSrcId = $("#Mp3preID").attr("value");
 var Mp3SrcTpye = $("#Mp3preID").attr("SrcTpye"); 
@@ -244,7 +244,6 @@ if (Mp3MainSrcId){
 
 if(ImgMainSrcId){
     questionDescribeId = ImgMainSrcId;
-    questionDescribe = null
 };
 
 if (answerAId){
@@ -291,37 +290,40 @@ console.log("题干"+questionDescribe);
 console.log("题干ID"+questionDescribeId);
 
 
-
-
-/*          $.ajax({
-                type:'POST',
-                data:{
-                      level:lvProblem,
-                      title:exerciseTitle,
-                      mp3Id:,
-                      imgId:,//练字题
-                      anwserA:,
-                      anwserAId:,
-                      anwserB:,
-                      anwserBId:,
-                      anwserC:,
-                      anwserCId:,
-                      anwserD:,
-                      anwserDId:,
-                      exerciseTypeId:,
-                      anwserType:anwserType,
-                      exerciseDescribe:,
-                      questionDescribe:,//题干
-                      questionDescribeId:,
-                      realAnwser:realAnwser,
-                  },       
-              url: UpLoadURL+'/Web/Api/addQuestion.action;jsessionid='+Sessionid,
-              success:function(data) {
-                alert("添加成功")
-                  },
-              error:function() {
-                alert("网络有点小问题~请重试")
-                  }
-              }); */
+  $.ajax({
+        type:'POST',
+        data:{
+              level:lvProblem,
+              title:exerciseTitle,
+              mp3Id:mp3Id,
+              imgId:imgId,//练字题
+              answerA:AnswerAtext,
+              answerAId:answerAId,
+              answerB:AnswerBtext,
+              answerBId:answerBId,
+              answerC:AnswerCtext,
+              answerCId:answerCId,
+              answerD:AnswerDtext,
+              answerDId:answerDId,
+              exerciseTypeId:exerciseTypeId,
+              answerType:anwserType,
+              exerciseDescribe:exerciseDescribe,//说明
+              questionDescribe:questionDescribe,//题干
+              questionDescribeId:questionDescribeId,
+              realAnswer:realAnwser
+          },       
+      url: UpLoadURL+'/AreTalkServer/Web/Api/addQuestion.action;jsessionid='+Sessionid,
+      success:function(data) {
+              if (data.data.Question){
+                console.log(JSON.stringify(data.data.Question))
+                alert("添加成功");
+              }else{
+                alert("失败，请重试")
+              }
+          },
+      error:function() {
+        alert("网络有点小问题~请重试")
+          }
+      }); 
 
 }

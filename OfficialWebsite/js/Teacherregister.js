@@ -79,7 +79,8 @@ console.log(fromValue)
 
 teacherHeadImgId = $(".col-lg-7").attr("value");
   if (teacherHeadImgId) {
-    register();
+     register()
+   
   }else{
     alert("没有上传头像");
     return;    
@@ -279,7 +280,6 @@ $.ajax({
 
 
 
-
 var checkInfoValid;
 function GetCode(){
   
@@ -354,7 +354,7 @@ $.ajax({
         data:{
               userType:0,
               userName:fromValue.userName,
-              password:fromValue.Tpassword,
+              password:fromValue.password,
               phoneNo:fromValue.phoneNo,
               motherlandId:fromValue.motherLang,       
               phoneNo:fromValue.phoneNo,
@@ -372,7 +372,7 @@ $.ajax({
               Login(); 
              
             }else{
-              layer.msg('网络错误请重试',{time:1500});
+              layer.msg('',{time:1500});
             }
 
             },

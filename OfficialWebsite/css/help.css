@@ -85,6 +85,14 @@ float: left;
     color: #666;
 }
 
+.layui-colla-content p{
+	font-size:16px;
+	margin:1vw;
+	font-weight:600;
+}
+.layui-colla-content img{
+	width: 80%;
+}
 
 
 
