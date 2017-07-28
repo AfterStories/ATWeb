@@ -55,8 +55,8 @@
                   <div class="layui-inline" id="TelBox" style="width:100%;margin-right: 0px;">
                     <label class="layui-form-label inputName" >手机号</label>
                     <div class="layui-input-inline">
-                      <select name="countryId" id="PhoneNmuAre" lay-verify="required">
-                            <option  value="0">区号</option>
+                      <select lay-verify="required" name="countryId" id="PhoneNmuAre" >
+                            <option  value="">区号</option>
                       </select>
                     </div>                    
                     <div class="PhoneNum-inline">
@@ -96,7 +96,7 @@
                 <div class="layui-inline">
                   <label class="layui-form-label" >证件信息</label>
                   <div class="layui-input-inline input-short">
-                    <select name="certificate" lay-verify="" id="certificate" lay-verify="required">
+                    <select name="certificate"  id="certificate" lay-verify="required">
                       <option value="">请选择证件类型</option>
 
                     </select>      
@@ -111,8 +111,8 @@
                 <div class="layui-inline">
                   <label class="layui-form-label">来自</label>
                   <div class="layui-input-inline input-short">
-                    <select name="motherlandId" id="motherlandId" lay-filter="country" lay-verify="required" lay-verify="required">                      
-						        <option  selected = "selected" value="0">请选择</option>
+                    <select name="motherlandId" id="motherlandId" lay-filter="country" lay-verify="required">                      
+						        <option value="">请选择</option>
                     </select>
                   </div>
                 </div>
@@ -131,8 +131,8 @@
                 <div class="layui-inline">
                   <label class="layui-form-label" >居住地</label>
                   <div class="layui-input-inline input-short">
-                    <select name="LivelandId" id="LivelandId" lay-filter="country" lay-verify="required" lay-verify="required">                      
-						<option  selected = "selected" value="0">请选择</option>
+                    <select name="LivelandId" id="LivelandId" lay-filter="country" lay-verify="required">                      
+						<option  value="">请选择</option>
                     </select>
                   </div>
                 </div>
@@ -331,7 +331,7 @@
                 <div class="layui-inline">
                   <label class="layui-form-label">你的母语</label>
                   <div class="layui-input-inline input-long">
-                    <select name="motherLang" lay-verify="" id="motherLangSelect" lay-verify="required">
+                    <select name="motherLang" id="motherLangSelect" lay-verify="required">
                       <option value="">请选择你的母语</option>
 
                     </select>  
@@ -341,7 +341,7 @@
                 <div class="layui-inline">
                   <label class="layui-form-label" >掌握语言</label>
                   <div class="layui-input-inline input-short">
-                    <select class="KnowLang" name="KnowLang1" lay-verify="" id="KnowLangSelect" lay-verify="required">
+                    <select class="KnowLang" name="KnowLang1" id="KnowLangSelect" lay-verify="required">
                       <option value="">请选择你掌握语言</option>
 
                     </select>      
@@ -350,7 +350,7 @@
                 <div class="layui-inline input-right">
                   <label class="layui-form-label">等级</label>
                   <div class="layui-input-inline input-short">
-                    <select class="KnowLangLv" name="KnowLangLv1" lay-verify="" id="LangLvSelect" lay-verify="required">
+                    <select class="KnowLangLv" name="KnowLangLv1" id="LangLvSelect" lay-verify="required">
                       <option value="">请选择语言等级</option>
                       <option value="1">初级</option>
                       <option value="2">中级</option>
@@ -382,7 +382,7 @@
                 <div class="layui-inline">
                   <label class="layui-form-label" >选择银行</label>
                   <div class="layui-input-inline input-short">
-                    <select name="bank" lay-verify="" id="BankSelect" lay-verify="required">
+                    <select name="bank"  id="BankSelect" lay-verify="required">
 						            <option value="">请选开户银行</option>
                     </select>      
                   </div>

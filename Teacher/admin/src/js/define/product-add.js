@@ -1,4 +1,105 @@
 
+
+
+$(function() {
+
+/*  获取语言/课程类型、下拉列表/*/
+     var Sessionid = getCookie("JSESSIONID")
+        $.ajax({
+            dataType:'json',
+            type:'GET',
+            data:{},       
+            url: 'http://211.159.152.210:8188/AreTalkServer/Web/Api/getCommonTable.action;jsessionid='+Sessionid,
+            success:function(data){
+              for (var i = 0;i<data.data.lang.length; i++) {
+                   var LangList = '<option value="'+data.data.lang[i].id+'">'+data.data.lang[i].name+'</option>';  
+                   $('#teachLang').append(LangList);                       
+                   $('#Lang').append(LangList);
+                    var form = layui.form();
+                  form.render(); 
+                };
+
+              for (var i = 0;i<data.data.level.length; i++) {
+                   var levelList = '<option value="'+data.data.level[i].id+'">'+data.data.level[i].name+'</option>';  
+                   $('#lessonlevel').append(levelList);
+                    var form = layui.form();
+                    form.render(); 
+                }
+
+              for (var i = 0;i<data.data.lessonType.length; i++) {
+                   var typeList = '<option value="'+data.data.lessonType[i]+'">'+data.data.lessonType[i]+'</option>';  
+                   $('#lessonType').append(typeList);
+                   console.log(typeList)
+                    var form = layui.form();
+                    form.render(); 
+                } 
+
+                  var LessonType = data.data.lessonType;
+                 for(var item in LessonType){
+
+                      var TypeKey = item;
+                      var Typevalue = LessonType[item];
+
+
+                    if (TypeKey == 'LITTLE_CLASS') {
+                      TypeKey = '小班课'
+                    }else if(TypeKey == 'ONE_TO_ONE'){
+                      TypeKey = '一对一';
+                    }else if(TypeKey == 'VEDIO_CLASS'){
+                       TypeKey = '录播课'; 
+                    };
+                    var typeList = '<option value="'+Typevalue+'">'+TypeKey+'</option>';
+                    $('#lessonType').append(typeList);
+
+                     console.log("typeList")
+                    var form = layui.form();
+                    form.render(); 
+                  }               
+
+                },
+              error: function () {                  
+                alert(data.errMsg);       
+          
+          }                        
+            }); 
+
+/*获取标签下拉列表*/
+$.ajax({
+dataType:'json',
+type:'GET',
+data:{userType:0},       
+url: 'http://211.159.152.210:8188/AreTalkServer/Web/Api/getLessonLabel.action;jsessionid='+Sessionid,
+success:function(data) {
+  var tags = data.data.LessonLabels;
+  var tagsArry = [];
+    for (var i = 0; i<tags.length; i++) {
+        tagsArry[i] = tags[i];
+    };
+       //二维数组排序，以子数组的第一个元素（count 次数）为升序
+        var tagsArr = tagsArry.sort(function(x, y){
+        return y[0]-x[0];        
+      });
+ 
+      for (var i = 0; i<tagsArr.length;i++) {
+          var tagsList = '<option value="'+tagsArr[i].labelName+'">'+tagsArr[i].labelName+'</option>';
+          $('#tags-select').append(tagsList);        
+          var form = layui.form();
+          form.render(); 
+        };
+
+    },
+  error: function () {                  
+    alert(data.errMsg);       
+
+}                        
+}); 
+
+});  
+
+
+
+
+
   var Lang; var teachLang;var lessonType;var tagsselect;
 
 layui.config({
@@ -142,6 +243,8 @@ $(".DelTagBtn").click(function (){
        return;
       }
 
+
+
          $.ajax({
               dataType:'json',
               type:'POST', 
@@ -199,7 +302,8 @@ $(".DelTagBtn").click(function (){
 
                           layer.alert('添加课程成功~', {
                             skin: 'layui-layer-molv' //样式类名
-                            ,closeBtn: 0
+                            ,closeBtn: 0,
+                            offset: '100px'
                           }, function(){
                             parent.layer.closeAll();
                           });              

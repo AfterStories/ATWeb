@@ -35,7 +35,7 @@
   $('#addlesson').on('click', function() {
     var username ="添加新课程";
     var href = 'product-add.html';
-    layer_show(username, href, '', '1000', '600');
+    layer_show(username, href, '', '1000', '');
   });
   /*课程-修改*/
 
@@ -130,7 +130,7 @@ function edit(lessonId){
     editlesId = lessonId;  
     var name = '修改课程'; 
     var href = 'product-edit.html';
-    layer_show(name, href, '', '1000', '600');   
+    layer_show(name, href, '', '1000', '');   
 
      //阻止事件冒泡
      var e=arguments.callee.caller.arguments[0]||event;

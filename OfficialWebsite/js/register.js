@@ -228,7 +228,7 @@ function GetCode(){
               url: 'http://211.159.152.210:8188/AreTalkServer/Web/Login/checkInfoValid.action',
               success:function(data) {
                   
-                  if(data.status="success"){
+                  if(data.data.status=="success"){
                     checkInfoValid = true;
                       
                       $.ajax({
@@ -237,7 +237,7 @@ function GetCode(){
                           data:{countryId:PhoneLocaltion,phoneNo:PhoneNumber,type:1},       
                           url: 'http://211.159.152.210:8188/AreTalkServer/Verify/sendPhoneNoVerifyCode.action',
                           success:function(data) {
-                                if (data.status="success") {
+                                if (data.data.status=="success") {
                                     time();
                                    layer.msg('正在发送验证码，请查收手机短信',{time:1500});
                                 }
@@ -248,11 +248,11 @@ function GetCode(){
                             }                        
                       }); 
 
-                  }else if(data.status="failed"){
+                  }else if(data.data.status=="failed"){
 
-                        if (data.item="userName") {
+                        if (data.data.item=="userName") {
                             layer.msg('用户名已被注册',{time:1500});
-                        }else if(data.item="phoneNO"){
+                        }else if(data.data.item=="phoneNo"){
                             layer.msg('手机号已注册',{time:1500});
                         }
                   }

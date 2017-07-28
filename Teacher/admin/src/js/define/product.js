@@ -230,6 +230,26 @@ layui.use(['layer', 'datatable', 'datatableButton', 'datatableFlash', 'datatable
             {
                 "targets": [8],
                 "data": "classNo",
+               
+                "render": function(data, type, row,full) {
+                    var s = '<span title="上传" class="handle-btn handle-btn-edit" style="margin-right:14px;"><i class="layui-icon" onclick="uploadVideo('+data+')">&#xe62f;</i></span>';
+                    return s;
+                },
+                "className": "td-handle"
+            },             
+            {
+                "targets": [9],
+                "data": "classNo",
+               
+                "render": function(data, type, row,full) {
+                    var s = '<span title="上传" class="handle-btn handle-btn-edit" style="margin-right:14px;"><i class="layui-icon" onclick="uploadRecording('+data+')">&#xe62f;</i></span>';
+                    return s;
+                },
+                "className": "td-handle"
+            },            
+            {
+                "targets": [10],
+                "data": "classNo",
                 "orderable": false,
                 "render": function(data, type, row,full) {
                     var s = '<span title="编辑" class="handle-btn handle-btn-edit" style="margin-right:14px;"><i class="linyer icon-edit" onclick="edit('+data+')";></i></span><span title="删除" class="handle-btn handle-btn-delect"><i class="linyer icon-delect"></i></span>';
@@ -277,7 +297,7 @@ layui.use(['layer', 'datatable', 'datatableButton', 'datatableFlash', 'datatable
         message: 'AreTalk课程表!'
       }]
     });
-    console.log(myTable);
+    /*console.log(myTable);*/
     myTable.buttons().container().appendTo($('.tableTools'));
     /**
      * 显示隐藏列
@@ -303,7 +323,7 @@ layui.use(['layer', 'datatable', 'datatableButton', 'datatableFlash', 'datatable
      * 选择
      */
     myTable.on('select', function(e, dt, type, index) {
-      console.log(index);
+      
       if(type === 'row') {
         $(myTable.row(index).node()).find('input:checkbox').prop('checked', true);
       }

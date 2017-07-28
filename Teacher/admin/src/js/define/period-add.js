@@ -89,7 +89,9 @@ layui.use(['jquery', 'form', 'upload','laydate'], function() {
                   },       
               url: 'http://211.159.152.210:8188/AreTalkServer/Web/Api/addLessonDetailClass.action;jsessionid='+Sessionid,
               success:function(data) {
-                if (data.data.errCode==0) {
+             
+                console.log(data.errCode)
+                if (data.errCode==0) {
                    alert("提交成功");  
                  }else{
                     alert(data.fieldError.errMsg);  

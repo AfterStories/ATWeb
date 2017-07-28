@@ -54,7 +54,7 @@ layui.use(['jquery', 'form', 'upload','laydate','layer'], function() {
         $.ajax({
               dataType:'json',
               type:'POST',
-              async:false,//异步关掉才好使~！
+              async:false,//异步关掉~！
               contentType: "application/x-www-form-urlencoded; charset=utf-8", 
               data:{title:$("#kejietitle").val(),
                     lessonId:Lessonid,

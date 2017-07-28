@@ -317,12 +317,15 @@ console.log("题干ID"+questionDescribeId);
               if (data.data.Question){
                 console.log(JSON.stringify(data.data.Question))
                 alert("添加成功");
+
+              window.location.reload();//刷新
+
               }else{
                 alert("失败，请重试")
               }
           },
       error:function() {
-        alert("网络有点小问题~请重试")
+        alert("失败~请重试")
           }
       }); 
 

@@ -78,12 +78,16 @@ fromValue.userName = fromValue.userName.toLowerCase();
 console.log(fromValue)
 
 teacherHeadImgId = $(".col-lg-7").attr("value");
+
   if (teacherHeadImgId) {
+
+    if (fromValue.countryId) {}
      register()
+
    
   }else{
     alert("没有上传头像");
-    return;    
+    return; 
   }
 
 
@@ -93,7 +97,7 @@ teacherHeadImgId = $(".col-lg-7").attr("value");
 
 var i =2;
 $("#addKnowLang").click(function(){
-var addUseLang = '<div class="addBox"><div class="layui-inline"><label class="layui-form-label">掌握语言</label><div class="layui-input-inline input-short"><select class="KnowLang" name="KnowLang'+i+'" lay-verify=""><option value="">请选择你掌握语言</option><option value="1">英语</option><option value="2">汉语</option><option value="3">日语</option></select></div></div><div class="layui-inline input-right"><label class="layui-form-label">等级</label><div class="layui-input-inline input-short"><select class="KnowLangLv" name="KnowLangLv'+i+'" lay-verify=""><option value="">请选择</option><option value="1">初级</option><option value="2">中级</option><option value="3">高级</option></select></div></div><img class="clearLang" src="images/jian.png" /></div>';
+var addUseLang = '<div class="addBox"><div class="layui-inline"><label class="layui-form-label">掌握语言</label><div class="layui-input-inline input-short"><select class="KnowLang" name="KnowLang'+i+'" lay-verify="required"><option value="">请选择你掌握语言</option><option value="1">英语</option><option value="2">汉语</option><option value="3">日语</option></select></div></div><div class="layui-inline input-right"><label class="layui-form-label">等级</label><div class="layui-input-inline input-short"><select class="KnowLangLv" name="KnowLangLv'+i+'" lay-verify="required"><option value="">请选择</option><option value="1">初级</option><option value="2">中级</option><option value="3">高级</option></select></div></div><img class="clearLang" src="images/jian.png" /></div>';
  $("#KnowLangFrom").append(addUseLang);
  form.render();
   i = i+1;
@@ -108,7 +112,7 @@ var addUseLang = '<div class="addBox"><div class="layui-inline"><label class="la
 
 var j = 2;
 $("#addTeachUseLang").click(function(){
-var addTeachUseLang = '<div class="addBox"><div class="layui-inline"><label class="layui-form-label">语言课程</label><div class="layui-input-inline input-short"><select class="lessonLang" name="lessonLang'+j+'" lay-verify=""><option value="">请选择你掌握语言</option><option value="1">英语</option><option value="2">汉语</option><option value="3">日语</option></select></div></div><div class="layui-inline input-right"><label class="layui-form-label">使用语言</label><div class="layui-input-inline input-short"><select name="UseLang" name="UseLang'+j+'" lay-verify=""><option value="">请选择</option><option value="1">英语</option><option value="2">汉语</option><option value="3">日语</option></select></div></div><img class="clearLang" src="images/jian.png" /></div>';
+var addTeachUseLang = '<div class="addBox"><div class="layui-inline"><label class="layui-form-label">语言课程</label><div class="layui-input-inline input-short"><select class="lessonLang" name="lessonLang'+j+'" lay-verify="required"><option value="">请选择你掌握语言</option><option value="1">英语</option><option value="2">汉语</option><option value="3">日语</option></select></div></div><div class="layui-inline input-right"><label class="layui-form-label">使用语言</label><div class="layui-input-inline input-short"><select name="UseLang" name="UseLang'+j+'" lay-verify="required"><option value="">请选择</option><option value="1">英语</option><option value="2">汉语</option><option value="3">日语</option></select></div></div><img class="clearLang" src="images/jian.png" /></div>';
  $("#baseInfoFromuse").append(addTeachUseLang);
  form.render();
 j =j+1
@@ -286,7 +290,7 @@ function GetCode(){
   username = $("#username").val();
   PhoneNumber = $("#PhoneNumber").val();
   var PhoneLocaltion = $('#PhoneNmuAre option:selected').val();//Select选中的值
-  console.log(username);console.log(PhoneNumber);
+
 
   if (username&&PhoneNumber){
       $.ajax({
@@ -295,17 +299,17 @@ function GetCode(){
               data:{userName:username,phoneNo:PhoneNumber,type:1},       
               url: UpLoadURL+'/AreTalkServer/Web/Login/checkInfoValid.action',
               success:function(data) {
-                  
-                  if(data.status="success"){
+                 
+                  if(data.data.status=="success"){
                     checkInfoValid = true;
-                      
+                      console.log(data.data.status)
                       $.ajax({
                           async:false,                  
                           type:'POST',
                           data:{countryId:PhoneLocaltion,phoneNo:PhoneNumber,type:0},       
                           url: UpLoadURL+'/AreTalkServer/Verify/sendPhoneNoVerifyCode.action',
                           success:function(data) {
-                                if (data.status="success") {  
+                                if (data.data.status=="success") {  
                                    time()                                
                                    layer.msg('正在发送验证码，请查收手机短信',{time:1500});
                                    console.log('正在发送验证码，请查收手机短信')
@@ -316,12 +320,12 @@ function GetCode(){
                             }                        
                       }); 
 
-                  }else if(data.status="failed"){
-
-                        if (data.item="userName") {
+                  }else if(data.data.status=="failed"){
+                         console.log(data.data.status)
+                        if (data.data.item=="userName") {
                             layer.msg('用户名已被注册',{time:1500});
                             console.log('用户名已被注册')
-                        }else if(data.item="phoneNO"){
+                        }else if(data.data.item=="phoneNo"){
                             layer.msg('手机号已注册',{time:1500});
                             console.log('手机号已注册')
                         }
@@ -371,8 +375,8 @@ $.ajax({
                console.log("register 成功"); 
               Login(); 
              
-            }else{
-              layer.msg('',{time:1500});
+            }else if(data.data.errCode=="5"){
+              layer.msg('验证码错误请重试',{time:1500});
             }
 
             },
@@ -390,15 +394,15 @@ $.ajax({
 
 function Login() {
 var TuserName = fromValue.userName;
-var Tpassword = fromValue.Tpassword;
+var password = fromValue.password
 
  console.log(TuserName)
-  console.log(Tpassword)
+  console.log(password)
 
   $.ajax({
       type: "POST",
       url:UpLoadURL+"/AreTalkServer/Web/Login/login.action",
-      data: {userName:TuserName,password:Tpassword,userType:0},
+      data: {userName:TuserName,password:password,userType:0},
       success: function (data) {
           console.log("Login 成功"); 
 
