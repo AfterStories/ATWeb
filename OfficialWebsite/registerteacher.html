@@ -33,63 +33,63 @@
 	<div id="main">
 
 		<div id="InfoTitle">
-			<div id="InfoTitle-text1">为什么要在 AreTalk上教学？</div>
-			<div id="InfoTitle-text2">这是最权威的中文教学平台</div>
+			<div id="InfoTitle-text1" langtag="registerAD1">为什么要在 AreTalk上教学？</div>
+			<div id="InfoTitle-text2" langtag="registerAD2">这是最权威的中文教学平台</div>
 		</div>
 
 		<div id="Info">
 			<div class="InfoContent">
 				<img src="images/Wallet.png" alt="">
-				<div class="InfoText">注册教师可自主进行授课定价，通过在线教学赚取可观收入
+				<div class="InfoText" langtag="registerAD3">注册教师可自主进行授课定价，通过在线教学赚取可观收入
 				</div>
 			</div>
 
 			<div class="InfoContent-right">
 				<img src="images/Star.png" alt="">
-				<div class="InfoText">			
+				<div class="InfoText" langtag="registerAD4">			
 				充分展示注册教师教学基本功，同时提升您的网络教学声誉
 				</div>
 			</div>
 			<div class="InfoContent">
 				<img src="images/Share.png" alt="">
-				<div class="InfoText">			
+				<div class="InfoText" langtag="registerAD5">			
 				拥有众多在线中文学习者	
 				</div>
 			</div>
 			<div class="InfoContent-right">
 				<img src="images/Folder.png" alt="">
-				<div class="InfoText">			
+				<div class="InfoText" langtag="registerAD6">			
 				Aretalk全程处理财务支付相关事情，同时负责处理学生在使用课件中遇到的各类问题	
 				</div>
 			</div>
 			<div class="InfoContent">
 				<img src="images/Notepad.png" alt="">
-				<div class="InfoText">			
+				<div class="InfoText" langtag="registerAD7">			
 				注册教师可灵活安排教学时间，学生选择在你的预定课时中学习相应课程
 				</div>
 			</div>
 			<div class="InfoContent-right">
 				<img src="images/User.png" alt="">
-				<div class="InfoText">			
+				<div class="InfoText" langtag="registerAD8">			
 					帮助您管理跟踪所有学生的学习记录
 				</div>
 			</div>
 			<div class="InfoContent">
 				<img src="images/Home.png" alt="">
-				<div class="InfoText">			
+				<div class="InfoText" langtag="registerAD9">			
 					无需全职教学，可在家安排教学
 				</div>
 			</div>
 			<div class="InfoContent-right">
 				<img src="images/Security.png" alt="">
-				<div class="InfoText">			
+				<div class="InfoText" langtag="registerAD10">			
 					Aretalk确保您课后收取到相应的报酬	
 				</div>
 			</div>			
 		<div class="clear"></div> 
 		</div>
 		
-		<div id="SignUpBtn">立即申请入驻</div>
+		<div id="SignUpBtn" langtag="applyjoin">立即申请入驻</div>
 	</div>
 	<footer>
 		
@@ -97,25 +97,69 @@
 
 
 <script>
+
+function getCookie(c_name) {
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1) {
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1) {
+        c_value = null;
+    }
+    else {
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1) {
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start, c_end));
+    }
+    return c_value;
+}
+
+
+
+
 $(document).ready(function(){
+
+var Language = getCookie("Language");
+if (Language) {
+  console.log(Language)
+}else{
+  Language = "zh"
+}
+
+
+
 	$("#header").load("lib/header/header.html",function(){
 	
 
 	});
 
-	$("footer").load("lib/footer/footer.html",function(){
-		$('.changeLangSet').dropkick({
+$("footer").load("lib/footer/footer.html",function(){
+    
+    $("body").cloudLang({lang: Language, file: "lib/js/lang/lang-resource.xml"});
 
+    $("#LanguagePic img").attr("src","images/"+Language+".png");  
+
+
+    $(".changeLangSet").val(Language);
+
+    $('.changeLangSet').dropkick({
+  
         change: function (value) {
-
+          
           $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
-          $("#LanguagePic img").attr("src","images/"+value+".png");
-          CreateCookie("Language", value, 30)
+
+            $("#LanguagePic img").attr("src","images/"+value+".png");
+
+            CreateCookie("Language", value, 30)
+
         }
 
       });
-
-	})
+  })
 
 
 

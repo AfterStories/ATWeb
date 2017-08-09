@@ -27,6 +27,19 @@
 	</div>
 	<div id="DownTopIMGBox">
 		<img id="DownTopimg" src="images/AreTalkDownload.png" alt="" />
+		<div id="BannerText">
+			<div id="BannerTittle" langtag="BannerTittle">AreTalk客户端</div>
+			<div id="DownType">Windows/iPhone/Android</div>
+			<div id="noticeTittle" class="noticeText" langtag="noticeTittle">注意事项：</div>
+			<div id="noticeText1" class="noticeText" langtag="noticeText1">
+			Windows7以上操作系统/iPhone IOS 9.0以上/Android 系统版本4.0以上
+			</div>
+			<div id="noticeText2" class="noticeText" langtag="noticeText2">1.课程进行中禁止拔插耳机、耳麦等接收设备，避免因拔插设备造成重启课程软件或浏览器等情况的发生；</div>
+			<div id="noticeText3" class="noticeText" langtag="noticeText3">2.课程进行中尽量避免多人同时共用网络观看电影或下载娱乐视频等;</div>
+			<div id="noticeText4" class="noticeText" langtag="noticeText4">3.如需更换相关课程，请联系助教教师进行网络辅助测试。</div>
+
+			</div>
+		</div>
 	</div>
 	<div id="Nav-Box">
 			<ul id="DownLoadNav">
@@ -43,15 +56,15 @@
 
 			<div class="Pctext">			
 			<div class="DownLoadDec">
-				Windows系统客户端下载</br>				
-				大小：90MB</br>
-				适应系统：windows /win7/win8/win10</br>
-				版本：are talk v1.2.0 - 上课软件</br>
-				更新时间：2016.11.27 <br />
-				环境：全面兼容Win10、及Win8、Win7等操作系统.
+				Windows<span langtag="AppDownload">客户端下载</span></br>				
+				<span langtag="FileSize">文件大小</span>：90MB</br>
+				<span langtag="befit">适用系统</span>：windows /win7/win8/win10</br>
+				<span langtag="version">版本信息</span>：are talk v1.2.0 </br>
+				<span langtag="updateTime">更新时间</span>：2016.11.27 <br />
+				<span langtag="environment">运行环境</span>：Win10、及Win8、Win7.
 				</br>
 			</div>
-			<div id="PcDownloadBtn" onclick="downloadFile()">下载Windows客户端</div>	
+			<div id="PcDownloadBtn" onclick="downloadFile()" langtag="DownloadWindows">下载Windows客户端</div>	
 			</div>
 
 		</div>
@@ -61,12 +74,12 @@
 				
 			<div class="Pctext">			
 			<div class="DownLoadDec">
-				iPhone 客户端下载</br>
-				版本说明：版本：1.3.5
+				iPhone<span langtag="AppDownload">客户端下载</span></br>
+				<span langtag="version">版本信息</span>：1.3.5
 				</br>
-				软件系统：iOS 8.2 或更高版本</br>
-				更新：2017-05-30</br>
-				下载方法：
+				<span langtag="befit">软件系统</span>：iOS 8.2 <span langtag="BetterV">或更高版本</span></br>
+				<span langtag="updateTime">更新时间</span>：2017-05-30</br>
+				<span langtag="DownloadWay">下载方法：</span>
 			</div>
 			<div id="IOSDownloadimg" class="QCCode"><img src="images/DownQcCode.png" alt="" /></div>
 			</div>
@@ -77,12 +90,12 @@
 
 			<div class="Pctext">			
 			<div class="DownLoadDec">
-				安卓客户端下载</br>
-				版本：V0.1.4</br>
-				大小：53.6MB
+				Android<span langtag="AppDownload" langtag="AppDownload">客户端下载</span></br>
+				<span langtag="version">版本信息</span>：V0.1.4</br>
+				<span langtag="FileSize">大小</span>：53.6MB
 				</br>
-				软件系统：Android 系统4.0以上</br>
-				下载方法：</br>
+				<span langtag="befit">软件系统：</span>Android 4.0 <span langtag="BetterV">或更高版本</span></br>
+				<span langtag="DownloadWay">下载方法：</span></br>
 				
 			</div>
 			<div id="androidDownloadimg" class="QCCode"><img src="images/DownQcCode.png" alt="" /></div>				
@@ -94,15 +107,15 @@
 		</div>
 	
 	<div id="otherTools">
-		<div id="toolsText">其他工具下载</div>
+		<div id="toolsText" langtag="OtherTools">其他工具下载</div>
 
 		<div class="DownBox" id="Microsoft">
 			<div class="toolsMain">
 				<div class="LogoImg"><img src="images/microsoft_logo.png"/></div>
 				<div class="AboutText">
 					<div class="textTitle">Microsoft.NET Framework 4.5</div>
-					<div class="textcontent">支持Win7，Win8系统，WinXP暂时不支持。此软件需要Microsoft .net framework v4.0 插件支持,若系统没有需要下载安装。</div>
-					<div class="downBtn" onclick="DownFramework()">下载Microsoft.NET Framework4.5</div>
+					<div class="textcontent" langtag="FrameworkText">支持Win7，Win8系统，WinXP暂时不支持。此软件需要Microsoft .net framework v4.0 插件支持,若系统没有需要下载安装。</div>
+					<div class="downBtn" onclick="DownFramework()" langtag="FrameworkDownload">下载Microsoft.NET Framework4.5</div>
 				</div>
 			</div>
 			
@@ -113,8 +126,8 @@
 				<div class="LogoImg"><img src="images/flash_logo.png"/></div>
 				<div class="AboutText " id="flashtext">
 					<div class="textTitle">FlashPlayer 22</div>
-					<div class="textcontent">可以更好的支持Flash版本教室</div>
-					<div class="downBtn" onclick="DownFlashPlayer()">下载FlashPlayer 22</div>
+					<div class="textcontent" langtag="FlashPlayerText">可以更好的支持Flash版本教室</div>
+					<div class="downBtn" onclick="DownFlashPlayer()" langtag="FlashPlayerDownload">下载FlashPlayer 22</div>
 				</div>
 			</div>
 			
@@ -133,24 +146,45 @@
 
 <script>
 $(document).ready(function(){ 
+
+
+	var Language = getCookie("Language");
+if (Language) {
+  console.log(Language)
+}else{
+  Language = "zh"
+}
+
+
+
 	$("#header").load("lib/header/header.html",function(){
 	
 
 	});
 
 	$("footer").load("lib/footer/footer.html",function(){
-		$('.changeLangSet').dropkick({
+    
+    $("body").cloudLang({lang: Language, file: "lib/js/lang/lang-resource.xml"});
 
+    $("#LanguagePic img").attr("src","images/"+Language+".png");  
+
+
+    $(".changeLangSet").val(Language);
+
+    $('.changeLangSet').dropkick({
+  
         change: function (value) {
-
+          
           $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
-          $("#LanguagePic img").attr("src","images/"+value+".png");
-          CreateCookie("Language", value, 30)
+
+            $("#LanguagePic img").attr("src","images/"+value+".png");
+
+            CreateCookie("Language", value, 30)
+
         }
 
       });
-
-	})
+  })
 
 
 

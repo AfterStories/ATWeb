@@ -35,16 +35,16 @@
   <div id="main" class="layui-form">
 
     <div id="step">
-      <div class=" proFirst" id="Personal">个人信息</div>
-      <div class="progressSec proNOW" id="Archives">档案</div>
-      <div class="progress-long" id="ServiceProvision">教师服务条款</div>
-      <div class="proFinish" id="Finish">完成</div>
+      <div class=" proFirst" id="Personal" langtag="TeacherFromTittle1">个人信息</div>
+      <div class="progressSec proNOW" id="Archives" langtag="TeacherFromTittle2">档案</div>
+      <div class="progress-long" id="ServiceProvision" langtag="TeacherFromTittle3">教师服务条款</div>
+      <div class="proFinish" id="Finish" langtag="TeacherFromTittle4">完成</div>
     </div>
 
     <div class="PersonalInfo">
         <div class="InfoTitle">
-          <span class="title1" >视频、音频介绍</span>
-          <span class="title2" >在这里上传你的视频</span>
+          <span class="title1" langtag="VideoDatum1">视频、音频介绍</span>
+          <span class="title2" langtag="VideoDatum2">在这里上传你的视频</span>
         </div>
 
 
@@ -63,15 +63,15 @@
                 </div>
                 <div class="mediauploadInfo">
                   <ul class="videoUL">
-                    <li class="videoInfo">语言清晰流利</li>
-                    <li class="videoInfo">时间1-2分钟</li>
-                    <li class="videoInfo">确保正确的拍摄方向</li>
-                    <li class="videoInfo">保持光照以确保视频清晰</li>
-                    <li class="videoInfo">不能包含个人和其他广告信息</li>
+                    <li class="videoInfo" langtag="VideoDatum3">语言清晰流利</li>
+                    <li class="videoInfo" langtag="VideoDatum4">时间1-2分钟</li>
+                    <li class="videoInfo" langtag="VideoDatum5">确保正确的拍摄方向</li>
+                    <li class="videoInfo" langtag="VideoDatum6">保持光照以确保视频清晰</li>
+                    <li class="videoInfo" langtag="VideoDatum7">不能包含个人和其他广告信息</li>
                   </ul>
                             <span class="btn fileinput-button" >
                                 
-                                <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span class="uploadbtntext">选择文件</span>
+                                <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span class="uploadbtntext" langtag="choose">选择</span>
                                 <input type="file" name="files[]" multiple id="upload-btn">
                             </span>                  
                     <div class="row fileupload-buttonbar">
@@ -123,12 +123,12 @@
                     <td>
                         {% if (!i && !o.options.autoUpload) { %}
                             <button class="btn btn-primary start" disabled>
-                             <span>上传</span>
+                             <span langtag="UploadBtn">上传</span>
                             </button>
                         {% } %}
                         {% if (!i) { %}
                             <button class="btn btn-warning cancel" onclick="cancelupload()">
-                                <span>取消</span>
+                                <span langtag="cancelBtn">取消</span>
                             </button>
                         {% } %}
                     </td>
@@ -171,7 +171,7 @@
                         {% } else { %} -->
                             <button class="btn btn-warning cancel">
                                 <i class="glyphicon glyphicon-ban-circle"></i>
-                                <span>取消</span>
+                                <span langtag="cancelBtn">取消</span>
                             </button>
                         {% } %}
                     </td>
@@ -188,7 +188,7 @@
             
     <div class="PersonalInfo">
         <div class="InfoTitle">
-          <span class="title2" >在这里上传你的音频</span>
+          <span class="title2" langtag="VideoDatum8">在这里上传你的音频</span>
         </div>
             <form class="fileupload" id="MP3-upload" action="http://211.159.152.210:8188/AreTalkServer/Servlet/UploadHandleServlet" method="POST" enctype="multipart/form-data">
 
@@ -201,14 +201,14 @@
                 </div>
                 <div class="mediauploadInfo">
                   <ul class="videoUL">
-                    <li class="videoInfo">语言清晰流利</li>
-                    <li class="videoInfo">时间1-2分钟</li>                   
-                    <li class="videoInfo">确保环境安静音质清晰</li>
-                    <li class="videoInfo">不能包含个人和其他广告信息</li>
+                    <li class="videoInfo" langtag="VideoDatum3">语言清晰流利</li>
+                    <li class="videoInfo" langtag="VideoDatum4">时间1-2分钟</li>                   
+                    <li class="videoInfo" langtag="VideoDatum11">确保环境安静音质清晰</li>
+                    <li class="videoInfo" langtag="VideoDatum12">不能包含个人和其他广告信息</li>
                   </ul>
                             <span class="btn fileinput-button" >
                                 
-                                <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span class="uploadbtntext">选择文件</span>
+                                <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span class="uploadbtntext" langtag="choose">选择文件</span>
                                 <input type="file" name="files[]" multiple id="upload-btn">
                             </span>                  
                     <div class="row fileupload-buttonbar">
@@ -240,8 +240,8 @@
 
     <div class="PersonalInfo">
         <div class="InfoTitle">
-          <span class="title1" >教学专长</span>
-          <span class="title2" >选择你的教学经验等级</span>
+          <span class="title1" langtag="VideoDatum13">教学专长</span>
+          <span class="title2" langtag="VideoDatum14">选择你的教学经验等级</span>
         </div>
     <div id="MyTeachLv">
 <!--         <ul id="teachLV">
@@ -266,19 +266,19 @@
     </div>
     <div class="PersonalInfo">
         <div class="InfoTitle">
-          <spanvalue="" class="title1" >我的教师签名</span>
-          <span class="title2" >编写一段自我介绍，如下示例所示</span>
+          <spanvalue="" class="title1" langtag="VideoDatum15">我的教师签名</span>
+          <span class="title2" langtag="VideoDatum15-1">编写一段自我介绍，如下示例所示</span>
         </div>
         <div id="Demointroduction">
             <div class="DemoIntroText">
-                <div class="DemoIntroTextTitle">示例1</div>
-                <div class="DemoContent">
+                <div class="DemoIntroTextTitle" langtag="VideoDatum16">示例1</div>
+                <div class="DemoContent" langtag="VideoDatum17">
                     大学本科学历,中学老师。1995年参加工作,默默奉献,不浮华。人生座右铭:激发学生兴趣永远是教师的目标。
                 </div>
             </div>
             <div class="DemoIntroText">
-                <div class="DemoIntroTextTitle">示例2</div>
-                <div class="DemoContent">
+                <div class="DemoIntroTextTitle" langtag="VideoDatum18">示例2</div>
+                <div class="DemoContent" langtag="VideoDatum19">
                     大学本科学历,中学老师。1995年参加工作,默默奉献,不浮华。人生座右铭:激发学生兴趣永远是教师的目标。
                 </div>
             </div>
@@ -287,7 +287,7 @@
     </div>
         <div class="PersonalInfo">
         <div class="InfoTitle">
-          <span class="title1" >我的证书</span>
+          <span class="title1" langtag="VideoDatum20">我的证书</span>
         </div>
         <div id="Mycertificate">
             <div class="certificateBox">
@@ -297,10 +297,10 @@
         
                         <div class="certificateuploadInfo">
                             <div id="IDCardBox" class="CerUploadBox">
-                                <div class="CerUploadTitle">身份证明<span class="must">*</span></div>
+                                <div class="CerUploadTitle" langtag="VideoDatum21">身份证明<span class="must">*</span></div>
                                 <img id="CerUploadTitlePic" class="UploadTitlePic" src="images/demoimg.png" alt="" />
                                 <span class="btn fileinput-button CerUpBtn" >                                
-                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span                 class="uploadbtntext">选择文件</span>
+                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span                 class="uploadbtntext" langtag="choose">选择文件</span>
                                     <input type="file" name="files[]" multiple id="upload-btn">
                                 </span>                          
                             </div>
@@ -334,10 +334,10 @@
         
                         <div class="certificateuploadInfo">
                             <div id="IDCardBox" class="CerUploadBox">
-                                <div class="CerUploadTitle">毕业证书<span class="must">*</span></div>
+                                <div class="CerUploadTitle" langtag="VideoDatum22">毕业证书<span class="must">*</span></div>
                                 <img id="SchUploadTitlePic" class="UploadTitlePic" src="images/demoimg.png" alt="" />
                                 <span class="btn fileinput-button CerUpBtn" >                                
-                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span                 class="uploadbtntext">选择文件</span>
+                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span                 class="uploadbtntext" langtag="choose">选择文件</span>
                                     <input type="file" name="files[]" multiple id="upload-btn">
                                 </span>                          
                             </div>
@@ -367,10 +367,10 @@
         
                         <div class="certificateuploadInfo">
                             <div id="IDCardBox" class="CerUploadBox">
-                                <div id="CerUploadTitle" class="CerUploadTitle">教室资格证<span class="must">*</span></div>
+                                <div id="CerUploadTitle" class="CerUploadTitle" langtag="VideoDatum23">教师资格证<span class="must">*</span></div>
                                 <img id="teacherUploadTitlePic" class="UploadTitlePic" src="images/demoimg.png" alt="" />
                                 <span class="btn fileinput-button CerUpBtn" >                                
-                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span  class="uploadbtntext">选择文件</span>
+                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span  class="uploadbtntext" langtag="choose">选择文件</span>
                                     <input type="file" name="files[]" multiple id="upload-btn">
                                 </span>                          
                             </div>
@@ -400,10 +400,10 @@
         
                         <div class="certificateuploadInfo">
                             <div id="IDCardBox" class="CerUploadBox">
-                                <div id="otherUploadTitle" class="CerUploadTitle">其他证书<span class="must"></span></div>
+                                <div id="otherUploadTitle" class="CerUploadTitle" langtag="VideoDatum23">其他证书<span class="must"></span></div>
                                 <img id="otherUploadTitlePic" class="UploadTitlePic" src="images/demoimg.png" alt="" />
                                 <span class="btn fileinput-button CerUpBtn" >                                
-                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span  class="uploadbtntext">选择文件</span>
+                                    <img class="uploadbtnpng" src="images/uploadbtn.png" alt="" /><span  class="uploadbtntext" langtag="choose">选择文件</span>
                                     <input type="file" name="files[]" multiple id="upload-btn">
                                 </span>                          
                             </div>
@@ -433,7 +433,7 @@
         </div>
     </div>
     <div class="PersonalInfo" align="center">
-      <div lay-submit lay-filter="nextFrom" id="sendFrom" class="layui-btn layui-btn-normal">提交并继续</div>
+      <div lay-submit lay-filter="nextFrom" id="sendFrom" class="layui-btn layui-btn-normal" langtag="NEXT">提交并继续</div>
     </div> 
 
 

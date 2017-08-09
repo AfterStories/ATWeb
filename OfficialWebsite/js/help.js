@@ -2,6 +2,15 @@
 $(document).ready(function(){ 
 resizeHeight()
 
+
+var Language = getCookie("Language");
+if (Language) {
+  console.log(Language)
+}else{
+  Language = "zh"
+}
+
+
 layui.use(['layer', 'element'], function(){
   var layer = layui.layer;
 var element = layui.element();
@@ -17,19 +26,29 @@ element.on('collapse', function(data){
     $("#header").load("lib/header/header.html",function(){
     });
 
-    $("footer").load("lib/footer/footer.html",function(){
-        $('.changeLangSet').dropkick({
+$("footer").load("lib/footer/footer.html",function(){
+    
+    $("body").cloudLang({lang: Language, file: "lib/js/lang/lang-resource.xml"});
 
+    $("#LanguagePic img").attr("src","images/"+Language+".png");  
+
+
+    $(".changeLangSet").val(Language);
+
+    $('.changeLangSet').dropkick({
+  
         change: function (value) {
-
+          
           $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
-          $("#LanguagePic img").attr("src","images/"+value+".png");
-          CreateCookie("Language", value, 30)
+
+            $("#LanguagePic img").attr("src","images/"+value+".png");
+
+            CreateCookie("Language", value, 30)
+
         }
 
       });
-
-    })
+  })
 
 
 

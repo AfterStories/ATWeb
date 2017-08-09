@@ -294,7 +294,8 @@ top:0;
 	
 	overflow: hidden;
 	-moz-background-size:100% 100%; background-size:100% 100%;
-	color: #fff; 
+	color: #fff;
+	width: 100%; 
 
 }
 #swiperTextAd1{
@@ -859,13 +860,13 @@ top:0;
 .swipertextTitle{
 	margin: 0 auto;
 	position: relative;
-	top: 5vw;
+	top: 3vw;
 	font-size: 1.4rem;
 }
 
 .swipertextcontent{
 	position: relative;
-	top: 5vw;
+	top: 3vw;
 	padding: 1vw 2vw;
 	font-size: 1rem;
 }
@@ -938,7 +939,7 @@ top:0;
 
 
 .smAdTittle{
-	font-size: 35px;
+	font-size: 24px;
 	font-weight: 700;
 	margin: 1vw 0;
 }
@@ -1062,7 +1063,7 @@ top:0;
 }
 
 .smAdTittle{
-	font-size: 35px;
+	font-size: 28px;
 	font-weight: 700;
 	margin: 1vw 0;
 }
@@ -1106,16 +1107,16 @@ top:0;
 .swipertextTitle{
 	margin: 0 auto;
 	position: relative;
-	top: 5vw;
+	top: 3vw;
 	font-size: 1.6rem;
 	margin-bottom: 2rem;
 }
 
 .swipertextcontent{
 	position: relative;
-	top: 5vw;
+	top: 3vw;
 	padding: 1vw 2vw;
-	font-size: 1.2rem;
+	font-size: 1rem;
 }
 
 
@@ -1195,7 +1196,7 @@ top:0;
 }
 
 .smAdTittle{
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 700;
 	margin: 1vw 0;
 }

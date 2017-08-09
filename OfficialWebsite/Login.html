@@ -20,7 +20,7 @@
 <script src="lib/js/jquery.js"></script>
 <script src="lib/js/layui/layui.js"></script>
 <script src="js/md5.js"></script>
-<script src="js/login.js"></script>
+
 
 <script src="lib/header/js/dropkick.js"></script>
 <script src="lib/js/lang/langchange.js" type="text/javascript"></script>
@@ -38,18 +38,18 @@
 	<div id="login" class="layui-form">
 				<div id="LoginTitle">
 					<img src="images/logo2.png" >
-					<div id="LogoText">中文教育在线直播平台</div>
+					<div id="LogoText" langtag="StuLoginText">中文教育在线直播平台</div>
 				</div>
 
 					<div style="text-align:center">
-					 	 <input id="username" name="username" class="loginInput"  type="text" placeholder="账户" lay-verify="required|username|pass">
-						 <input id="Password" type="password" class="loginInput" name="	password" placeholder="密码" lay-verify="required">		 
+					 	 <input id="username" name="username" class="loginInput"  type="text" placeholder="账户/username" lay-verify="required|username|pass">
+						 <input id="Password" type="password" class="loginInput" name="	password" placeholder="密码/password" lay-verify="required">		 
 					</div>
 			 		<div id="LoginSet">
 			 			<div id="forget" style="display:none;"><a href="">忘记密码?</a></div>
-			 			<div id="goRegister"><a href="register.html">注册成为AreTalk学生</a></div>
+			 			<div id="goRegister"><a href="register.html" langtag="StuRegisterBtn">注册成为AreTalk学生</a></div>
 			 		</div>
-			 		<div id="SignBtn" lay-submit lay-filter="register" >登录</div>
+			 		<div id="SignBtn" lay-submit lay-filter="register" langtag="LoginBtn">登录</div>
 
 
 	</div>		

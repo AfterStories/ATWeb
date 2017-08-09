@@ -1,5 +1,5 @@
 <content>
-	<text id="Language">
+		<text id="Language">
 		<zh>选择语言：</zh>
 		<en>Language：</en>
 	</text>
@@ -90,27 +90,27 @@
 	</text>
 	<text id="TeacherFromTittle1">
 		<zh>个人信息</zh>
-		<en>Personal Information</en>
+		<en>*******************</en>
 	</text>	
 	<text id="TeacherFromTittle2">
 		<zh>档案</zh>
-		<en>Archives</en>
+		<en>*******************</en>
 	</text>	
 	<text id="TeacherFromTittle3">
 		<zh>教师服务条款</zh>
-		<en>Teacher term of service </en>
+		<en>*******************</en>
 	</text>	
 	<text id="TeacherFromTittle4">
 		<zh>完成</zh>
-		<en>Completed</en>
+		<en>*******************</en>
 	</text>	
 	<text id="baseInfoTitle">
 		<zh>基本信息</zh>
-		<en>Basic Information</en>
+		<en>*******************</en>
 	</text>	
 	<text id="realname">
 		<zh>真实姓名</zh>
-		<en>Real Name</en>
+		<en>*******************</en>
 	</text>	
 	<text id="E-mail">
 		<zh>电子邮箱</zh>
@@ -118,413 +118,413 @@
 	</text>	
 	<text id="CredentialInfo">
 		<zh>证件信息</zh>
-		<en>Certificate Information</en>
+		<en>*******************</en>
 	</text>	
 	<text id="CredentialNO">
 		<zh>证件号码</zh>
-		<en>Certificate Number</en>
+		<en>*******************</en>
 	</text>	
 	<text id="Comefrom">
 		<zh>来自</zh>
-		<en>Hometown</en>
+		<en>*******************</en>
 	</text>	
 	<text id="Provinces">
 		<zh>省市</zh>
-		<en>Province</en>
+		<en>*******************</en>
 	</text>	
 	<text id="Detailedadd">
 		<zh>详细地址</zh>
-		<en>Full Address</en>
+		<en>*******************</en>
 	</text>	
 	<text id="Liveadd">
 		<zh>居住地</zh>
-		<en>Present Addresss</en>
+		<en>*******************</en>
 	</text>	
 	<text id="Contact">
 		<zh>联系方式</zh>
-		<en>Contact Details</en>
+		<en>*******************</en>
 	</text>	
 	<text id="IDNO">
 		<zh>号码/ID</zh>
-		<en>Identity Card Number</en>
+		<en>*******************</en>
 	</text>	
 	<text id="TeacherHeadIMG">
 		<zh>教师头像照片</zh>
-		<en>Teacher's profile</en>
+		<en>*******************</en>
 	</text>	
 	<text id="HeadIMGNeed">
 		<zh>照片要求：</zh>
-		<en>Profile Standard</en>
+		<en>*******************</en>
 	</text>	
 	<text id="HeadIMGNeed2">
 		<zh>修改头像需经过审核</zh>
-		<en>Chang the profile needs to be reviewed.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="HeadIMGNeed3">
 		<zh>图片格式只支持：JPG、PNG</zh>
-		<en>Image format: JPG, PNG</en>
+		<en>*******************</en>
 	</text>	
 	<text id="HeadIMGNeed4">
 		<zh>文件大小不超过2M</zh>
-		<en>File size shouldn't exceed 2M</en>
+		<en>*******************</en>
 	</text>	
 	<text id="HeadIMGDemo1">
 		<zh>第一印象是非常重要的</zh>
-		<en>The first impression is very important</en>
+		<en>*******************</en>
 	</text>	
 	<text id="HeadIMGDemo2">
 		<zh>请参考正确示范事例</zh>
-		<en>Please consulte the sample</en>
+		<en>*******************</en>
 	</text>	
 	<text id="HeadIMGDemo3">
 		<zh>我的基本照片要求：</zh>
-		<en>Basic standard to pictures</en>
+		<en>*******************</en>
 	</text>	
 	<text id="HeadIMGDemo4">
 		<zh>上传近期本人正面清晰照片，不要上传合影照片</zh>
-		<en>Please upload a clear recent photo showing your full from the front. Do not upload group photo.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="HeadIMGDemo5">
 		<zh>头像不允许涉及政治敏感与色情</zh>
-		<en>Profile should not involve politics, sensitive issues and sex.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="HeadIMGDemo6">
 		<zh>请不要使用类似以下情况的照片</zh>
-		<en>Please do not use pictures with follwing issue.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="UploadBtn">
 		<zh>上传</zh>
-		<en>Upload</en>
+		<en>*******************</en>
 	</text>	
 	<text id="cancelBtn">
 		<zh>取消</zh>
-		<en>Cancel</en>
+		<en>*******************</en>
 	</text>	
 	<text id="MyLang1">
 		<zh>我的语言</zh>
-		<en>My language</en>
+		<en>*******************</en>
 	</text>	
 	<text id="MyLang2">
 		<zh>请认真填写语言水平，以免影响审核结果</zh>
-		<en>Please enter language level carefully, lest it should have influence on audition result.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="MyLang3">
 		<zh>你的母语</zh>
-		<en>Your mother language</en>
+		<en>*******************</en>
 	</text>
 	<text id="MyLang4">
 		<zh>掌握语言</zh>
-		<en>Mastery language</en>
+		<en>*******************</en>
 	</text>
 	<text id="MyLang5">
 		<zh>等级</zh>
-		<en>Grade</en>
+		<en>*******************</en>
 	</text>
 	<text id="MyLang6">
 		<zh>初级</zh>
-		<en>Primary</en>
+		<en>*******************</en>
 	</text>
 	<text id="MyLang7">
 		<zh>中级</zh>
-		<en>Intermediate</en>
+		<en>*******************</en>
 	</text>
 	<text id="MyLang8">
 		<zh>高级</zh>
-		<en>Advanced</en>
+		<en>*******************</en>
 	</text>
 	<text id="MyBankInfo1">
 		<zh>我的银行卡</zh>
-		<en>My bank card</en>
+		<en>*******************</en>
 	</text>
 	<text id="MyBankInfo2">
 		<zh>请认真填写银行卡号，确保及时收到汇款</zh>
-		<en>Please enter your bank card number careully, to insure that you can receive the remittance on time.</en>
+		<en>*******************</en>
 	</text>
 	<text id="MyBankInfo3">
 		<zh>选择银行</zh>
-		<en>Please choose a bank</en>
+		<en>*******************</en>
 	</text>
 	<text id="MyBankInfo4">
 		<zh>预留电话</zh>
-		<en>Bound phone No.</en>
+		<en>*******************</en>
 	</text>
 	<text id="MyBankInfo5">
 		<zh>银行卡号</zh>
-		<en>Bank card No.</en>
+		<en>*******************</en>
 	</text>
 	<text id="NEXT">
 		<zh>提交并继续</zh>
-		<en>Submit and go on</en>
+		<en>*******************</en>
 	</text>
 
 
 	<text id="registerAD1">
 		<zh>为什么要在 AreTalk上教学？</zh>
-		<en>Why to teach on AreTalk?</en>
+		<en>*******************</en>
 	</text>
 	<text id="registerAD2">
 		<zh>这是最权威的中文教学平台</zh>
-		<en>It's the most authoritative Chinese teaching platform.</en>
+		<en>*******************</en>
 	</text>
 	<text id="registerAD3">
 		<zh>注册教师可自主进行授课定价，通过在线教学赚取可观收入</zh>
-		<en>Registered teacher can fix prices for his or her courses, to get decent income by teaching online.</en>
+		<en>*******************</en>
 	</text>
 	<text id="registerAD4">
 		<zh>充分展示注册教师教学基本功，同时提升您的网络教学声誉</zh>
-		<en>Show the basic skills of registered teacher, and improve your reputation of online teaching.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="registerAD5">
 		<zh>拥有众多在线中文学习者</zh>
-		<en>We have considerable on learners.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="registerAD6">
 		<zh>Aretalk全程处理财务支付相关事情，同时负责处理学生在使用课件中遇到的各类问题</zh>
-		<en>Aretalk is in charge of dealing with financial issue, and various problems students could meet.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="registerAD7">
 		<zh>注册教师可灵活安排教学时间，学生选择在你的预定课时中学习相应课程</zh>
-		<en>Registered teacher can arrange schedule flexible, students can choose a proper course from your appointed time.</en>
+		<en>*******************</en>
 	</text>
 	<text id="registerAD8">
 		<zh>帮助您管理跟踪所有学生的学习记录</zh>
-		<en>Help you to trace and to manage student's learning record.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="registerAD9">
 		<zh>无需全职教学，可在家安排教学</zh>
-		<en>No need to be a full time teacher, courses can be arranged at home.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="registerAD10">
 		<zh>Aretalk确保您课后收取到相应的报酬</zh>
-		<en>Aretalk can guarantee that you will obtain the corresponding reward.</en>
+		<en>*******************</en>
 	</text>	
 
 	<text id="applyjoin">
 		<zh>立即申请入驻</zh>
-		<en>Join us immediately</en>
+		<en>*******************</en>
 	</text>
 	<text id="whichkind1">
 		<zh>想成为什么类型的教师</zh>
-		<en>What kind of teacher do you want to be?</en>
+		<en>*******************</en>
 	</text>
 	<text id="whichkind2">
 		<zh>我们有两种类型的教师,你属于哪一种?</zh>
-		<en>We have two types, which on are you?</en>
+		<en>*******************</en>
 	</text>
 	<text id="Theachkind">
 		<zh>教师的类型</zh>
-		<en>Teacher type</en>
+		<en>*******************</en>
 	</text>
 	<text id="ProT">
 		<zh>专业教师</zh>
-		<en>Professional teacher</en>
+		<en>*******************</en>
 	</text>
 	<text id="amateurT">
 		<zh>辅导教师</zh>
-		<en>Tutor</en>
+		<en>*******************</en>
 	</text>
 	
 	<text id="introduce1">
 		<zh>教育背景</zh>
-		<en>Educatin background</en>
+		<en>*******************</en>
 	</text>
 	
 	<text id="introduce2">
 		<zh>接受专业对外汉语教学培训有丰富的教学经验</zh>
-		<en>Have been trained for teaching Chinesse as a second language, and is experienced at teaching.</en>
+		<en>*******************</en>
 	</text>
 	
 	<text id="introduce3">
 		<zh>汉语母语者或者业余时间愿意教授汉语课程</zh>
-		<en>Native speaker and want to teach Chinese at spare time.</en>
+		<en>*******************</en>
 	</text>
 	
 	<text id="introduce4">
 		<zh>教学资质</zh>
-		<en>Teaching qualification</en>
+		<en>*******************</en>
 	</text>
 	
 	<text id="introduce5">
 		<zh>获得CTCSOL国际汉语教师资格证书等对外汉语授课资格认证</zh>
-		<en>Have a qualification certificate for teaching Chinese as a second language, such as CTCSOL</en>
+		<en>*******************</en>
 	</text>
 	
 	<text id="introduce6">
 		<zh>无</zh>
-		<en>no</en>
+		<en>*******************</en>
 	</text>
 	
 	<text id="introduce7">
 		<zh>教学材料</zh>
-		<en>Teaching material</en>
+		<en>*******************</en>
 	</text>
 	
 	<text id="introduce8">
 		<zh>上传授课PPT课件</zh>
-		<en>Upload PPT</en>
+		<en>*******************</en>
 	</text>
 	
 	<text id="introduce10">
 		<zh>教学方法</zh>
-		<en>Teaching method</en>
+		<en>*******************</en>
 	</text>
 	<text id="introduce11">
 		<zh>小班制课程与1对1课程</zh>
-		<en>Mini class and one-to-one</en>
+		<en>*******************</en>
 	</text>
 	<text id="introduce12">
 		<zh>上传自己制作的视频或者音频课件</zh>
-		<en>Upload your original video or audio teaching material.</en>
+		<en>*******************</en>
 	</text>
 	<text id="introduce13">
 		<zh>视频介绍</zh>
-		<en>Video introduction</en>
+		<en>*******************</en>
 	</text>
 	<text id="introduce14">
 		<zh>需要上传1-2分钟自我介绍视频以及自我介绍音频</zh>
-		<en>You need to upload a video and an audio to introduce yourself in 1~2min.</en>
+		<en>*******************</en>
 	</text>
 	<text id="introduce15">
 		<zh>需要上传1-2分钟自我介绍音频</zh>
-		<en>You need to upload an audio to introduce yourself in 1~2min.</en>
+		<en>*******************</en>
 	</text>
 	<text id="introduce16">
 		<zh>收入预期</zh>
-		<en>Income expectation</en>
+		<en>*******************</en>
 	</text>
 
 	<text id="introduce17">
 		<zh>授课教师自主设定授课价格</zh>
-		<en>Registered teacher can fix prices for his or her courses.</en>
+		<en>*******************</en>
 	</text>
 	<text id="introduce18">
 		<zh>获得相应报酬</zh>
-		<en>Obtain the corresponding reward.</en>
+		<en>*******************</en>
 	</text>
 	<text id="introduce19">
 		<zh>成为Aretalk的教师</zh>
-		<en>To be a teacher on Aretalk.</en>
+		<en>*******************</en>
 	</text>
 	<text id="introduce20">
 		<zh>申请成为专业教师</zh>
-		<en>Apply to be a professional teacher.</en>
+		<en>*******************</en>
 	</text>
 	<text id="introduce21">
 		<zh>申请成为辅导教师</zh>
-		<en>Apply to be a tutor.</en>
+		<en>*******************</en>
 	</text>			
 																						
 	<text id="FinishTitle">
 		<zh>您的申请表格已成功提交！</zh>
-		<en>Form submitted</en>
+		<en>*******************</en>
 	</text>	
 	<text id="FinishMain1">
 		<zh>请您查看电子邮箱内收到的验证邮件进行帐号激活。</zh>
-		<en>Please check your verification e-mail and activate your account.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="FinishMain2">
 		<zh>申请表格将在3-5个工作日完成审核。如有问题，请发送邮件至aretalk@anttutor.com与我们联系。</zh>
-		<en>The audition will be completed in 3-5 working days. If there is any problem, please contact us by sending e-mail to aretalk@anttutor.com</en>
+		<en>*******************</en>
 	</text>	
 
 	<text id="VideoDatum1">
 		<zh>视频、音频介绍</zh>
-		<en>Video or audiio introduction</en>
+		<en>*******************</en>
 	</text>	
 	<text id="VideoDatum2">
 		<zh>在这里上传你的视频</zh>
-		<en>Upload your video here</en>
+		<en>*******************</en>
 	</text>	
 	<text id="VideoDatum3">
 		<zh>语言清晰流利</zh>
-		<en>Speaking clear and fluently</en>
+		<en>*******************</en>
 	</text>
 	<text id="VideoDatum4">
 		<zh>时间1-2分钟</zh>
-		<en>1~2min</en>
+		<en>*******************</en>
 	</text>	
 	<text id="VideoDatum5">
 		<zh>确保正确的拍摄方向</zh>
-		<en>Make sure of the shooting direction</en>
+		<en>*******************</en>
 	</text>	
 	<text id="VideoDatum6">
 		<zh>保持光照以确保视频清晰</zh>
-		<en>Enough light to make sure the video is clear</en>
+		<en>*******************</en>
 	</text>	
 	<text id="VideoDatum7">
 		<zh>不能包含个人和其他广告信息</zh>
-		<en>Should not include personal and other advertisements.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="choose">
 		<zh>选择文件</zh>
-		<en>Choose a file</en>
+		<en>*******************</en>
 	</text>	
 	<text id="VideoDatum8">
 		<zh>在这里上传你的音频</zh>
-		<en>Upload your audio here</en>
+		<en>*******************</en>
 	</text>	
 	<text id="VideoDatum11">
 		<zh>确保环境安静音质清晰</zh>
-		<en>Keep a quiet environment to make sure the audio is clear</en>
+		<en>*******************</en>
 	</text>	
 	<text id="VideoDatum12">
 		<zh>不能包含个人和其他广告信息</zh>
-		<en>Should not include personal and other advertisements.</en>
+		<en>*******************</en>
 	</text>	
 	<text id="VideoDatum13">
 		<zh>教学专长</zh>
-		<en>Teaching speciality</en>
+		<en>*******************</en>
 	</text>
 	<text id="VideoDatum14">
 		<zh>选择你的教学经验等级</zh>
-		<en>Choose you teaching experience grade</en>
+		<en>*******************</en>
 	</text>	
 	<text id="VideoDatum15">
 		<zh>我的教师签名</zh>
-		<en>Ny signature</en>
+		<en>*******************</en>
 	</text>	
-	<text id="VideoDatum15-1">
+		<text id="VideoDatum15-1">
 		<zh>编写一段自我介绍，如下示例所示</zh>
-		<en>Edit a self introduction. As shown below</en>
+		<en>*******************</en>
 	</text>
-		
-	<text id="VideoDatum16">
+	</text>	
+		<text id="VideoDatum16">
 		<zh>示例1</zh>
-		<en>Sample1</en>
+		<en>*******************</en>
 	</text>		
-	<text id="VideoDatum17">
+		<text id="VideoDatum17">
 		<zh>大学本科学历,中学老师。1995年参加工作,默默奉献,不浮华。人生座右铭:激发学生兴趣永远是教师的目标。</zh>
-		<en>大学本科学历,中学老师。1995年参加工作,默默奉献,不浮华。人生座右铭:激发学生兴趣永远是教师的目标。</en>
+		<en>*******************</en>
 	</text>	
-	<text id="VideoDatum18">
+		<text id="VideoDatum18">
 		<zh>示例2</zh>
-		<en>Sample2</en>
+		<en>*******************</en>
 	</text>	
-	<text id="VideoDatum19">
+		<text id="VideoDatum19">
 		<zh>大学本科学历,中学老师。1995年参加工作,默默奉献,不浮华。人生座右铭:激发学生兴趣永远是教师的目标。</zh>
-		<en>大学本科学历,中学老师。1995年参加工作,默默奉献,不浮华。人生座右铭:激发学生兴趣永远是教师的目标。</en>
+		<en>*******************</en>
 	</text>	
-	<text id="VideoDatum20">
+		<text id="VideoDatum20">
 		<zh>我的证书</zh>
-		<en>My certificate</en>
+		<en>*******************</en>
 	</text>	
-	<text id="VideoDatum21">
+		<text id="VideoDatum21">
 		<zh>身份证明</zh>
-		<en>Identification certificate</en>
+		<en>*******************</en>
 	</text>	
-	<text id="VideoDatum22">
+		<text id="VideoDatum22">
 		<zh>毕业证书</zh>
-		<en>Graduation certificate</en>
+		<en>*******************</en>
 	</text>	
-		
-	<text id="VideoDatum23">
+	</text>	
+		<text id="VideoDatum23">
 		<zh>教师资格证</zh>
-		<en>Teacher qualification certificate</en>
+		<en>*******************</en>
 	</text>
-	
-	<text id="VideoDatum24">
+	</text>	
+		<text id="VideoDatum24">
 		<zh>其他证书</zh>
-		<en>Other certificates</en>
+		<en>*******************</en>
 	</text>		
 	<text id="HomePageTitle">
 			<zh>Aretalk 在线直播中文教育平台</zh>
@@ -855,40 +855,41 @@
 		<zh>相关信息</zh>
 		<en>About</en>
 	</text>
-	<text id="About Us">
+		<text id="About Us">
 		<zh>关于我们</zh>
 		<en>About Us</en>
 	</text>
-	<text id="Contact Us">
+		<text id="Contact Us">
 		<zh>联系我们</zh>
 		<en>Contact Us</en>
 	</text>
-	<text id="Cooperative Partner">
+		<text id="Cooperative Partner">
 		<zh>合作机构</zh>
 		<en>Cooperative Partner</en>
 	</text>
-	<text id="Business Cooperation">
+		<text id="Business Cooperation">
 		<zh>商业合作</zh>
 		<en>Business Cooperation</en>
 	</text>
-	<text id="Development opportunity">
+		<text id="Development opportunity">
 		<zh>发展机会</zh>
 		<en>Development opportunity</en>
 	</text>
-	<text id="Other">
+		<text id="Other">
 		<zh>其他</zh>
 		<en>Other</en>
 	</text>
-	<text id="Help">
+		<text id="Help">
 		<zh>帮助信息</zh>
 		<en>Help</en>
 	</text>
 		
-	<text id="Terms privacy">
+		<text id="Terms privacy">
 		<zh>隐私/协议</zh>
 		<en>Terms privacy</en>
-	</text>
-	<text id="Help Center">
+
+		</text>
+		<text id="Help Center">
 		<zh>帮助中心</zh>
 		<en>Help Center</en>
 	</text>

@@ -37,18 +37,18 @@
 	<div id="login" class="layui-form">
 				<div id="LoginTitle">
 					<img src="images/logo2.png" >
-					<div id="LogoText">教师信息管理系统</div>
+					<div id="LogoText" langtag="TheacherLoginText">教师信息管理系统</div>
 				</div>
 
 					<div style="text-align:center">
-					 	<input id="username" name="username" class="loginInput"  type="text" placeholder="账户" lay-verify="required|username|pass">
-						 <input id="Password" type="password" class="loginInput" name="	password" placeholder="密码" lay-verify="required">		 
+					 	<input id="username" name="username" class="loginInput"  type="text" placeholder="账户/username" lay-verify="required|username|pass">
+						 <input id="Password" type="password" class="loginInput" name="	password" placeholder="密码/password" lay-verify="required">		 
 					</div>
 			 		<div id="LoginSet">
 			 			<div id="forget" style="display:none;"><a href="">忘记密码?</a></div>
-			 			<div id="goRegister"><a href="registerteacher.html">注册成为AreTalk教师</a></div>
+			 			<div id="goRegister"><a href="registerteacher.html" langtag="TeaRegisterBtn">注册成为AreTalk教师</a></div>
 			 		</div>
-			 		<div id="SignBtn" lay-submit lay-filter="register" >登录</div>
+			 		<div id="SignBtn" lay-submit lay-filter="register" langtag="SignBtn">登录</div>
 
 			
 <!-- 					<div id="StayLogin">

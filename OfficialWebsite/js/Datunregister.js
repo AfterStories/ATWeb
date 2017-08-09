@@ -26,28 +26,66 @@ next();
 
 
 
-
+function getCookie(c_name) {
+      var c_value = document.cookie;
+      var c_start = c_value.indexOf(" " + c_name + "=");
+      if (c_start == -1) {
+          c_start = c_value.indexOf(c_name + "=");
+      }
+      if (c_start == -1) {
+          c_value = null;
+      }
+      else {
+          c_start = c_value.indexOf("=", c_start) + 1;
+          var c_end = c_value.indexOf(";", c_start);
+          if (c_end == -1) {
+              c_end = c_value.length;
+          }
+          c_value = unescape(c_value.substring(c_start, c_end));
+      }
+      return c_value;
+}
+ 
 
 $(document).ready(function(){ 
+
+    var Language = getCookie("Language");
+if (Language) {
+  console.log(Language)
+}else{
+  Language = "zh"
+}
+
+
+
+
   $("#header").load("lib/header/header.html",function(){
   
 });
 
-  $("footer").load("lib/footer/footer.html",function(){
+$("footer").load("lib/footer/footer.html",function(){
+    
+    $("body").cloudLang({lang: Language, file: "lib/js/lang/lang-resource.xml"});
+
+    $("#LanguagePic img").attr("src","images/"+Language+".png");  
+
+
+    $(".changeLangSet").val(Language);
+
     $('.changeLangSet').dropkick({
-
+  
         change: function (value) {
-
+          
           $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
-          $("#LanguagePic img").attr("src","images/"+value+".png");
-          CreateCookie("Language", value, 30)
+
+            $("#LanguagePic img").attr("src","images/"+value+".png");
+
+            CreateCookie("Language", value, 30)
+
         }
 
       });
-
   })
-
-
 
 
 

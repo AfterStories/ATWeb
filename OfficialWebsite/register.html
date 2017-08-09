@@ -18,10 +18,13 @@
 
 
 <script src="lib/js/jquery.js"></script>
+<script src="lib/js/lang/langchange.js" type="text/javascript"></script>
 <script src="lib/header/js/dropkick.js"></script>
 <script src="lib/js/layui/layui.js"></script>
 <script src="js/md5.js"></script>
+
 <script src="js/register.js"></script>
+
 
 </head>
 
@@ -33,65 +36,66 @@
 	<img class="splitImgDown" src="images/splitImgDown.png"/>
 	<div id="login" class="layui-form layui-form-pane">
 				<div id="LoginTitle">
-					<div id="LogoText">AreTalk注册</div>
+					<div id="LogoText" langtag="StudentRegister">AreTalk学生注册</div>
 				</div>
 
 					<div style="text-align:center;">
 
   						<div class="layui-form-item">
-  						  <label class="layui-form-label inputName">账户</label>
+  						  <label class="layui-form-label inputName" langtag="username">账户</label>
   						  <div class="layui-input-block">
   						    <input type="text" id="username" name="userName" autocomplete="off" class="layui-input " lay-verify="required|username|pass" placeholder="数字或者字母组合，不允许含有标点符号、空格等">
   						  </div>
   						</div>
               
   						  <div class="layui-form-item">
-  						  <label class="layui-form-label inputName">密码</label>
+  						  <label class="layui-form-label inputName" langtag="password">密码</label>
   						  <div class="layui-input-block">
   						    <input type="text" name="password" autocomplete="off" class="layui-input " lay-verify="required" placeholder="大于6位，数字或者字母组合">
   						  </div>
   						  </div>
 
                 <div class="layui-form-item">
-                <label class="layui-form-label inputName">昵称</label>
+                <label class="layui-form-label inputName" langtag="nickname">昵称</label>
                 <div class="layui-input-block">
                   <input type="text" name="nickname" autocomplete="off" class="layui-input " lay-verify="required">
                 </div>
                 </div>
 
                 <div class="layui-form-item sex-item">
-                <label class="sexinput">性别</label>
+                <label class="sexinput" langtag="sex">性别</label>
                 <div class="layui-input-block">
-                        <input type="radio" lay-filter="sexinput" name="sex" value="1" title="男" lay-verify="required">
-                        <input type="radio" lay-filter="sexinput" name="sex" value="0" title="女" lay-verify="required">
+                        <input type="radio" lay-filter="sexinput" name="sex" value="1" title="男/Male" lay-verify="required">
+                        <input type="radio" lay-filter="sexinput" name="sex" value="0" title="女/Female" lay-verify="required">
                 </div>
                 </div>
 
                 <div class="layui-form-item">
-                  <label class="layui-form-label inputName">国籍</label>
+                  <label class="layui-form-label inputName" langtag="nationality">国籍</label>
                   <div class="layui-input-block">
                     <select name="motherlandId" id="motherlandId" lay-filter="country" lay-verify="required">                      
-						        <option  selected = "selected" value="0">请选择</option>
+						        <option  selected = "selected" value="0" langtag="select">请选择</option>
                     </select>
                   </div>
                 </div>
 
              
                 <div class="layui-form-item">
-                  <label class="layui-form-label inputName" >生日</label>
+                  <label class="layui-form-label inputName" langtag="Birthday">生日</label>
                   <div class="layui-input-block">
                     <input class="layui-input" name="birthday" placeholder="出生日期" id="LAY_demorange_s" lay-verify="required"> 
                   </div>
                 </div>
                                        
            
+
                 <div class="layui-form-item">
                    
                   <div class="layui-inline" style="width:100%;margin-right: 0px;">
-                    <label class="layui-form-label inputName" >手机号</label>
+                    <label class="layui-form-label inputName" langtag="Phone">手机号</label>
                     <div class="layui-input-inline">
                       <select name="countryId" id="PhoneNmuAre" >
-                            <option  value="0">区号</option>
+                            <option  value="0" langtag="AreaNO">区号</option>
                       </select>
                     </div>                    
                     <div class="PhoneNum-inline" >
@@ -103,21 +107,21 @@
 
 
   						  <div class="layui-form-item">
-  						  <label class="layui-form-label inputName">验证码</label>
+  						  <label class="layui-form-label inputName" langtag="VerificationCode">验证码</label>
   						  <div class="layui-input-block">
   						    <input type="text" name="verifyCode" autocomplete="off" id="IDcode" class="layui-input"  placeholder="您接收到的短信验证码">
-  						    <button id="sendCode" lay-submit class="" lay-filter="getCode" type="button">发送验证码</button>  						    
+  						    <button id="sendCode" lay-submit class="" lay-filter="getCode" type="button" langtag="SendVerificationCode">发送验证码</button>  						    
   						  </div>
   						</div>
+ 
 
 					</div>
 					<div id="StayLogin">
-					<input id="chk_protocol" type="checkbox" name="protocol" title=" " lay-skin="primary" lay-filter="protocol" lay-verify="agree"><span>同意并遵守<a href="http://www.aretalk.com/protocol.html" id="protocol">《服务条款》</a></span>
+					<input id="chk_protocol" type="checkbox" name="protocol" title=" " lay-skin="primary" lay-filter="protocol" lay-verify="agree"><span langtag="Agree">同意并遵守</span><a href="http://www.aretalk.com/protocol.html" id="protocol" langtag="Terms">《服务条款》</a>
 					</div>  
-			 		<div id="SignBtn" lay-submit lay-filter="register" >注册</div>
+			 		<div id="SignBtn" lay-submit lay-filter="register" langtag="StudentregisterBTN">注册</div>
 <!-- " -->
 	</div>		
-		
 
   <footer>
     

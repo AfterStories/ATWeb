@@ -420,17 +420,17 @@ canvas{
 	padding: 9px 4px;
 }
 .input-short{
-	width:19vw;
+	width:24vw;
 }
 .input-long{
-	width: 52vw;;
+	width: 65vw;;
 }
 
 #TelBox .layui-form-select {
-	width: 8vw;
+	width: 21vw;
 }
 #PhoneNumber{
-	width: 37vw;
+	width: 44vw;
 }
 }
 
@@ -671,11 +671,11 @@ canvas{
 	width: 52vw;;
 }
 #TelBox .layui-form-select {
-	width: 10vw;
+	width: 15vw;
 }
 
 #PhoneNumber{
-	width: 42vw;
+	width: 37vw;
 }
 }
 
@@ -920,11 +920,11 @@ canvas{
 	width: 46vw;;
 }
 #TelBox .layui-form-select {
-	width: 8vw;
+	width: 14vw;
 }
 
 #PhoneNumber{
-	width: 37vw;
+	width: 32vw;
 }
 }
 
@@ -1169,10 +1169,10 @@ canvas{
 	width: 45vw;;
 }
 #TelBox .layui-form-select {
-	width: 8vw;
+	width: 10vw;
 }
 #PhoneNumber{
-	width: 37vw;
+	width: 35vw;
 }
 }
 

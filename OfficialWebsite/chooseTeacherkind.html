@@ -31,50 +31,50 @@
 	<div id="main">
 
 		<div id="InfoTitle">
-			<div id="InfoTitle-text1">想成为什么类型的教师</div>
-			<div id="InfoTitle-text2">我们有两种类型的教师,你属于哪一种?</div>
+			<div id="InfoTitle-text1" langtag="whichkind1">想成为什么类型的教师</div>
+			<div id="InfoTitle-text2" langtag="whichkind2">我们有两种类型的教师,你属于哪一种?</div>
 		</div>
 		<div id="MainTable">
 			<table  id="teachertable" cellspacing="0" cellpadding="0">
   				<tr>
-  				  <th class="Tdbackgroundcolor">教师的类型</th>
-  				  <th class="Tdbackgroundcolorgery"><img src="images/KindIcon.png" >专业教师</th>
-  				  <th class="Tdbackgroundcolorlightgery"><img src="images/KindIcon.png" >辅导教师 </th>
+  				  <th class="Tdbackgroundcolor" langtag="Theachkind">教师的类型</th>
+  				  <th class="Tdbackgroundcolorgery" langtag="ProT">专业教师</th>
+  				  <th class="Tdbackgroundcolorlightgery" langtag="amateurT">辅导教师</th>
   				</tr>
   				<tr>
-  				  <td>教育背景</td>
-  				  <td>接受专业对外汉语教学培训有丰富的教学经验</td>
-  				  <td>汉语母语者或者业余时间愿意教授汉语课程</td>
+  				  <td langtag="introduce1">教育背景</td>
+  				  <td langtag="introduce2">接受专业对外汉语教学培训有丰富的教学经验</td>
+  				  <td langtag="introduce3">汉语母语者或者业余时间愿意教授汉语课程</td>
   				</tr>
   				<tr>
-  				  <td>教学资质</td>
-  				  <td>获得CTCSOL国际汉语教师资格证书等对外汉语授课资格认证</td>
-  				  <td>无</td>
+  				  <td langtag="introduce4">教学资质</td>
+  				  <td langtag="introduce5">获得CTCSOL国际汉语教师资格证书等对外汉语授课资格认证</td>
+  				  <td langtag="introduce6">无</td>
   				</tr>
   				<tr>
-  					<td>教学材料</td>
-  					<td>上传授课PPT课件</td>
-  					<td>无</td>
+  					<td langtag="introduce7">教学材料</td>
+  					<td langtag="introduce8">上传授课PPT课件</td>
+  					<td langtag="introduce6">无</td>
   				</tr>
   				<tr>
-  					<td>教学方法</td>
-  					<td>小班制课程与1对1课程</td>
-  					<td>上传自己制作的视频或者音频课件</td>
+  					<td langtag="introduce10">教学方法</td>
+  					<td langtag="introduce11">小班制课程与1对1课程</td>
+  					<td langtag="introduce12">上传自己制作的视频或者音频课件</td>
   				</tr>  
   				<tr>
-  					<td>视频介绍</td>
-  					<td>需要上传1-2分钟自我介绍视频以及自我介绍音频</td>
-  					<td>需要上传1-2分钟自我介绍音频</td>
+  					<td langtag="introduce13">视频介绍</td>
+  					<td langtag="introduce14">需要上传1-2分钟自我介绍视频以及自我介绍音频</td>
+  					<td langtag="introduce15">需要上传1-2分钟自我介绍音频</td>
   				</tr>   				
   				<tr>
-  					<td>收入预期</td>
-  					<td>授课教师自主设定授课价格</td>
-  					<td>获得相应报酬</td>
+  					<td langtag="introduce16">收入预期</td>
+  					<td langtag="introduce17">授课教师自主设定授课价格</td>
+  					<td langtag="introduce18">获得相应报酬</td>
   				</tr>
   				<tr>
-  					<td>成为Aretalk的教师</td>
-  					<td><div class="tablebtn" id="applypro">申请成为专业教师</div></td>
-  					<td><div class="tablebtn" id="applytur">申请成为辅导教师</div></td>
+  					<td langtag="introduce19">成为Aretalk的教师</td>
+  					<td ><div class="tablebtn" id="applypro" langtag="introduce20">申请成为专业教师</div></td>
+  					<td ><div class="tablebtn" id="applytur" langtag="introduce21">申请成为辅导教师</div></td>
   				</tr>    				   								
 			</table>
 		</div>
@@ -87,25 +87,67 @@
 
 
 <script>
+
+function getCookie(c_name) {
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1) {
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1) {
+        c_value = null;
+    }
+    else {
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1) {
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start, c_end));
+    }
+    return c_value;
+}
+
+
 $(document).ready(function(){
+
+  var Language = getCookie("Language");
+if (Language) {
+  console.log(Language)
+}else{
+  Language = "zh"
+}
+
+
+
 	$("#header").load("lib/header/header.html",function(){
 	
 
 	});
 
-	$("footer").load("lib/footer/footer.html",function(){
-		$('.changeLangSet').dropkick({
+$("footer").load("lib/footer/footer.html",function(){
+    
+    $("body").cloudLang({lang: Language, file: "lib/js/lang/lang-resource.xml"});
 
+    $("#LanguagePic img").attr("src","images/"+Language+".png");  
+
+
+    $(".changeLangSet").val(Language);
+
+    $('.changeLangSet').dropkick({
+  
         change: function (value) {
-
+          
           $("body").cloudLang({lang: value, file: "lib/js/lang/lang-resource.xml"});
-          $("#LanguagePic img").attr("src","images/"+value+".png");
-          CreateCookie("Language", value, 30)
+
+            $("#LanguagePic img").attr("src","images/"+value+".png");
+
+            CreateCookie("Language", value, 30)
+
         }
 
       });
-
-	})
+  })
 
 
 
